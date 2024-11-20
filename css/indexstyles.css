@@ -1,0 +1,36 @@
+.modal-open .container-fluid, .modal-open  .container {
+    -webkit-filter: blur(10px);
+}
+.modal-content {
+    background-color:rgb(62, 62, 62);
+    color: white;
+}
+button.close {
+    color:white;
+}
+button.close:hover {
+    color:white;
+}
+.modal-content .btn-primary {
+    width: 200px;
+}
+.bg-gradient {
+    background: linear-gradient(to right, #150a1d, #351b48);
+}
+img#profile {
+    width: 250px;
+    height: 250px;
+}
+.pos-f-t #collapse {
+    background-color:rgb(25, 25, 25);
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 35px;
+}
+h5.logo {
+    color: white;
+    font-size: 50px;
+    font-family: "Brush Script MT"; 
+    background-color: transparent;
+    cursor: pointer;
+}
