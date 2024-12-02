@@ -12,6 +12,12 @@ body {
     animation: fadeIn 2s ease;
     opacity: 1;
 }
+#buttonTutorial {
+    transition: 0.3s;
+}
+#buttonTutorial:hover {
+    transform: scale(1.07);
+}
 .modal-open .container-fluid, .modal-open  .container {
     -webkit-filter: blur(10px);
 }
@@ -25,8 +31,12 @@ button.close {
 button.close:hover {
     color:white;
 }
-.modal-content .btn-primary {
+#myModalButton {
     width: 200px;
+    transition: 0.3s;
+}
+#myModalButton:hover {
+    transform: scale(1.07);
 }
 .bg-gradient {
     background: linear-gradient(to right, #150a1d, #351b48);
@@ -191,6 +201,21 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+img#chipotle {
+    position: relative;
+    bottom: 14px;
+    width: 75px;
+    height: 75px;
+}
+#experienceButton {
+    position: relative;
+    bottom: 14px;
+    left: 35px;
+    transition: 0.3s;
+}
+#experienceButton:hover {
+    transform: scale(1.1);
+}
 #contact {
     margin-top: 75px;
     width: 309px;
@@ -210,7 +235,16 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+img#oinwicon2 {
+    position: relative;
+    left: 132px;
+    bottom: 118px;
+    height: 36px;
+    width: 36px;
+}
 #myLife {
+    position: relative;
+    bottom: 90px;
     margin-left: 65px;
     width: 351px;
     height: 173px;
@@ -228,4 +262,11 @@ img#oinwicon {
     line-height: normal;
     font-size: 40px;
     color:#e3bbff;
+}
+#myLifeButton {
+    
+    transition: 0.3s;
+}
+#myLifeButton:hover {
+    transform: scale(1.1);
 }
