@@ -42,12 +42,12 @@
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="p-4" id="collapse">
-                <a href="#" class="text-white ml-5 mr-5">About Me</a>
-                <a href="#" class="text-white ml-5 mr-5">Portfolio</a>
-                <a href="#" class="text-white ml-5 mr-5">Skills</a>
-                <a href="#" class="text-white ml-5 mr-5">Experience</a>
-                <a href="#" class="text-white ml-5 mr-5">My Life</a>
-                <a href="#" class="text-white ml-5 mr-5">Contact</a>
+                <a href="aboutme.html" class="navTitles text-white ml-5 mr-5">About Me</a>
+                <a href="portfolio.html" class="navTitles text-white ml-5 mr-5">Portfolio</a>
+                <a href="skills.html" class="navTitles text-white ml-5 mr-5">Skills</a>
+                <a href="experience.html" class="navTitles text-white ml-5 mr-5">Experience</a>
+                <a href="mylife.html" class="navTitles text-white ml-5 mr-5">My Life</a>
+                <a href="contact.html" class="navTitles text-white ml-5 mr-5">Contact</a>
             </div>
         </div>
         <nav class="navbar navbar-dark bg-muted">
@@ -97,6 +97,7 @@
                     </div>
                     <div class="container rounded d-inline-block " id="portfolio">
                         <h5 id="portfolioHeader">My Portfolio</h5>
+                        <button class="btn btn-primary" id="portfolioButton" type="button">View</button>
 
                         <div id="carousel" class="carousel slide" data-ride="carousel">
 
@@ -127,21 +128,66 @@
                             <a class="carousel-control-next" href="#carousel" data-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </a>
-                
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="container rounded" id="skills">
                 <h5 id="skillsHeader">Skills</h5>
+                <div class="container rounded" id="skillBox1">
+                    <h5 class="boxHeaders">Languages</h5>
+                    <img src="images/openinnewwindowicon.png" class="rounded skilloinwicons" alt="Open in New Window Icon">
+                </div>
+                <div class="container rounded" id="skillBox2">
+                    <h5 class="boxHeaders">Technical</h5>
+                    <img src="images/openinnewwindowicon.png" class="rounded skilloinwicons" alt="Open in New Window Icon">
+                </div>
+                <div class="container rounded" id="skillBox3">
+                    <h5 class="boxHeaders">General</h5>
+                    <img src="images/openinnewwindowicon.png" class="rounded skilloinwicons" alt="Open in New Window Icon">
+                </div>
             </div>
+
             <div class="container rounded d-inline-block" id="contact">
-                <h5 id="skillsHeader">Contact Form</h5>
+                <h5 id="contactHeader">Contact Form</h5>
                 <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon2" alt="Open in New Window Icon">
             </div>
+
             <div class="container rounded d-inline-block" id="myLife">
-                <h5 id="skillsHeader">My Life</h5>
-                <button class="btn btn-primary mr-5 ml-auto" id="myLifeButton" type="button">View</button>
+                <h5 id="myLifeHeader">My Life&ensp;</h5>
+                <button class="btn btn-primary" id="myLifeButton" type="button">View</button>
+
+                <div id="carousel2" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                    <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel2" data-slide-to="1"></li>
+                    <li data-target="#carousel2" data-slide-to="2"></li>
+                    </ul>
+                    
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="la.jpg" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="chicago.jpg" alt="Chicago">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="ny.jpg" alt="New York">
+                    </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#carousel2" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel2" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

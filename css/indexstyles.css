@@ -51,6 +51,14 @@ img#profile {
     font-weight: bold;
     font-size: 35px;
 }
+.navTitles {
+    text-decoration: underline #150a1d;
+    transition: text-decoration 1s;
+  }
+  
+.navTitles:hover {
+    text-decoration-color: white;
+}
 h5.logo {
     position: fixed;
     color: white;
@@ -160,9 +168,18 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+#portfolioButton {
+    height: 50px;
+    width: 130px;
+    transition: 0.3s;
+}
+#portfolioButton:hover {
+    transform: scale(1.07);
+}
 #skills {
-    position: absolute;
-    top: 500px;
+    position: relative;
+    bottom: 476px;
+    left: 366px;
     width: 308px;
     height: 228px;
     line-height: 90px;
@@ -181,6 +198,54 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+#skillBox1 {
+    width: 150px;
+    height: 40px;
+    line-height: 90px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#skillBox1:hover {
+    transform:scale(1.1);
+}
+#skillBox2 {
+    width: 150px;
+    height: 40px;
+    line-height: 90px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#skillBox2:hover {
+    transform:scale(1.1);
+}
+#skillBox3 {
+    width: 150px;
+    height: 40px;
+    line-height: 90px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#skillBox3:hover {
+    transform:scale(1.1);
+}
+.boxHeaders {
+    line-height: normal;
+    font-size: 18px;
+    color:#e3bbff;
+}
+.skilloinwicons {
+    position: relative;
+    left: 60px;
+    bottom: 68px;
+    height: 20px;
+    width: 20px;
+}
 #experience {
     position: relative;
     right: 17px;
@@ -196,6 +261,7 @@ img#oinwicon {
     transform: scale(1.07);
 }
 #experienceHeader {
+    display: inline-block;
     vertical-align: middle;
     line-height: normal;
     font-size: 40px;
@@ -217,7 +283,8 @@ img#chipotle {
     transform: scale(1.1);
 }
 #contact {
-    margin-top: 75px;
+    position: relative;
+    bottom: 200px;
     width: 309px;
     height: 100px;
     line-height: 90px;
@@ -230,22 +297,23 @@ img#chipotle {
     transform: scale(1.07);
 }
 #contactHeader {
+    display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    font-size: 40px;
+    font-size: 35px;
     color:#e3bbff;
 }
 img#oinwicon2 {
     position: relative;
-    left: 132px;
-    bottom: 118px;
+    bottom: 27px;
+    left: 22px;
     height: 36px;
     width: 36px;
 }
 #myLife {
     position: relative;
-    bottom: 90px;
-    margin-left: 65px;
+    bottom: 200px;
+    left: 13px;
     width: 351px;
     height: 173px;
     line-height: 90px;
@@ -258,13 +326,14 @@ img#oinwicon2 {
     transform: scale(1.07);
 }
 #myLifeHeader {
+    display: inline-block;
     vertical-align: middle;
     line-height: normal;
     font-size: 40px;
     color:#e3bbff;
 }
 #myLifeButton {
-    
+
     transition: 0.3s;
 }
 #myLifeButton:hover {
