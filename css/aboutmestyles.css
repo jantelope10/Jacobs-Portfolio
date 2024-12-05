@@ -1,0 +1,130 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 2s ease;
+    opacity: 1;
+}
+.clickable {
+    cursor: pointer;
+}
+.normal {
+    cursor: default;
+}
+.bg-gradient {
+    background: linear-gradient(to right, #150a1d, #351b48);
+}
+#logo {
+    position: fixed;
+    color: white;
+    font-size: 50px;
+    font-family: "Brush Script MT"; 
+    background-color: transparent;
+    cursor: pointer;
+}
+#collapse {
+    margin-left: 50px;
+    background-color:#150a1d;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 35px;
+}
+.navTitles {
+    text-decoration: underline #150a1d;
+    transition: text-decoration 1s;
+  }
+  
+.navTitles:hover {
+    text-decoration-color: white;
+}
+#navicon {
+    transition: 0.3s;
+}
+#navicon:hover {
+    transform: scale(1.1);
+}
+#spinner {
+    display: none;
+    position: fixed;
+    bottom: 35%;
+    left: 42%;
+    height: 250px;
+    width: 250px;
+    border-width: 15px;
+}
+.bottom {
+    position: relative;
+    bottom: 150px;
+}
+#footerHeader {
+    text-align: left;
+    font-size: 30px;
+    color:#e3bbff;
+}
+#footerDesc {
+    display: inline;
+    text-align: left;
+    font-size: 20px;
+    color:#e3bbff;
+}
+#github {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+#github:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+#linkedin {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+#linkedin:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+#discord {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+#discord:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+#line {
+    height: 5px;
+    width: 1110px;
+    border: 3px solid #e3bbff;
+    position: absolute;
+    top: 90px;
+}
+#copyright {
+    color: rgb(152, 152, 152);
+    font-size: 10px;
+    position: relative;
+    top: 35px;
+}
