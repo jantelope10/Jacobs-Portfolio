@@ -2,12 +2,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-body {
+.all {
     opacity: 0;
     animation: fadeIn 2s ease;
     opacity: 1;
@@ -28,6 +23,32 @@ body {
     font-family: "Brush Script MT"; 
     background-color: transparent;
     cursor: pointer;
+}
+#buttonTutorial {
+    transition: 0.3s;
+}
+#buttonTutorial:hover {
+    transform: scale(1.07);
+}
+.modal-open .container-fluid, .modal-open  .container {
+    -webkit-filter: blur(10px);
+}
+.modal-content {
+    background-color:rgb(62, 62, 62);
+    color: white;
+}
+button.close {
+    color:white;
+}
+button.close:hover {
+    color:white;
+}
+#myModalButton {
+    width: 200px;
+    transition: 0.3s;
+}
+#myModalButton:hover {
+    transform: scale(1.07);
 }
 #collapse {
     margin-left: 50px;
@@ -50,14 +71,36 @@ body {
 #navicon:hover {
     transform: scale(1.1);
 }
-#spinner {
-    display: none;
-    position: fixed;
-    bottom: 35%;
-    left: 42%;
-    height: 250px;
-    width: 250px;
-    border-width: 15px;
+.top {
+    display: inline;
+}
+#titleHeader {
+    text-align: left;
+    font-size: 100px;
+    color:#e3bbff;
+}
+#titleDesc {
+    position: relative;
+    right: 330px;
+    top: 15px;
+    width: 450px;
+    height: 270px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#titleDesc:hover {
+    transform: scale(1.07);
+}
+.titles {
+    position: relative;
+    bottom: 20px;
+    margin-top: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    color:#e3bbff;
 }
 .bottom {
     position: relative;
@@ -127,4 +170,13 @@ body {
     font-size: 10px;
     position: relative;
     top: 35px;
+}
+#spinner {
+    display: none;
+    position: fixed;
+    bottom: 35%;
+    left: 42%;
+    height: 250px;
+    width: 250px;
+    border-width: 15px;
 }

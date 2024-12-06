@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    /*Shows modal when tutorial button is clicked*/
+    $("#buttonTutorial").click(function(){
+        $('#myModal').modal("show");
+    });
+
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -62,3 +67,12 @@ $(document).ready(function() {
         }, 500);
     });
 });
+
+function animate(index) {
+    if(index == 1){
+        var hover = document.getElementById("title1");
+        var anim = document.getElementById("anim");
+        anim.style.display= "block";
+    }
+
+}

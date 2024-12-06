@@ -117,12 +117,12 @@ img#gcu {
     width: 75px;
     height: 75px;
 }
-h4#titleHeader {
+#titleHeader {
     text-align: center;
     font-size: 100px;
     color:#e3bbff;
 }
-h5#titles {
+.titles {
     text-align: center;
     font-size: 25px;
     color:#e3bbff;
