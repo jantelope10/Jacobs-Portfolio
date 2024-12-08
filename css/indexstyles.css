@@ -1,21 +1,27 @@
+/*FadeIn animation to make page fade into view onload.*/
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*Container containing all elements, calls fadeIn animation.*/
 .all {
     opacity: 0;
     animation: fadeIn 2s ease;
     opacity: 1;
 }
+/*Makes all containers that have this class have a pointer cursor to look clickable.*/
 .clickable {
     cursor: pointer;
 }
+/*Makes all containers that have this class have a normal cursor to not look clickable/highlightable.*/
 .normal {
     cursor: default;
 }
+/*Purple background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #150a1d, #351b48);
 }
+/*Fixed logo in top left, stays in same spot when page is scrolled.*/
 #logo {
     position: fixed;
     color: white;
@@ -24,56 +30,65 @@
     background-color: transparent;
     cursor: pointer;
 }
+/*Tutorial button in top right, expands when hovered.*/
 #buttonTutorial {
     transition: 0.3s;
 }
+/*Hover animation.*/
 #buttonTutorial:hover {
     transform: scale(1.07);
 }
+/*Blurs background when tutorial button is clicked.*/
 .modal-open .container-fluid, .modal-open  .container {
     -webkit-filter: blur(10px);
 }
+/*Modal content background and text.*/
 .modal-content {
     background-color:rgb(62, 62, 62);
     color: white;
 }
+/*X button in top right of modal.*/
 button.close {
     color:white;
 }
+/*Hover animation.*/
 button.close:hover {
     color:white;
 }
+/*Button inside modal that starts tutorial, expands when hovered.*/
 #myModalButton {
     width: 200px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #myModalButton:hover {
     transform: scale(1.07);
 }
-img#profile {
-    width: 300px;
-    height: 300px;
-}
+/*Style of navbar when navbar button is clicked.*/
 #collapse {
     background-color:#150a1d;
     justify-content: space-evenly;
     font-weight: bold;
     font-size: 35px;
 }
+/*Navbar button that opens navbar when clicked, expands when hovered.*/
 #navicon {
     transition: 0.3s;
 }
+/*Hover animation.*/
 #navicon:hover {
     transform: scale(1.1);
 }
+/*Underline animation for links in navbar.*/
 .navTitles {
     text-decoration: underline #150a1d;
     transition: text-decoration 1s;
-  }
-  
+}
+/*Hover animation.*/ 
 .navTitles:hover {
     text-decoration-color: white;
 }
+/*Profile card on left of screen, defined with image, header, body, and footer.*/
 #profileCard {
     width: 308px;
     background-color: black;
@@ -81,22 +96,33 @@ img#profile {
     color: rgb(255, 224, 181);
     text-align: center;
 }
+/*Profile image.*/
+img#profile {
+    width: 300px;
+    height: 300px;
+}
+/*Profile header with border.*/
 #profileHeader {
     border:2px solid rgb(255, 224, 181);
 }
+/*Profile body with border.*/
 #profileBody {
     border:2px solid rgb(255, 224, 181);
 }
+/*Profile footer with border.*/
 #profileFooter {
     border: 2px solid rgb(255, 224, 181);
 }
+/*Profile button in footer that opens about me page when clicked, expands when hovered.*/
 #profileButton {
     color: rgb(255, 224, 181);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #profileButton:hover {
     transform: scale(1.07);
 }
+/*Bio container below profile card, matches profile card with styles.*/
 #bio {
     margin-left: 0px;
     width: 309px;
@@ -106,6 +132,7 @@ img#profile {
     background-color: black;
     border: 4px solid rgb(255, 224, 181);
 }
+/*Bio header in bio.*/
 #bioHeader {
     display: inline-block;
     vertical-align: middle;
@@ -113,20 +140,24 @@ img#profile {
     font-size: 20px;
     color:rgb(255, 224, 181);
 }
+/*GCU image in bio.*/
 img#gcu {
     width: 75px;
     height: 75px;
 }
-#titleHeader {
+/*Home title header at top.*/
+#titleHeader1 {
     text-align: center;
     font-size: 100px;
     color:#e3bbff;
 }
+/*Class of all sub-titles underneath the titleHeader.*/
 .titles {
     text-align: center;
     font-size: 25px;
     color:#e3bbff;
 }
+/*About me container below titles, expands when hovered.*/
 #aboutMe {
     margin-bottom: 230px;
     width: 350px;
@@ -137,9 +168,11 @@ img#gcu {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #aboutMe:hover {
     transform: scale(1.07);
 }
+/*Header in about me container.*/
 #aboutMeHeader {
     display: inline-block;
     vertical-align: middle;
@@ -147,6 +180,7 @@ img#gcu {
     font-size: 40px;
     color:#e3bbff;
 }
+/*Open in new window icon to indicate the container's clickability.*/
 img#oinwicon {
     position: relative;
     left: 25px;
@@ -154,6 +188,7 @@ img#oinwicon {
     height: 40px;
     width: 40px;
 }
+/*Portfolio container to the right of about me and skills containers, expands when hovered.*/
 #portfolio {
     margin-top: 70px;
     margin-left: 70px;
@@ -165,9 +200,11 @@ img#oinwicon {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #portfolio:hover {
     transform: scale(1.07);
 }
+/*Header in portfolio container.*/
 #portfolioHeader {
     display: inline-block;
     vertical-align: middle;
@@ -175,14 +212,17 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+/*Button in portfolio container navigating to portfolio page when clicked, expands when hovered.*/
 #portfolioButton {
     height: 50px;
     width: 130px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #portfolioButton:hover {
     transform: scale(1.07);
 }
+/*Skills container below the about me container, expands when hovered.*/
 #skills {
     position: relative;
     bottom: 476px;
@@ -195,9 +235,11 @@ img#oinwicon {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #skills:hover {
     transform: scale(1.07);
 }
+/*Header in skills container.*/
 #skillsHeader {
     display: inline-block;
     vertical-align: middle;
@@ -205,6 +247,7 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+/*First box in skills container navigating to languages section of skills page when clicked, expands when hovered.*/
 #skillBox1 {
     width: 150px;
     height: 40px;
@@ -214,9 +257,11 @@ img#oinwicon {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #skillBox1:hover {
     transform:scale(1.1);
 }
+/*Second box in skills container navigating to technical section of skills page when clicked, expands when hovered.*/
 #skillBox2 {
     width: 150px;
     height: 40px;
@@ -226,9 +271,11 @@ img#oinwicon {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #skillBox2:hover {
     transform:scale(1.1);
 }
+/*Third box in skills container navigating to general section of skills page when clicked, expands when hovered.*/
 #skillBox3 {
     width: 150px;
     height: 40px;
@@ -238,14 +285,17 @@ img#oinwicon {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #skillBox3:hover {
     transform:scale(1.1);
 }
+/*Properties of box containers in skills container.*/
 .boxHeaders {
     line-height: normal;
     font-size: 18px;
     color:#e3bbff;
 }
+/*Open in new window icons located in box containers indicating their clickability.*/
 .skilloinwicons {
     position: relative;
     left: 60px;
@@ -253,6 +303,7 @@ img#oinwicon {
     height: 20px;
     width: 20px;
 }
+/*Experience container located below the bio container containing programming languages, expands when hovered.*/
 #experience {
     position: relative;
     right: 17px;
@@ -264,9 +315,11 @@ img#oinwicon {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #experience:hover {
     transform: scale(1.07);
 }
+/*Header in experience container.*/
 #experienceHeader {
     display: inline-block;
     vertical-align: middle;
@@ -274,21 +327,25 @@ img#oinwicon {
     font-size: 40px;
     color:#e3bbff;
 }
+/*Chipotle image in experience container.*/
 img#chipotle {
     position: relative;
     bottom: 14px;
     width: 75px;
     height: 75px;
 }
+/*Button in experience container, expands when hovered.*/
 #experienceButton {
     position: relative;
     bottom: 14px;
     left: 35px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #experienceButton:hover {
     transform: scale(1.1);
 }
+/*Contact container below the skills container, expands when hovered.*/
 #contact {
     position: relative;
     bottom: 200px;
@@ -300,9 +357,11 @@ img#chipotle {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #contact:hover {
     transform: scale(1.07);
 }
+/*Header in contact container.*/
 #contactHeader {
     display: inline-block;
     vertical-align: middle;
@@ -310,6 +369,7 @@ img#chipotle {
     font-size: 35px;
     color:#e3bbff;
 }
+/*Open in new window icon in top right of contact container indicating its clickability.*/
 img#oinwicon2 {
     position: relative;
     bottom: 27px;
@@ -317,6 +377,7 @@ img#oinwicon2 {
     height: 36px;
     width: 36px;
 }
+/*My life container below the portfolio container, expands when hovered.*/
 #myLife {
     position: relative;
     bottom: 200px;
@@ -329,9 +390,11 @@ img#oinwicon2 {
     border: 4px solid rgb(35, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #myLife:hover {
     transform: scale(1.07);
 }
+/*Header in my life container.*/
 #myLifeHeader {
     display: inline-block;
     vertical-align: middle;
@@ -339,37 +402,33 @@ img#oinwicon2 {
     font-size: 40px;
     color:#e3bbff;
 }
+/*Button in my life container, expands when clicked.*/
 #myLifeButton {
-
     transition: 0.3s;
 }
+/*Hover animation.*/
 #myLifeButton:hover {
     transform: scale(1.1);
 }
-#spinner {
-    display: none;
-    position: fixed;
-    bottom: 35%;
-    left: 42%;
-    height: 250px;
-    width: 250px;
-    border-width: 15px;
-}
+/*About me footer.*/
 .bottom {
     position: relative;
     bottom: 150px;
 }
+/*Header of footer, my name.*/
 #footerHeader {
     text-align: left;
     font-size: 30px;
     color:#e3bbff;
 }
+/*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
     text-align: left;
     font-size: 20px;
     color:#e3bbff;
 }
+/*GitHub button that contains link, expands when hovered.*/
 #github {
     position: relative;
     bottom: 10px;
@@ -380,10 +439,12 @@ img#oinwicon2 {
     width: 50px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #github:hover {
     cursor: pointer;
     transform: scale(1.07);
 }
+/*LinkedIn button that contains link, expands when hovered.*/
 #linkedin {
     position: relative;
     bottom: 10px;
@@ -394,10 +455,12 @@ img#oinwicon2 {
     width: 50px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #linkedin:hover {
     cursor: pointer;
     transform: scale(1.07);
 }
+/*Discord button that contains link, expands when hovered.*/
 #discord {
     position: relative;
     bottom: 10px;
@@ -407,10 +470,12 @@ img#oinwicon2 {
     width: 50px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #discord:hover {
     cursor: pointer;
     transform: scale(1.07);
 }
+/*Footer line separating content from copyright claim.*/
 #line {
     height: 5px;
     width: 1110px;
@@ -418,9 +483,20 @@ img#oinwicon2 {
     position: absolute;
     top: 90px;
 }
+/*Copyright claim in footer.*/
 #copyright {
     color: rgb(152, 152, 152);
     font-size: 10px;
     position: relative;
     top: 35px;
+}
+/*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
+#spinner {
+    display: none;
+    position: fixed;
+    bottom: 35%;
+    left: 42%;
+    height: 250px;
+    width: 250px;
+    border-width: 15px;
 }

@@ -22,10 +22,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <!--Index external CSS file import.-->
         <link rel="stylesheet" href="css/indexstyles.css">
+        <!--Border animations CSS file import.-->
         <link rel="stylesheet" href="css/traceanimate.css">
         <!--Index external JS file import.-->
         <script src="js/index.js"></script>
-
 </head>
 <!--Entirety of content on page.-->
 <body class="bg-gradient">
@@ -58,7 +58,7 @@
             <div class="pos-f-t">
                 <div class="collapse" id="navbarToggleExternalContent">
                     <!--The div ID that holds all the links, styles in external CSS file.-->
-                    <div class="p-4" id="collapse">
+                    <div class="p-4 normal" id="collapse">
                         <!--All links; link locations are located in the external JS file in jQuery functions.-->
                         <a href="#" class="navTitles text-white ml-5 mr-5" id="aboutmenav">About Me</a>
                         <a href="#" class="navTitles text-white ml-5 mr-5" id="portfolionav">Portfolio</a>
@@ -109,7 +109,7 @@
                         <h5 class="normal mb-4" id="bioHeader">Bootstrap, jQuery, JavaScript, HTML, CSS</h5>
                     </div>
                     <!--Experience container with header, view button, and image.-->
-                    <div class="container rounded mt-5" id="experience">
+                    <div class="container rounded standard mt-5" id="experience">
                         <h5 class="normal" id="experienceHeader">Work Experience</h5>
                         <img src="images/chipotlelogo.png" class="rounded" id="chipotle" alt="Chipotle Logo">
                         <!--View button that directs user to experience page when clicked.-->
@@ -119,7 +119,12 @@
                 <!--Aligns content in this container to the middle and right third of the page.-->    
                 <div class="col-md-8" >
                     <!--Title headers.-->
-                    <h4 class="normal" id="titleHeader">Jacob Sanchez</h4>
+                    <h4 class="normal" id="titleHeader1">Jacob Sanchez
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </h4>
                     <h4 class="normal mb-3 titles" id="title1">Up-and-coming Software Developer
                         <span></span>
                         <span></span>
@@ -141,13 +146,13 @@
                     <!--Container that connects all containers within with flex and center.-->
                     <div class="d-flex align-items-center">
                         <!--About me container that directs user to about me page when clicked.-->
-                        <div class="container rounded d-inline-block clickable" id="aboutMe">
+                        <div class="container rounded standard d-inline-block clickable" id="aboutMe">
                             <h5 class="clickable" id="aboutMeHeader">&ensp;About Me</h5>
                             <!--Open in a new window icon located in top right of about me container.-->
                             <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon" alt="Open in New Window Icon">
                         </div>
                         <!--Portfolio container containing the header, view button and carousel.-->
-                        <div class="container rounded d-inline-block " id="portfolio">
+                        <div class="container rounded standard d-inline-block " id="portfolio">
                             <h5 class="normal" id="portfolioHeader">My Portfolio</h5>
                             <!--View button that directs user to the portfolio page when clicked.-->
                             <button class="btn btn-primary" id="portfolioButton" type="button">View</button>
@@ -185,7 +190,7 @@
                 </div>
                 <!--Skills container that consists of the header, and individual containers that navigate users to that specific section of the skills page.-->
                 <!--Each container has an open in new window icon located in the top right.-->
-                <div class="container rounded" id="skills">
+                <div class="container rounded standard" id="skills">
                     <h5 class="normal" id="skillsHeader">Skills</h5>
                     <!--Languages container that directs user to the languages section of the skills page when clicked.-->
                     <div class="container rounded clickable" id="skillBox1">
@@ -204,13 +209,13 @@
                     </div>
                 </div>
                 <!--Contact container that directs user to the contact page when clicked.-->
-                <div class="container rounded d-inline-block clickable" id="contact">
+                <div class="container rounded standard d-inline-block clickable" id="contact">
                     <h5 class="clickable" id="contactHeader">Contact Form</h5>
                     <!--Open in a new window icon located in top right of about me container.-->
                     <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon2" alt="Open in New Window Icon">
                 </div>
                 <!--My Life container that consists of the header, view button, and carousel.-->
-                <div class="container rounded d-inline-block" id="myLife">
+                <div class="container rounded standard d-inline-block" id="myLife">
                     <h5 class="normal" id="myLifeHeader">My Life&ensp;</h5>
                     <!--View button that navigates user to the mylife page when clicked.-->
                     <button class="btn btn-primary" id="myLifeButton" type="button">View</button>

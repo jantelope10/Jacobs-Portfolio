@@ -1,3 +1,142 @@
+/*Border animation for all containers.*/
+@keyframes fadeBorder {
+    from { border-color: rgb(35, 0, 44); }
+    to { border-color: rgb(110, 0, 137); }
+}
+/*Calls fadeBorder animation for all containers with standard class when hovered.*/
+.standard:hover {
+    animation: fadeBorder 0.3s ease;
+    border-color: rgb(110, 0, 137) !important;
+}
+/*Border animation for main title 1, home page title header.*/
+/*Defines positioning for each line.*/
+#titleHeader1 span {
+    position: absolute;
+}
+/*Defines the two horizontal lines of this text, how far they will go.*/
+#titleHeader1 span:nth-child(1), #titleHeader1 span:nth-child(3) {
+    width: 90%;
+    height: 1px;
+    background: white;
+}
+/*Defines the top line's location and transformation.*/
+#titleHeader1 span:nth-child(1) {
+    top: 20px;
+    left: 40px;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+/*Hover animation for top line.*/
+#titleHeader1:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+/*Defines the bottom line's location and transformation.*/
+#titleHeader1 span:nth-child(3) {
+    top: 110px;
+    left: 40px;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+/*Hover animation for bottom line.*/
+#titleHeader1:hover span:nth-child(3) {
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+/*Defines the two vertical lines of this text, how far they will go.*/
+#titleHeader1 span:nth-child(2), #titleHeader1 span:nth-child(4) {
+    width: 1px;
+    height: 9.3%;
+    background: white;
+}
+/*Defines the right line's location and transformation.*/
+#titleHeader1 span:nth-child(2) {
+    top: 20px;
+    right: 35px;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+/*Hover animation for right line.*/
+#titleHeader1:hover span:nth-child(2) {
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+/*Defines the left line's location and transformation.*/
+#titleHeader1 span:nth-child(4) {
+    top: 20px;
+    left: 40px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+/*Hover animation for left line.*/
+#titleHeader1:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
+/*Same functionality across all border animations in this CSS file.*/
+/*Border animation for main title 2, about me title header.*/
+#titleHeader2 span {
+    position: absolute;
+}
+#titleHeader2 span:nth-child(1), #titleHeader2 span:nth-child(3) {
+    width: 32%;
+    height: 1px;
+    background: white;
+}
+#titleHeader2 span:nth-child(1) {
+    top: 70px;
+    left: 193px;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+#titleHeader2:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+#titleHeader2 span:nth-child(3) {
+    top: 170px;
+    left: 193px;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+#titleHeader2:hover span:nth-child(3) {
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+#titleHeader2 span:nth-child(2), #titleHeader2 span:nth-child(4) {
+    width: 1px;
+    height: 13.9%;
+    background: white;
+}
+#titleHeader2 span:nth-child(2) {
+    top: 70px;
+    right: 850.5px;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+#titleHeader2:hover span:nth-child(2) {
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+#titleHeader2 span:nth-child(4) {
+    top: 70px;
+    left: 192px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+#titleHeader2:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
+/*Border animation for title 1, first sub-title of home page.*/
 #title1 span {
     position: absolute;
 }
@@ -18,7 +157,7 @@
     transition-delay: 0s;
 }
 #title1 span:nth-child(3) {
-    top: 162.5px;
+    top: 162px;
     left: 167px;
     transform-origin: right;
     transform: scaleX(0);
@@ -55,7 +194,7 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
-/*Border animation for title 2*/
+/*Border animation for title 2, second sub-title of home page.*/
 #title2 span {
     position: absolute;
 }
@@ -113,7 +252,7 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
-/*Border animation for title 3*/
+/*Border animation for title 3, third sub-title of home page.*/
 #title3 span {
     position: absolute;
 }
@@ -135,7 +274,7 @@
 }
 #title3 span:nth-child(3) {
     top: 255.5px;
-    left: 158px;
+    left: 158.8px;
     transform-origin: right;
     transform: scaleX(0);
 }
@@ -171,7 +310,7 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
-/*Border animation around title 4*/
+/*Border animation around title 4, first sub-title of about me page.*/
 #title4 span {
     position: absolute;
 }
@@ -229,7 +368,7 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
-/*Border animation around title 5*/
+/*Border animation around title 5, second sub-title of about me page.*/
 #title5 span {
     position: absolute;
 }
@@ -287,7 +426,7 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
-/*Border animation around title 6*/
+/*Border animation around title 6, third sub-title of about me page.*/
 #title6 span {
     position: absolute;
 }
@@ -345,7 +484,7 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
-/*Border animation around title 7*/
+/*Border animation around title 7, fourth sub-title of about me page.*/
 #title7 span {
     position: absolute;
 }
