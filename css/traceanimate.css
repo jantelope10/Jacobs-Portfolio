@@ -3,10 +3,18 @@
     from { border-color: rgb(35, 0, 44); }
     to { border-color: rgb(110, 0, 137); }
 }
+@keyframes fadeBorder2 {
+    from { border-color: rgb(110, 0, 137); }
+    to { border-color: rgb(184, 0, 230); }
+}
 /*Calls fadeBorder animation for all containers with standard class when hovered.*/
 .standard:hover {
     animation: fadeBorder 0.3s ease;
     border-color: rgb(110, 0, 137) !important;
+}
+.slideshow:hover {
+    animation: fadeBorder2 0.3s ease;
+    border-color: rgb(184, 0, 230) !important;
 }
 /*Border animation for main title 1, home page title header.*/
 /*Defines positioning for each line.*/
@@ -83,7 +91,7 @@
     position: absolute;
 }
 #titleHeader2 span:nth-child(1), #titleHeader2 span:nth-child(3) {
-    width: 32%;
+    width: 31.3%;
     height: 1px;
     background: white;
 }

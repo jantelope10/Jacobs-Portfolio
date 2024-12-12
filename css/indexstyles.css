@@ -44,8 +44,8 @@
 }
 /*Modal content background and text.*/
 .modal-content {
-    background-color:rgb(62, 62, 62);
-    color: white;
+    background-color: #150a1d;
+    color: #e3bbff;
 }
 /*X button in top right of modal.*/
 button.close {

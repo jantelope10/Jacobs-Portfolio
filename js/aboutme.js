@@ -5,6 +5,30 @@ $(document).ready(function() {
     $("#buttonTutorial").click(function(){
         $('#myModal').modal("show");
     });
+    $("#personButton").click(function(){
+        const elem = document.getElementById("personButton");
+        elem.style.backgroundColor = "#e3bbff";
+        $('#personModal').modal("show");
+    });
+    $("#personModalButton").click(function(){
+        $('#personModal').modal("hide");
+    });
+    $("#hobbiesButton").click(function(){
+        const elem = document.getElementById("hobbiesButton");
+        elem.style.backgroundColor = "#e3bbff";
+        $('#hobbiesModal').modal("show");
+    });
+    $("#hobbiesModalButton").click(function(){
+        $('#hobbiesModal').modal("hide");
+    });
+    $("#schoolButton").click(function(){
+        const elem = document.getElementById("schoolButton");
+        elem.style.backgroundColor = "#e3bbff";
+        $('#schoolModal').modal("show");
+    });
+    $("#schoolModalButton").click(function(){
+        $('#schoolModal').modal("hide");
+    });
     /*Shows spinner and blurs background when logo is clicked, loads home page after a timeout.*/
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
@@ -66,6 +90,58 @@ $(document).ready(function() {
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "contact.html";
+        }, 500);
+    });
+    
+    $("#moreBox1").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "portfolio.html";
+        }, 500); 
+    });
+    $("#moreBox2").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "skills.html";
+        }, 500); 
+    });
+    $("#moreBox3").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "mylife.html";
+        }, 500);
+    });
+    /*Shows spinner and blurs background when the Discord button is clicked, my Discord profile after a timeout.*/
+    $("#discord").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://discordapp.com/users/1271304170753888327";
+        }, 500);
+    });
+    /*Shows spinner and blurs background when the LinkedIn button is clicked, loads my LinkedIn profile page after a timeout.*/
+    $("#linkedin").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://www.linkedin.com/in/jacob-sanchez-b823b432a/";
+        }, 500);
+    });
+    /*Shows spinner and blurs background when the GitHub button is clicked, loads my GitHub profile page after a timeout.*/
+    $("#github").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://github.com/jantelope10";
         }, 500);
     });
 });

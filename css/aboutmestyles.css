@@ -3,6 +3,11 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+@keyframes fadeText {
+    0% { color: #150a1d; }
+    50% { color: #381f4a; }
+    100% { color:#8f31d2; }
+}
 /*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
@@ -42,10 +47,13 @@
 .modal-open .container-fluid, .modal-open  .container {
     -webkit-filter: blur(10px);
 }
+.images {
+    margin: auto;
+}
 /*Modal content background and text.*/
 .modal-content {
-    background-color:rgb(62, 62, 62);
-    color: white;
+    background-color: #150a1d;
+    color: #e3bbff;
 }
 /*X button in top right of modal.*/
 button.close {
@@ -62,6 +70,14 @@ button.close:hover {
 }
 /*Hover animation.*/
 #myModalButton:hover {
+    transform: scale(1.07);
+}
+.moreModalButtons {
+    font-weight: bold;
+    width: 200px;
+    transition: 0.3s;
+}
+.moreModalButtons:hover {
     transform: scale(1.07);
 }
 /*Style of navbar when navbar button is clicked.*/
@@ -89,21 +105,25 @@ button.close:hover {
 #navicon:hover {
     transform: scale(1.1);
 }
-/*Sets titleHeader and image inline.*/
-.top {
-    display: inline;
-}
 /*About me title header, has border animation when hovered.*/
 #titleHeader2 {
     text-align: left;
     font-size: 100px;
     color:#e3bbff;
 }
+#titleImg {
+    position: relative;
+    left: 530px;
+    bottom: 95px;
+    width: 27%;
+    height: 27%;
+    border:6px solid rgb(255, 224, 181);
+}
 /*About me title description container, has border animation for headings when hovered, expands when hovered.*/
 #titleDesc {
     position: relative;
     right: 330px;
-    top: 15px;
+    bottom: 455px;
     width: 450px;
     height: 270px;
     text-align: center;
@@ -124,6 +144,203 @@ button.close:hover {
     vertical-align: middle;
     font-size: 20px;
     color:#e3bbff;
+}
+#aboutMeSlideshow {
+    position: relative;
+    right: 330px;
+    bottom: 390px;
+    width: 450px;
+    height: 70px;
+    text-align: center;
+    background-color: #2b153a;
+    border: 4px solid rgb(79, 0, 98);
+    transition: 0.3s;
+}
+#aboutMeSlideshow:hover {
+    transform: scale(1.07);
+}
+#slideshowHeader {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+#oinwicon {
+    position: relative;
+    bottom: 12px;
+    left: 59px;
+    height: 40px;
+    width: 40px;
+}
+.content {
+    position: relative;
+    bottom: 320px;
+    margin-left: 17px;
+}
+.buttons {
+    height: 160px;
+    width: 100px;
+    background-color: #e3bbff;
+    transition: 0.3s;
+}
+.buttons:hover {
+    transform: scale(1.07);
+    background-color: #e3bbff;
+    animation: fadeText 0.8s ease;
+    color: #8f31d2 !important;
+}
+#vertLine {
+    height: 640px;
+    width: 7px;
+    color: #e3bbff;;
+    border: 7px solid #e3bbff;
+    position: absolute;
+    bottom: 320px;
+    left: 95px;
+}
+#horizLine {
+    height: 5px;
+    width: 1100px;
+    color: #e3bbff;;
+    border: 5px solid #e3bbff;
+    position: absolute;
+    bottom: 315px;
+    right: 3px;
+}
+#person {
+    width: 450px;
+    height: 270px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#person:hover {
+    transform: scale(1.07);
+}
+#personHeader {
+    position: relative;
+    bottom: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+#personButton {
+    font-weight: bold;
+    font-size: 20px;
+    color: #150a1d;
+    position: relative;
+    top: 50px;
+    left: 90px;
+}
+#school {
+    width: 450px;
+    height: 270px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#school:hover {
+    transform: scale(1.07);
+}
+#schoolHeader {
+    position: relative;
+    bottom: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+#schoolButton {
+    font-weight: bold;
+    font-size: 20px;
+    color: #150a1d;
+    position: relative;
+    top: 50px;
+    left: 65px;
+}
+#hobbies {
+    margin-top: 100px;
+    width: 450px;
+    height: 270px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#hobbies:hover {
+    transform: scale(1.07);
+}
+#hobbiesHeader {
+    position: relative;
+    bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+#hobbiesButton {
+    font-weight: bold;
+    font-size: 20px;
+    color: #150a1d;
+    position: relative;
+    top: 50px;
+    left: 48px;
+}
+#more {
+    margin-top: 100px;
+    width: 450px;
+    height: 270px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#more:hover {
+    transform: scale(1.07);
+}
+#moreHeader {
+    margin-top: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+#moreButton {
+    position: relative;
+    top: 50px;
+    left: 75px;
+}
+.moreBoxes {
+    width: 200px;
+    height: 50px;
+    line-height: 90px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+.moreBoxes:hover {
+    transform: scale(1.1);
+}
+.boxHeaders {
+    line-height: 40px;
+    font-size: 18px;
+    color:#e3bbff;
+}
+.moreoinwicons {
+    position: relative;
+    left: 85px;
+    bottom: 85px;
+    height: 20px;
+    width: 20px;
 }
 /*About me footer.*/
 .bottom {
