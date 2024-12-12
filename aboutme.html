@@ -114,81 +114,84 @@
             </div>
         </div>
         <!--Navigation bar and logo-->
-        <!--Navigation bar containing each individual link to each page within the project.-->
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <!--The div ID that holds all the links, styles in external CSS file.-->
-                <div class="p-4 normal" id="collapse">
-                    <!--All links; link locations are located in the external JS file in jQuery functions.-->
-                    <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
-                    <a href="#" class="navTitles text-white ml-5 mr-5" id="portfolionav">Portfolio</a>
-                    <a href="#" class="navTitles text-white ml-5 mr-5" id="skillsnav">Skills</a>
-                    <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
-                    <a href="#" class="navTitles text-white ml-5 mr-5" id="mylifenav">My Life</a>
-                    <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
+            <!--Navigation bar containing each individual link to each page within the project.-->
+            <div class="pos-f-t">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <!--The div ID that holds all the links, styles in external CSS file.-->
+                    <div class="p-4 normal" id="collapse">
+                        <!--All links; link locations are located in the external JS file in jQuery functions.-->
+                        <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
+                        <a href="#" class="navTitles text-white ml-5 mr-5" id="portfolionav">Portfolio</a>
+                        <a href="#" class="navTitles text-white ml-5 mr-5" id="skillsnav">Skills</a>
+                        <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
+                        <a href="#" class="navTitles text-white ml-5 mr-5" id="mylifenav">My Life</a>
+                        <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
+                    </div>
                 </div>
+                <!--Inital navigation bar when the page is loaded: logo, tutorial button, navigation icon.-->
+                <nav class="navbar navbar-dark bg-muted">
+                    <!--Logo icon that navigates user to the top of the home page when clicked.-->
+                    <h5 class="normal logo active" id="logo">JS</h5>
+                    <!--Tutorial button that loads modal when clicked.-->
+                    <button class="btn btn-primary mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
+                    <!--Navigation icon that loads navbar containing the links when clicked.-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
             </div>
-            <!--Inital navigation bar when the page is loaded: logo, tutorial button, navigation icon.-->
-            <nav class="navbar navbar-dark bg-muted">
-                <!--Logo icon that navigates user to the top of the home page when clicked.-->
-                <h5 class="normal logo active" id="logo">JS</h5>
-                <!--Tutorial button that loads modal when clicked.-->
-                <button class="btn btn-primary mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
-                <!--Navigation icon that loads navbar containing the links when clicked.-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
-        </div>
-        <!--About me title header, contains span lines for border animation (see external CSS file).-->
-        <h5 class="top normal" id="titleHeader2">About Me
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </h5>
-        <!--Picture of me inline with about me title header.-->
-        <img class="top rounded" id="titleImg" src="images/jacobwalking.jpg" alt="Me">
-        <!--Title description container, contains all 4 sub-titles.-->
-        <div class="container rounded standard" id="titleDesc">
-            <!--First about me sub-title header, contains span lines for border animation (see external CSS file).-->
-            <h4 class="titles normal" id="title4">Attending Grand Canyon University
+        <!--Contains title, sub-titles, and images slideshow.-->
+        <div class="container">
+            <!--About me title header, contains span lines for border animation (see external CSS file).-->
+            <h5 class="top normal" id="titleHeader2">About Me
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-            </h4>
-            <!--Second about me sub-title header, contains span lines for border animation (see external CSS file).-->
-            <h4 class="titles normal" id="title5">Originally from Orange, California
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </h4>
-            <!--Third about me sub-title header, contains span lines for border animation (see external CSS file).-->
-            <h4 class="titles normal" id="title6">Indulge in physical and mental hobbies
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </h4>
-            <!--Fourth about me sub-title header, contains span lines for border animation (see external CSS file).-->
-            <h4 class="titles normal" id="title7">Majoring in Software Development
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <br>with a Minor in Business Analytics
-            </h4>
-        </div>
-        <div class="container rounded clickable slideshow" id="aboutMeSlideshow">
-            <h5 class="clickable" id="slideshowHeader">Picture Slideshow</h5>
-            <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon" alt="Open In New Window Icon">
-        </div>
-        <!--Defined classes to properly create border animation for title header and 4 sub-titles.-->
-        <div class="animated" id="anim">
-            <div class="skew">
-                <div class="line">
+            </h5>
+            <!--Picture of me inline with about me title header.-->
+            <img class="top rounded" id="titleImg" src="images/jacobwalking.JPG" alt="Me">
+            <!--Title description container, contains all 4 sub-titles.-->
+            <div class="container rounded standard" id="titleDesc">
+                <!--First about me sub-title header, contains span lines for border animation (see external CSS file).-->
+                <h4 class="titles normal" id="title4">Attending Grand Canyon University
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </h4>
+                <!--Second about me sub-title header, contains span lines for border animation (see external CSS file).-->
+                <h4 class="titles normal" id="title5">Originally from Orange, California
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </h4>
+                <!--Third about me sub-title header, contains span lines for border animation (see external CSS file).-->
+                <h4 class="titles normal" id="title6">Indulge in physical and mental hobbies
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </h4>
+                <!--Fourth about me sub-title header, contains span lines for border animation (see external CSS file).-->
+                <h4 class="titles normal" id="title7">Majoring in Software Development
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <br>with a Minor in Business Analytics
+                </h4>
+            </div>
+            <div class="container rounded clickable slideshow" id="aboutMeSlideshow">
+                <h5 class="clickable" id="slideshowHeader">Picture Slideshow</h5>
+                <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon" alt="Open In New Window Icon">
+            </div>
+            <!--Defined classes to properly create border animation for title header and 4 sub-titles.-->
+            <div class="animated" id="anim">
+                <div class="skew">
+                    <div class="line">
+                    </div>
                 </div>
             </div>
         </div>
