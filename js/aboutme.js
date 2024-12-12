@@ -1,6 +1,12 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    /*Hides previous spinner and unblurs previous background when back arrow is pressed.*/
+    $(window).on("popstate", function(event){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+    });
     /*Shows modal when tutorial button is clicked*/
     $("#buttonTutorial").click(function(){
         $('#myModal').modal("show");
@@ -115,6 +121,14 @@ $(document).ready(function() {
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "mylife.html";
+        }, 500);
+    });
+    $("#contact").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "contact.html";
         }, 500);
     });
     /*Shows spinner and blurs background when the Discord button is clicked, my Discord profile after a timeout.*/

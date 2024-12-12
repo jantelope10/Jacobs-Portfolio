@@ -30,8 +30,20 @@
     background-color: transparent;
     cursor: pointer;
 }
+.buttons {
+    background-color: #e3bbff;
+    transition: 0.3s;
+}
+.buttons:hover {
+    transform: scale(1.07);
+    background-color: #e3bbff;
+    animation: fadeText 0.8s ease;
+    color: #8f31d2 !important;
+}
 /*Tutorial button in top right, expands when hovered.*/
 #buttonTutorial {
+    font-weight: bold;
+    color: #150a1d;
     transition: 0.3s;
 }
 /*Hover animation.*/
@@ -108,6 +120,9 @@ img#profile {
 /*Profile body with border.*/
 #profileBody {
     border:2px solid rgb(255, 224, 181);
+}
+#profileText {
+    font-size: 20px;
 }
 /*Profile footer with border.*/
 #profileFooter {
@@ -214,6 +229,8 @@ img#oinwicon {
 }
 /*Button in portfolio container navigating to portfolio page when clicked, expands when hovered.*/
 #portfolioButton {
+    font-weight: bold;
+    color: #150a1d;
     height: 50px;
     width: 130px;
     transition: 0.3s;
@@ -225,7 +242,7 @@ img#oinwicon {
 /*Skills container below the about me container, expands when hovered.*/
 #skills {
     position: relative;
-    bottom: 476px;
+    bottom: 420px;
     left: 366px;
     width: 308px;
     height: 228px;
@@ -306,7 +323,7 @@ img#oinwicon {
 /*Experience container located below the bio container containing programming languages, expands when hovered.*/
 #experience {
     position: relative;
-    right: 17px;
+    bottom: 160px;
     width: 309px;
     height: 200px;
     line-height: 90px;
@@ -336,6 +353,8 @@ img#chipotle {
 }
 /*Button in experience container, expands when hovered.*/
 #experienceButton {
+    font-weight: bold;
+    color: #150a1d;
     position: relative;
     bottom: 14px;
     left: 35px;
@@ -348,7 +367,7 @@ img#chipotle {
 /*Contact container below the skills container, expands when hovered.*/
 #contact {
     position: relative;
-    bottom: 200px;
+    top: 90px;
     width: 309px;
     height: 100px;
     line-height: 90px;
@@ -380,10 +399,10 @@ img#oinwicon2 {
 /*My life container below the portfolio container, expands when hovered.*/
 #myLife {
     position: relative;
-    bottom: 200px;
+    bottom: 112px;
     left: 13px;
     width: 351px;
-    height: 173px;
+    height: 200px;
     line-height: 90px;
     text-align: center;
     background-color: #150a1d;
@@ -404,6 +423,8 @@ img#oinwicon2 {
 }
 /*Button in my life container, expands when clicked.*/
 #myLifeButton {
+    font-weight: bold;
+    color: #150a1d;
     transition: 0.3s;
 }
 /*Hover animation.*/
@@ -413,6 +434,7 @@ img#oinwicon2 {
 /*About me footer.*/
 .bottom {
     position: relative;
+    top: -80px;
     bottom: 150px;
 }
 /*Header of footer, my name.*/

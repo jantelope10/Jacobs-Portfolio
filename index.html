@@ -73,7 +73,7 @@
                     <!--Logo icon that navigates user to the top of the home page when clicked.-->
                     <h5 class="normal logo active" id="logo">JS</h5>
                     <!--Tutorial button that loads modal when clicked.-->
-                    <button class="btn btn-primary mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
+                    <button class="btn btn-light buttons mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
                     <!--Navigation icon that loads navbar containing the links when clicked.-->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
                         <span class="navbar-toggler-icon"></span>
@@ -96,7 +96,7 @@
                         </div>
                         <!--Profile description.-->
                         <div class="card-body" id="profileBody">
-                            <h4 class="normal card-text">Hi</h4>
+                            <h4 class="normal card-text" id="profileText">Orange, CA<br>Grand Canyon University<br><br>4+ months of front-end experience</h4>
                         </div>
                         <!--Button that navigates user to about me page when clicked.-->
                         <div class="card-footer" id="profileFooter">
@@ -108,12 +108,11 @@
                         <img src="images/gcu.jpeg" class="rounded mt-1" id="gcu" alt="GCU Logo">
                         <h5 class="normal mb-4" id="bioHeader">Bootstrap, jQuery, JavaScript, HTML, CSS</h5>
                     </div>
-                    <!--Experience container with header, view button, and image.-->
-                    <div class="container rounded standard mt-5" id="experience">
-                        <h5 class="normal" id="experienceHeader">Work Experience</h5>
-                        <img src="images/chipotlelogo.png" class="rounded" id="chipotle" alt="Chipotle Logo">
-                        <!--View button that directs user to experience page when clicked.-->
-                        <button class="btn btn-primary mr-5 ml-auto" id="experienceButton" type="button">View</button>
+                    <!--Contact container that directs user to the contact page when clicked.-->
+                    <div class="container rounded standard d-inline-block clickable" id="contact">
+                        <h5 class="clickable" id="contactHeader">Contact Form</h5>
+                        <!--Open in a new window icon located in top right of about me container.-->
+                        <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon2" alt="Open in New Window Icon">
                     </div>
                 </div>
                 <!--Aligns content in this container to the middle and right third of the page.-->    
@@ -155,7 +154,7 @@
                         <div class="container rounded standard d-inline-block " id="portfolio">
                             <h5 class="normal" id="portfolioHeader">My Portfolio</h5>
                             <!--View button that directs user to the portfolio page when clicked.-->
-                            <button class="btn btn-primary" id="portfolioButton" type="button">View</button>
+                            <button class="btn btn-light buttons" id="portfolioButton" type="button">View</button>
                             <!--Portfolio carousel that showcases covers of all the projects I have completed.-->
                             <div id="carousel" class="carousel slide" data-ride="carousel">
                                 <!--Indicators: determines the number of pages and its activity.-->
@@ -208,17 +207,18 @@
                         <img src="images/openinnewwindowicon.png" class="rounded skilloinwicons" alt="Open in New Window Icon">
                     </div>
                 </div>
-                <!--Contact container that directs user to the contact page when clicked.-->
-                <div class="container rounded standard d-inline-block clickable" id="contact">
-                    <h5 class="clickable" id="contactHeader">Contact Form</h5>
-                    <!--Open in a new window icon located in top right of about me container.-->
-                    <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon2" alt="Open in New Window Icon">
+                <!--Experience container with header, view button, and image.-->
+                <div class="container rounded standard mt-5" id="experience">
+                    <h5 class="normal" id="experienceHeader">Work Experience</h5>
+                    <img src="images/chipotlelogo.png" class="rounded" id="chipotle" alt="Chipotle Logo">
+                    <!--View button that directs user to experience page when clicked.-->
+                    <button class="btn btn-light buttons mr-5 ml-auto" id="experienceButton" type="button">View</button>
                 </div>
                 <!--My Life container that consists of the header, view button, and carousel.-->
                 <div class="container rounded standard d-inline-block" id="myLife">
                     <h5 class="normal" id="myLifeHeader">My Life&ensp;</h5>
                     <!--View button that navigates user to the mylife page when clicked.-->
-                    <button class="btn btn-primary" id="myLifeButton" type="button">View</button>
+                    <button class="btn btn-light buttons" id="myLifeButton" type="button">View</button>
                     <!--Carousel that cycles through images of important events in my life.-->
                     <div id="carousel2" class="carousel slide" data-ride="carousel">
                         <!--Indicators: determines the number of pages and its activity.-->
