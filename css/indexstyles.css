@@ -31,14 +31,19 @@
     cursor: pointer;
 }
 .buttons {
-    background-color: #e3bbff;
+    background-color: #e3bbff !important;
     transition: 0.3s;
 }
 .buttons:hover {
+
     transform: scale(1.07);
     background-color: #e3bbff;
     animation: fadeText 0.8s ease;
+    background-color: #e3bbff;
     color: #8f31d2 !important;
+}
+.buttons:active {
+    background-color: #e3bbff;
 }
 /*Tutorial button in top right, expands when hovered.*/
 #buttonTutorial {
@@ -51,7 +56,7 @@
     transform: scale(1.07);
 }
 /*Blurs background when tutorial button is clicked.*/
-.modal-open .container-fluid, .modal-open  .container {
+.modal-open .all {
     -webkit-filter: blur(10px);
 }
 /*Modal content background and text.*/

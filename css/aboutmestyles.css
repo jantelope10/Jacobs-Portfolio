@@ -46,7 +46,7 @@
     transform: scale(1.07);
 }
 /*Blurs background when tutorial button is clicked.*/
-.modal-open .container-fluid, .modal-open  .container {
+.modal-open .all {
     -webkit-filter: blur(10px);
 }
 .images {
@@ -181,7 +181,7 @@ button.close:hover {
     margin-left: 17px;
 }
 .buttons {
-    background-color: #e3bbff;
+    background-color: #e3bbff !important;
     transition: 0.3s;
 }
 .buttons:hover {
@@ -351,7 +351,7 @@ button.close:hover {
 #contactContent {
     display: inline-block;
     position: relative;
-    bottom: 220px;
+    margin-top: -210px;
 }
 #contactContentHeader {
     display: inline-block;
@@ -392,7 +392,8 @@ button.close:hover {
 /*About me footer.*/
 .bottom {
     position: relative;
-    top: -170px;
+    top: -80px;
+    bottom: 150px;
 }
 /*Header of footer, my name.*/
 #footerHeader {

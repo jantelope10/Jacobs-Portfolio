@@ -56,7 +56,7 @@
 /*Defines the two vertical lines of this text, how far they will go.*/
 #titleHeader1 span:nth-child(2), #titleHeader1 span:nth-child(4) {
     width: 1px;
-    height: 9.3%;
+    height: 9.9%;
     background: white;
 }
 /*Defines the right line's location and transformation.*/
@@ -177,7 +177,7 @@
 }
 #title1 span:nth-child(2), #title1 span:nth-child(4) {
     width: 1px;
-    height: 3.4%;
+    height: 3.5%;
     background: white;
 }
 #title1 span:nth-child(2) {
@@ -235,7 +235,7 @@
 }
 #title2 span:nth-child(2), #title2 span:nth-child(4) {
     width: 1px;
-    height: 3.5%;
+    height: 3.7%;
     background: white;
 }
 #title2 span:nth-child(2) {
@@ -293,7 +293,7 @@
 }
 #title3 span:nth-child(2), #title3 span:nth-child(4) {
     width: 1px;
-    height: 3.7%;
+    height: 3.9%;
     background: white;
 }
 #title3 span:nth-child(2) {

@@ -3,9 +3,9 @@
 $(document).ready(function() {
     /*Hides previous spinner and unblurs previous background when back arrow is pressed.*/
     $(window).on("popstate", function(event){
-        $(".all").css("filter", "blur(10px)");
+        $(".all").css("filter", "");
         const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
+        elem.style.display = "none";
     });
     /*Shows modal when tutorial button is clicked*/
     $("#buttonTutorial").click(function(){
