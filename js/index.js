@@ -3,7 +3,7 @@
 $(document).ready(function() {
     /*Hides previous spinner and unblurs previous background when back arrow is pressed.*/
     $(window).on("popstate", function(event){
-        $(".all").css("filter", "");
+        $(".all").css("filter", "none");
         const elem = document.getElementById("spinner");
         elem.style.display = "none";
     });
