@@ -1,12 +1,7 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
-    /*Hides previous spinner and unblurs previous background when back arrow is pressed.*/
-    $(window).on("popstate", function(event){
-        $(".all").css("filter", "none");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "none";
-    });
+    
     /*Shows modal when tutorial button is clicked*/
     $("#buttonTutorial").click(function(){
         $('#myModal').modal("show");
