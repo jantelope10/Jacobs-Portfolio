@@ -1,0 +1,395 @@
+/*FadeIn animation to make page fade into view onload, same as index page.*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeText {
+    0% { color: #150a1d; }
+    50% { color: #381f4a; }
+    100% { color:#8f31d2; }
+}
+/*All container that calls the fadeIn animation.*/
+.all {
+    opacity: 0;
+    animation: fadeIn 2s ease;
+    opacity: 1;
+}
+/*Makes all containers that have this class have a pointer cursor to look clickable.*/
+.clickable {
+    cursor: pointer;
+}
+/*Makes all containers that have this class have a normal cursor to not look clickable/highlightable.*/
+.normal {
+    cursor: default;
+}
+/*Purple background gradient.*/
+.bg-gradient {
+    background: linear-gradient(to right, #150a1d, #351b48);
+}
+/*Fixed logo in the top left, stays in that spot when page is scrolled.*/
+#logo {
+    position: fixed;
+    color: white;
+    font-size: 50px;
+    font-family: "Brush Script MT"; 
+    background-color: transparent;
+    cursor: pointer;
+}
+/*Tutorial button in top right, expands when hovered.*/
+#buttonTutorial {
+    font-weight: bold;
+    color: #150a1d;
+    background-color: #e3bbff !important;
+    transition: 0.3s;
+}
+/*Hover transformation.*/
+#buttonTutorial:hover {
+    transform: scale(1.07);
+    background-color: #e3bbff;
+    animation: fadeText 0.8s ease;
+    color: #8f31d2 !important;
+}
+/*Blurs background when tutorial button is clicked.*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
+}
+.images {
+    margin: auto;
+}
+/*Modal content background and text.*/
+.modal-content {
+    background-color: #150a1d;
+    color: #e3bbff;
+}
+/*X button in top right of modal.*/
+button.close {
+    color:white;
+}
+/*Turns white when hovered.*/
+button.close:hover {
+    color:white;
+}
+/*Button inside modal to start tutorial, expands when hovered*/
+#myModalButton {
+    width: 200px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#myModalButton:hover {
+    transform: scale(1.07);
+}
+.moreModalButtons {
+    font-weight: bold;
+    width: 200px;
+    transition: 0.3s;
+}
+.moreModalButtons:hover {
+    transform: scale(1.07);
+}
+/*Style of navbar when navbar button is clicked.*/
+#collapse {
+    margin-left: 50px;
+    background-color:#150a1d;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 35px;
+}
+/*Underline animation for links in navbar.*/
+.navTitles {
+    text-decoration: underline #150a1d;
+    transition: text-decoration 1s;
+}
+/*Hover animation.*/
+.navTitles:hover {
+    text-decoration-color: white;
+}
+/*Navbar button that opens navbar when clicked, expands when hovered.*/
+#navicon {
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#navicon:hover {
+    transform: scale(1.1);
+}
+/*About me title header, has border animation when hovered.*/
+#titleHeader3 {
+    text-align: left;
+    font-size: 100px;
+    color:#e3bbff;
+}
+#folder {
+    position: relative;
+    left: 500px;
+    bottom: 140px;
+    height: 200px;
+    width: 200px;
+}
+.portfolioButtons {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: #2b153a !important;
+    border: 4px solid rgb(79, 0, 98) !important;
+    transition: 0.3s;
+    margin-bottom: 60px;
+    margin-top: -50px;
+}
+.portfolioButtons:hover {
+    transform: scale(1.07);
+    border: 4px solid rgb(161, 0, 201) !important;
+}
+#projectButton {
+    position: relative;
+    left: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+#achievementButton {
+    position: relative;
+    left: 75px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 25px;
+    color:#e3bbff;
+}
+#moreButton {
+    position: relative;
+    left: 70px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 57px;
+    font-size: 35px;
+    color:#e3bbff;
+}
+/*Projects section title.*/
+#projectsTitle {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 60px;
+    color:#e3bbff;
+}
+.allProjects {
+    position: relative;
+    right: 15px;
+    margin-top: 35px;
+    width: 1110px;
+    height: 200px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+    
+}
+#project1 {
+    margin-bottom: 60px;
+}
+#project1:hover {
+    transform: scale(1.03);
+}
+#project2 {
+    margin-bottom: 60px;
+}
+#project2:hover {
+    transform: scale(1.03);
+}
+#project3 {
+    margin-left: 0px;
+}
+#project3:hover {
+    transform: scale(1.03);
+}
+#line1 {
+    position: relative;
+    top: 70px;
+    height: 7px;
+    width: 1110px;
+    border: 4px solid #e3bbff;
+    position: absolute; 
+}
+.allAchievements {
+    justify-content: space-evenly;
+    width: 360px;
+    height: 200px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#achievementsTitle {
+    text-align: center;
+    font-size: 50px;
+    color:#e3bbff;
+}
+#achievement1 {
+    margin-top: 150px;
+    margin-bottom: 35px;
+    margin-left: 0px;
+}
+#achievement1:hover {
+    transform: scale(1.07);
+}
+#achievement2 {
+    margin-top: 150px;
+    margin-bottom: 35px;
+    margin-right: 0px;
+}
+#achievement2:hover {
+    transform: scale(1.07);
+}
+#achievement3 {
+    margin-left: 0px;
+    margin-top: 35px;
+}
+#achievement3:hover {
+    transform: scale(1.07);
+}
+#achievement4 {
+    margin-right: 0px;
+    margin-top: 35px;
+}
+#achievement4:hover {
+    transform: scale(1.07);
+}
+#line2 {
+    position: relative;
+    top: 70px;
+    height: 7px;
+    width: 1110px;
+    border: 4px solid #e3bbff;
+    position: absolute; 
+}
+.allMore {
+    justify-content: space-evenly;
+    width: 240px;
+    height: 100px;
+    text-align: center;
+    background-color: #150a1d;
+    border: 4px solid rgb(35, 0, 44);
+    transition: 0.3s;
+}
+#moreTitle {
+    margin-top: 40px;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 50px;
+    color:#e3bbff;
+}
+#more1 {
+    margin-top: 150px;
+}
+#more1:hover {
+    transform: scale(1.07);
+}
+#more2 {
+    margin-top: 20px;
+    text-align: center;
+}
+#more2:hover {
+    transform: scale(1.07);
+}
+#more3 {
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+#more3:hover {
+    transform: scale(1.07);
+}
+
+/*About me footer.*/
+.bottom {
+    position: relative;
+    top: -80px;
+    bottom: 150px;
+}
+/*Header of footer, my name.*/
+#footerHeader {
+    text-align: left;
+    font-size: 30px;
+    color:#e3bbff;
+}
+/*Description of footer, profession and email.*/
+#footerDesc {
+    display: inline;
+    text-align: left;
+    font-size: 20px;
+    color:#e3bbff;
+}
+#footer .content p {
+    margin-bottom: 0px;
+}
+/*GitHub button that contains link, expands when hovered.*/
+#github {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#github:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+/*LinkedIn button that contains link, expands when hovered.*/
+#linkedin {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#linkedin:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+/*Discord button that contains link, expands when hovered.*/
+#discord {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#discord:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+/*Footer line separating content from copyright claim.*/
+#line3 {
+    height: 3px;
+    width: 1110px;
+    border: 3px solid #e3bbff;
+    position: absolute;
+    top: 90px;
+}
+/*Copyright claim in footer.*/
+#copyright {
+    color: rgb(152, 152, 152);
+    font-size: 10px;
+    position: relative;
+    top: 35px;
+}
+/*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
+#spinner {
+    display: none;
+    position: fixed;
+    bottom: 35%;
+    left: 42%;
+    height: 250px;
+    width: 250px;
+    border-width: 15px;
+}

@@ -144,6 +144,65 @@
     transition: 0.2s;
     transition-delay: 0.6s;
 }
+/*Same functionality across all border animations in this CSS file.*/
+/*Border animation for main title 2, portfolio title header.*/
+#titleHeader3 span {
+    position: absolute;
+}
+#titleHeader3 span:nth-child(1), #titleHeader3 span:nth-child(3) {
+    width: 27%;
+    height: 1px;
+    background: white;
+}
+#titleHeader3 span:nth-child(1) {
+    top: 70px;
+    left: 200px;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+#titleHeader3:hover span:nth-child(1) {
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+#titleHeader3 span:nth-child(3) {
+    top: 170px;
+    left: 200px;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+#titleHeader3:hover span:nth-child(3) {
+    transform: scaleX(1);
+    transition: 0.2s;
+    transition-delay: 0.4s;
+}
+#titleHeader3 span:nth-child(2), #titleHeader3 span:nth-child(4) {
+    width: 1px;
+    height: 13.9%;
+    background: white;
+}
+#titleHeader3 span:nth-child(2) {
+    top: 70px;
+    right: 910.5px;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+#titleHeader3:hover span:nth-child(2) {
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+#titleHeader3 span:nth-child(4) {
+    top: 70px;
+    left: 200px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+#titleHeader3:hover span:nth-child(4) {
+    transform: scaleY(1);
+    transition: 0.2s;
+    transition-delay: 0.6s;
+}
 /*Border animation for title 1, first sub-title of home page.*/
 #title1 span {
     position: absolute;

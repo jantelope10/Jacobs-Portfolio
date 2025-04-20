@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metatags that form description and viewport of website.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Me V2">
+    <meta name="keywords" content="Home, About Me, Portfolio, Skills, Experience, My Life, Contact">
+    <meta name="author" content="Jacob Sanchez">
+    <meta name="revised" content="12/5/2024">
+    <meta name="position" content="1">
+    <!--Window tab title.-->
+    <title>About Me V2</title>
+    <!--Imports for Bootstrap, jQuery, Popper, Index External CSS and JS files.-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Index external CSS file import.-->
+        <link rel="stylesheet" href="css/portfoliostyles.css">
+        <!--Border animations CSS file import.-->
+        <link rel="stylesheet" href="css/traceanimate.css">
+        <!--Index external JS file import.-->
+        <script src="js/portfolio.js"></script>
+</head>
+<body>
+    <body class="bg-gradient">
+        <!--Tutorial button that opens up the tutorial modal.-->
+            <!--Modal after the tutorial button is pressed.-->  
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered">
+                    <!--Content inside the modal.-->
+                    <div class="modal-content">
+                        <!--Header and exit button inside the modal.-->
+                        <div class="modal-header">
+                            <h5 class="modal-title normal">Welcome To Jacob's Portfolio!</h5>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!--Description text inside the modal.-->
+                        <div class="modal-body normal">
+                            <p>Welcome to my portfolio, otherwise known as version 2 of my about me webpage! In this project, you will explore</p>   
+                        </div>
+                        <!--Button that begins the following tutorial.-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary mx-auto" id="myModalButton">Begin Tutorial!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--Container containing all content except the spinner so that everything but the spinner blurs when a new page is loaded (look at external JS file).-->
+        <div class="all">
+            <!--Navigation bar and logo-->
+                <!--Navigation bar containing each individual link to each page within the project.-->
+                <div class="pos-f-t">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <!--The div ID that holds all the links, styles in external CSS file.-->
+                        <div class="p-4 normal" id="collapse">
+                            <!--All links; link locations are located in the external JS file in jQuery functions.-->
+                            <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
+                            <a href="#" class="navTitles text-white ml-5 mr-5" id="aboutmenav">About Me</a>
+                            <a href="#" class="navTitles text-white ml-5 mr-5" id="skillsnav">Skills</a>
+                            <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
+                            <a href="#" class="navTitles text-white ml-5 mr-5" id="mylifenav">My Life</a>
+                            <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
+                        </div>
+                    </div>
+                    <!--Inital navigation bar when the page is loaded: logo, tutorial button, navigation icon.-->
+                    <nav class="navbar navbar-dark bg-muted">
+                        <!--Logo icon that navigates user to the top of the home page when clicked.-->
+                        <h5 class="normal logo active" id="logo">JS</h5>
+                        <!--Tutorial button that loads modal when clicked.-->
+                        <button class="btn btn-light mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
+                        <!--Navigation icon that loads navbar containing the links when clicked.-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+                </div>
+            <div class="container">
+                <h5 class="top normal" id="titleHeader3">Portfolio
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </h5>
+                <img src="images/transparentfolder.png" class="rounded" id="folder" alt="Folder Icon">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-dark mr-5 ml-auto portfolioButtons" id="projectButton" type="button">Projects</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-dark mr-5 ml-auto portfolioButtons" id="achievementButton" type="button">Achievements</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-dark mr-5 ml-auto portfolioButtons" id="moreButton" type="button">More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-md-12">
+                    <h5 class="normal" id="projectsTitle">PROJECTS</h5>
+                </div>
+                <div class="col-md-12">
+                    <div class="container rounded standard allProjects" id="project1">
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="container rounded standard allProjects" id="project2">
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="container rounded standard allProjects" id="project3">
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="line rounded" id="line1"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container rounded standard allAchievements" id="achievement1">
+    
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container rounded standard allAchievements" id="achievement2">
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="normal" id="achievementsTitle">ACHIEVEMENTS</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container rounded standard allAchievements" id="achievement3">
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container rounded standard allAchievements" id="achievement4">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="line rounded" id="line2"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container rounded standard allMore" id="more1">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="normal" id="moreTitle">MORE:</h5>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container rounded standard allMore" id="more2">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container rounded standard allMore" id="more3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
+            <div class="container bottom">
+                <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
+                <!--Container that sets everything in it inline (external CSS file).-->
+                <div class="descLine">
+                    <!--Subtitle and email.-->
+                    <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
+                    <!--Images that direct users to my socials when clicked.-->
+                    <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
+                    <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
+                    <img class="rounded" id="github" src="images/github2.png" alt="GitHub">
+                </div>
+                <!--Footer line.-->
+                <span class="line" id="line3"></span>
+                <!--Copyright claim.-->
+                <h5 class="normal" id="copyright">© Copyright 2025 All Rights Reserved</h5>
+            </div>
+        </div>
+        <!--Spinner located outside of all container so that it doesn't get blurred when a user clicks a button navigating to a new page.-->
+        <!--Displayed in the middle of the screen whenever a button is clicked.-->
+        <div class="spinner-border text-light" id="spinner"></div>
+</body>
+</html>

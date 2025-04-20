@@ -8,30 +8,6 @@ $(document).ready(function() {
     $("#myModalButton").click(function(){
         $('#myModal').modal("hide");
     });
-    $("#personButton").click(function(){
-        const elem = document.getElementById("personButton");
-        elem.style.backgroundColor = "#e3bbff";
-        $('#personModal').modal("show");
-    });
-    $("#personModalButton").click(function(){
-        $('#personModal').modal("hide");
-    });
-    $("#hobbiesButton").click(function(){
-        const elem = document.getElementById("hobbiesButton");
-        elem.style.backgroundColor = "#e3bbff";
-        $('#hobbiesModal').modal("show");
-    });
-    $("#hobbiesModalButton").click(function(){
-        $('#hobbiesModal').modal("hide");
-    });
-    $("#schoolButton").click(function(){
-        const elem = document.getElementById("schoolButton");
-        elem.style.backgroundColor = "#e3bbff";
-        $('#schoolModal').modal("show");
-    });
-    $("#schoolModalButton").click(function(){
-        $('#schoolModal').modal("hide");
-    });
     /*Shows spinner and blurs background when logo is clicked, loads home page after a timeout.*/
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
@@ -51,12 +27,12 @@ $(document).ready(function() {
         }, 500);
     });
     /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
-    $("#portfolionav").click(function(){
+    $("#aboutmenav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
         elem.style.display = "inline";
         setTimeout(() => {
-            window.location.href = "portfolio.html";
+            window.location.href = "aboutme.html";
         }, 500);
     });
     /*Shows spinner and blurs background when skills link in navbar is clicked, loads skills page after a timeout.*/
@@ -95,38 +71,16 @@ $(document).ready(function() {
             window.location.href = "contact.html";
         }, 500);
     });
-    $("#moreBox1").click(function(){
-        $(".all").css("filter", "blur(10px)");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
-        setTimeout(() => {
-            window.location.href = "portfolio.html";
-        }, 500);
+    $("#projectButton").click(function(){
+        window.scrollTo({ top: 440, behavior: 'smooth' });
     });
-    $("#moreBox2").click(function(){
-        $(".all").css("filter", "blur(10px)");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
-        setTimeout(() => {
-            window.location.href = "skills.html";
-        }, 500);
+    $("#achievementButton").click(function(){
+        window.scrollTo({ top: 1375, behavior: 'smooth' });
     });
-    $("#moreBox3").click(function(){
-        $(".all").css("filter", "blur(10px)");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
-        setTimeout(() => {
-            window.location.href = "mylife.html";
-        }, 500);
+    $("#moreButton").click(function(){
+        window.scrollTo({ top: 2050, behavior: 'smooth' });
     });
-    $("#contact").click(function(){
-        $(".all").css("filter", "blur(10px)");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
-        setTimeout(() => {
-            window.location.href = "contact.html";
-        }, 500);
-    });
+
     /*Shows spinner and blurs background when the Discord button is clicked, my Discord profile after a timeout.*/
     $("#discord").click(function(){
         $(".all").css("filter", "blur(10px)");
