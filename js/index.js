@@ -1,6 +1,11 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    window.addEventListener("pageshow", function(event){
+        if (event,persisted) {
+            this.window.location.reload();
+        }
+    });
     /*Shows modal when welcome button is clicked*/
     $("#buttonWelcome").click(function(){
         $('#myModal').modal("show");
