@@ -1,6 +1,11 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    window.addEventListener("pageshow", function(event){
+        if (event.persisted) {
+            this.window.location.reload();
+        }
+    });
     /*Shows spinner and blurs background when logo is clicked, loads home page after a timeout.*/
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
