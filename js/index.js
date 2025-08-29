@@ -19,10 +19,10 @@ $(document).ready(function() {
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "aboutme.html";
+            elem.style.display = "none";
         }, 500);
         setTimeout(() => {
             elem.style.display = "none";
-            $(".all").css("filter", "blur(0px)");
         }, 600);
     });
     /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
