@@ -29,41 +29,22 @@
 </head>
 <!--Entirety of content on page.-->
 <body class="bg-gradient">
-    <!--Tutorial button that opens up the tutorial modal.-->
-        <!--Modal after the tutorial button is pressed.-->  
-        <div id="myModal" class="modal fade">
-            <div class="modal-dialog modal-dialog-centered">
-                <!--Content inside the modal.-->
-                <div class="modal-content">
-                    <!--Header and exit button inside the modal.-->
-                    <div class="modal-header">
-                        <h5 class="modal-title normal">Welcome To Jacob's Portfolio!</h5>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!--Description text inside the modal.-->
-                    <div class="modal-body normal">
-                        <p>Welcome to my portfolio, otherwise known as version 2 of my about me webpage! In this project, you will explore</p>   
-                    </div>
-                    <!--Button that begins the following tutorial.-->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary mx-auto" id="myModalButton">Begin Tutorial!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="personModal" class="modal fade">
             <div class="modal-dialog modal-dialog-centered">
                 <!--Content inside the modal.-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="#" class="images" id="personModalImage" alt="Me">
-                        <img src="#" class="images" id="personModalImage2" alt="Me 2">
+                        <img class="images top rounded" src="images/me1.jpg" id="personModalImage" alt="Me 1">
+                        <img class="images top rounded" src="images/me2.jpg" id="personModalImage2" alt="Me 2">
                     </div>
-                   
                     <div class="modal-body">
-                        <p>Welcome to my portfolio, otherwise known as version 2 of my about me webpage! In this project, you will explore</p>   
+                        <p>I am Jacob Sanchez (19), and I am the developer of this website! As you may have seen above, I am currently a sophomore attending Santiago Canyon College, working as 
+                            an Operations Intern at Premium Parts Wholesale.<br>Over the past couple of years, I have grown my skills in software and interpersonal relations, achieving goals such 
+                            as the AWS Certified Cloud Practitioner and experience with customer service. I have a burning passion to build and improve applications and systems to improve overall 
+                            efficiency and satisfaction.<br>Through the making of this website, I have learned more about the tiresome path of trial-and-error that programming will always provide, 
+                            as well as improve my current knowledge of problem-solving and developing efficiently. I hope for this website to bring influence to others with similar desires!
+                        </p>   
                     </div>
-                  
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger mx-auto moreModalButtons" id="personModalButton">Return</button>
                     </div>
@@ -74,16 +55,17 @@
             <div class="modal-dialog modal-dialog-centered">
                 <!--Content inside the modal.-->
                 <div class="modal-content">
-                   
                     <div class="modal-header">
-                        <img src="#" class="images" id="hobbiesModalImage1" alt="Hobby">
-                        <img src="#" class="images" id="hobbiesModalImage2" alt="Hobby 2">
+                        <img class="images top rounded" src="images/music.jpg" id="hobbiesModalImage" alt="Hobby 1">
+                        <img class="images top rounded" src="images/baseball.webp" id="hobbiesModalImage2" alt="Hobby 2">
                     </div>
-                   
                     <div class="modal-body">
-                        <p>Welcome to my portfolio, otherwise known as version 2 of my about me webpage! In this project, you will explore</p>   
+                        <p>I enjoy hobbies such as programming, listening to music, working out, and watching baseball. Ever since my junior year of high school, I have grown to love programming, and 
+                            I've been learning more avenues of the concept since. I'm constantly listening to music each day, and I enjoy genres such as hip hop, r&b, and rock the most, including the 
+                            many sub-genres within them.<br>When I have time, I enjoy working out and running, which has taught me time management and consistency in a way. As a big sports person, 
+                            baseball is by far my favorite, as I watch games and highlights daily. Baseball is also the only sport I've played from elementary all the way through high school.
+                        </p>   
                     </div>
-                   
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger mx-auto moreModalButtons" id="hobbiesModalButton">Return</button>
                     </div>
@@ -94,16 +76,18 @@
             <div class="modal-dialog modal-dialog-centered">
                 <!--Content inside the modal.-->
                 <div class="modal-content">
-                   
                     <div class="modal-header">
-                        <img src="#" class="images" id="schoolModalImage" alt="School">
-                        <img src="#" class="images" id="schoolModalImage2" alt="School 2">
+                        <img class="images top rounded" src="images/santiagocanyoncollege.png" id="schoolModalImage" alt="School 1">
+                        <img class="images top rounded" src="images/scccampus.png" id="schoolModalImage2" alt="School 2">
                     </div>
-                    
                     <div class="modal-body">
-                        <p>Hi</p>   
+                        <p>I am currently entering my second year of college at Santiago Canyon College with a Major in Computer Science. I originally attended Grand Canyon University for a semester, 
+                            but ended up transferring back home to Orange County. I plan on obtaining an Associate in Science for Transfer in Computer Science and transferring once more to a university 
+                            to obtain a Bachelor of Science in Computer Science or a similar major.<br>As for my current highest form of education, I have a high school diploma from Villa Park High 
+                            School, in which I obtained in 2024. Outside of school, I have earned knowledge and experience in cloud computing through Amazon Web Services as well as Microsoft Office 
+                            data management through Microsoft Office courses and my current job.
+                        </p>   
                     </div>
-                    
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger mx-auto moreModalButtons" id="schoolModalButton">Return</button>
                     </div>
@@ -127,14 +111,12 @@
                         <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
                     </div>
                 </div>
-                <!--Inital navigation bar when the page is loaded: logo, tutorial button, navigation icon.-->
+                <!--Inital navigation bar when the page is loaded: logo and navigation icon.-->
                 <nav class="navbar navbar-dark bg-muted">
                     <!--Logo icon that navigates user to the top of the home page when clicked.-->
                     <h5 class="normal logo active" id="logo">JS</h5>
-                    <!--Tutorial button that loads modal when clicked.-->
-                    <button class="btn btn-light buttons mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
                     <!--Navigation icon that loads navbar containing the links when clicked.-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </nav>
@@ -148,43 +130,40 @@
                 <span></span>
                 <span></span>
             </h5>
-            <!--Picture of me inline with about me title header.-->
+            <!--Pictures of me inline with about me title header.-->
             <img class="top rounded" id="titleImg" src="images/jacobwalking.JPG" alt="Me">
+            <img class="top rounded" id="titleImg2" src="images/suit.jpg" alt="Me 2">
+            <img class="rounded" id="titleImg3" src="images/tassel.jpg" alt="Me 3">
             <!--Title description container, contains all 4 sub-titles.-->
             <div class="container rounded standard" id="titleDesc">
                 <!--First about me sub-title header, contains span lines for border animation (see external CSS file).-->
-                <h4 class="titles normal" id="title4">Attending Grand Canyon University
+                <h4 class="titles normal" id="title4">Attending Santiago Canyon College
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                 </h4>
                 <!--Second about me sub-title header, contains span lines for border animation (see external CSS file).-->
-                <h4 class="titles normal" id="title5">Originally from Orange, California
+                <h4 class="titles normal" id="title5">From Orange County, California
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                 </h4>
                 <!--Third about me sub-title header, contains span lines for border animation (see external CSS file).-->
-                <h4 class="titles normal" id="title6">Indulge in physical and mental hobbies
+                <h4 class="titles normal" id="title6">Majoring in Computer Science
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                 </h4>
                 <!--Fourth about me sub-title header, contains span lines for border animation (see external CSS file).-->
-                <h4 class="titles normal" id="title7">Majoring in Software Development
+                <h4 class="titles normal" id="title7">Currently working as an Operations Intern
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    <br>with a Minor in Business Analytics
                 </h4>
-            </div>
-            <div class="container rounded clickable slideshow" id="aboutMeSlideshow">
-                <h5 class="clickable" id="slideshowHeader">Picture Slideshow</h5>
-                <img src="images/openinnewwindowicon.png" class="rounded" id="oinwicon" alt="Open In New Window Icon">
             </div>
             <!--Defined classes to properly create border animation for title header and 4 sub-titles.-->
             <div class="animated" id="anim">
@@ -199,10 +178,12 @@
                 <div class="col-md-5.5 content">
                     <div class="container rounded standard" id="person">
                         <h5 class="normal" id="personHeader">Me</h5>
+                        <img src="images/wave.png" class="rounded" id="personImage" alt="Person Waving">
                         <button class="btn btn-light buttons" id="personButton" type="button">View</button>
                     </div>
                     <div class="container rounded standard" id="hobbies">
                         <h5 class="normal" id="hobbiesHeader">Hobbies</h5>
+                        <img src="images/baseball.png" class="rounded" id="hobbiesImage" alt="Baseball Outline">
                         <button class="btn btn-light buttons" id="hobbiesButton" type="button">View</button>
                     </div>
                 </div>
@@ -212,6 +193,7 @@
                 <div class="col-md-5.5 content">
                     <div class="container rounded standard" id="school">
                         <h5 class="normal" id="schoolHeader">School</h5>
+                        <img src="images/school.png" class="rounded" id="schoolImage" alt="School Building">
                         <button class="btn btn-light buttons" id="schoolButton" type="button">View</button>
                     </div>
                     <span class="line rounded" id="horizLine"></span>
@@ -231,19 +213,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7" id="contactContent">
-                    <h5 class="normal" id="contactContentHeader">Contact Me Here:</h5>
-                    <div class="container rounded standard clickable" id="contact">
-                        <h5 class="clickable" id="contactHeader">Contact Form</h5>
-                        <img src="images/openinnewwindowicon.png" class="rounded" id="contactoinwicon" alt="Open in New Window Icon">
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container bottom">
             <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
             <div class="descLine">
                 <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
+                <button class="btn btn-dark" id="resume" type="button">Resume</button>
+                <button class="btn btn-dark" id="contact" type="button">Contact</button>
                 <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
                 <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
                 <img class="rounded" id="github" src="images/github2.png" alt="GitHub">

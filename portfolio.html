@@ -29,28 +29,6 @@
 </head>
 <body>
     <body class="bg-gradient">
-        <!--Tutorial button that opens up the tutorial modal.-->
-            <!--Modal after the tutorial button is pressed.-->  
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog modal-dialog-centered">
-                    <!--Content inside the modal.-->
-                    <div class="modal-content">
-                        <!--Header and exit button inside the modal.-->
-                        <div class="modal-header">
-                            <h5 class="modal-title normal">Welcome To Jacob's Portfolio!</h5>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <!--Description text inside the modal.-->
-                        <div class="modal-body normal">
-                            <p>Welcome to my portfolio, otherwise known as version 2 of my about me webpage! In this project, you will explore</p>   
-                        </div>
-                        <!--Button that begins the following tutorial.-->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary mx-auto" id="myModalButton">Begin Tutorial!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         <!--Container containing all content except the spinner so that everything but the spinner blurs when a new page is loaded (look at external JS file).-->
         <div class="all">
             <!--Navigation bar and logo-->
@@ -68,14 +46,12 @@
                             <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
                         </div>
                     </div>
-                    <!--Inital navigation bar when the page is loaded: logo, tutorial button, navigation icon.-->
+                    <!--Inital navigation bar when the page is loaded: logo and navigation icon.-->
                     <nav class="navbar navbar-dark bg-muted">
                         <!--Logo icon that navigates user to the top of the home page when clicked.-->
                         <h5 class="normal logo active" id="logo">JS</h5>
-                        <!--Tutorial button that loads modal when clicked.-->
-                        <button class="btn btn-light mr-5 ml-auto" id="buttonTutorial" type="button">Tutorial</button>
                         <!--Navigation icon that loads navbar containing the links when clicked.-->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="navicon">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </nav>
@@ -88,6 +64,7 @@
                     <span></span>
                 </h5>
                 <img src="images/transparentfolder.png" class="rounded" id="folder" alt="Folder Icon">
+                <img src="images/crown.png" class="rounded" id="crown" alt="Crown Icon">
             </div>
             <div class="container">
                 <div class="row">
@@ -108,17 +85,33 @@
                 </div>
                 <div class="col-md-12">
                     <div class="container rounded standard allProjects" id="project1">
-
+                        <h5 class="normal projectHeaders" id="projectHeader1">Jacob's Portfolio</h5>
+                        <h5 class="normal" id="project1Subheader">(this website)</h5>
+                        <h5 class="normal" id="project1Timeline">Mar 2025 - Present</h5>
+                        <p class="normal projectTexts" id="project1Text">• Designed and built an HTML/CSS/JavaScript<br>program in VS Code that displays my portfolio.<br><br>
+                            • Utilizes unique customizations and interactivity,<br>including jQuery and Bootstrap; solo project.
+                        </p>
+                        <img src="images/project1.png" class="rounded" id="project1Image" alt="Project 1 Image">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="container rounded standard allProjects" id="project2">
-
+                        <h5 class="normal projectHeaders" id="projectHeader2">Real-Estate Club Website</h5>
+                        <h5 class="normal" id="project2Timeline">Sep 2024 - Dec 2024</h5>
+                        <p class="normal projectTexts" id="project2Text">• Developed an interactive website with other members<br>of the GCU Software Development Club for another club.<br><br>
+                            • Created in TypeScript within VS Code; utilized GitHub<br>and Docker, with Firebase for database management.
+                        </p>
+                        <img src="images/project2.png" class="rounded" id="project2Image" alt="Project 2 Image">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="container rounded standard allProjects" id="project3">
-
+                        <h5 class="normal projectHeaders" id="projectHeader3">Java Casino Game</h5>
+                        <h5 class="normal" id="project3Timeline">Mar 2022 - June 2022</h5>
+                        <p class="normal projectTexts" id="project3Text">• Designed and build a Java program that simulated a casino consisting of<br>blackjack, slots and roulette.<br>
+                            • Consisted of a full-working application, conditional statements, a points<br>system, and graphics.<br>
+                            • Collaboration to complete the project efficiently, with me appointed as<br>project manager; group project.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -131,12 +124,21 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement1">
-    
+                            <h5 class="normal achievementHeaders" id="achievementHeader1">AWS Certified Cloud<br>Practitioner Certification</h5>
+                            <img src="images/aws.png" class="rounded" id="awsLogo" alt="AWS Logo">
+                            <p class="normal achievementTexts" id="achievement1Text">• Successfully completed the AWS Cloud Foundations course and Practitioner Exam.<br>
+                                • Formed basic knowledge and navigation of cloud computing and each AWS service through labs and coursework.
+                            </p>
+                            <button class="btn btn-dark" id="certificationButton" type="button">AWS Certification</button>
+                            <img src="images/openinnewwindowicon.png" class="rounded" id="certificationoinwicon" alt="Open in New Window Icon">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement2">
-    
+                            <h5 class="normal achievementHeaders" id="achievementHeader2">4.47 Weighted GPA in High School</h5>
+                            <p class="normal achievementTexts" id="achievement2Text">• Achieved a 4.47 Weighted GPA (4.00 Nonweighted), showing academic excellence.<br>
+                                • Completed 5 AP classes and received straight As as a High Honor Roll student.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -148,12 +150,19 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement3">
-
+                            <h5 class="normal achievementHeaders" id="achievementHeader3">AP Scholar with<br>Honor Award</h5>
+                            <p class="normal achievementTexts" id="achievement3Text">• Granted to high-school students who received an average score of at least 3.25 on each AP Exam taken.<br>
+                                • Designated for students who also had scores of 3 or higher on four or more AP Exams.
+                            </p>
+                            <img src="images/collegeboard.png" class="rounded" id="collegeBoardLogo" alt="College Board Logo">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement4">
-
+                            <h5 class="normal achievementHeaders" id="achievementHeader4">Certificate of Recognition - SBAC Testing</h5>
+                            <p class="normal achievementTexts" id="achievement4Text">• Granted to high-school students who showed scholar excellence in the areas of English language arts and mathematics from 11th grade SBAC testing.<br>
+                                • Designated for students within the top 10 percent of all scores in the grade.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -166,8 +175,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="container rounded standard allMore" id="more1">
-
+                        <div class="container rounded standard clickable allMore" id="more1">
+                            <h5 class="clickable moreHeaders" id="moreHeader1">About Me</h5>
+                            <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon1" alt="Open in New Window Icon">
                         </div>
                     </div>
                 </div>
@@ -176,15 +186,17 @@
                         <h5 class="normal" id="moreTitle">MORE:</h5>
                     </div>
                     <div class="col-md-6">
-                        <div class="container rounded standard allMore" id="more2">
-
+                        <div class="container rounded standard clickable allMore" id="more2">
+                            <h5 class="clickable moreHeaders" id="moreHeader2">Skills</h5>
+                            <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon2" alt="Open in New Window Icon">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="container rounded standard allMore" id="more3">
-
+                        <div class="container rounded standard clickable allMore" id="more3">
+                            <h5 class="clickable moreHeaders" id="moreHeader3">Experience</h5>
+                            <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon3" alt="Open in New Window Icon">
                         </div>
                     </div>
                 </div>
@@ -197,6 +209,8 @@
                     <!--Subtitle and email.-->
                     <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
                     <!--Images that direct users to my socials when clicked.-->
+                    <button class="btn btn-dark" id="resume" type="button">Resume</button>
+                    <button class="btn btn-dark" id="contact" type="button">Contact</button>
                     <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
                     <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
                     <img class="rounded" id="github" src="images/github2.png" alt="GitHub">
@@ -210,5 +224,6 @@
         <!--Spinner located outside of all container so that it doesn't get blurred when a user clicks a button navigating to a new page.-->
         <!--Displayed in the middle of the screen whenever a button is clicked.-->
         <div class="spinner-border text-light" id="spinner"></div>
+    </body>
 </body>
 </html>

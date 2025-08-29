@@ -4,9 +4,9 @@
     to { opacity: 1; }
 }
 @keyframes fadeText {
-    0% { color: #150a1d; }
-    50% { color: #381f4a; }
-    100% { color:#8f31d2; }
+    0% { color: #0e0a1d; }
+    50% { color: #281f4a; }
+    100% { color: #3931d2; }
 }
 /*All container that calls the fadeIn animation.*/
 .all {
@@ -24,7 +24,7 @@
 }
 /*Purple background gradient.*/
 .bg-gradient {
-    background: linear-gradient(to right, #150a1d, #351b48);
+    background: linear-gradient(to right, #0e0b1f, #1f1b48);
 }
 /*Fixed logo in the top left, stays in that spot when page is scrolled.*/
 #logo {
@@ -35,21 +35,6 @@
     background-color: transparent;
     cursor: pointer;
 }
-/*Tutorial button in top right, expands when hovered.*/
-#buttonTutorial {
-    font-weight: bold;
-    color: #150a1d;
-    background-color: #e3bbff !important;
-    transition: 0.3s;
-}
-/*Hover transformation.*/
-#buttonTutorial:hover {
-    transform: scale(1.07);
-    background-color: #e3bbff;
-    animation: fadeText 0.8s ease;
-    color: #8f31d2 !important;
-}
-/*Blurs background when tutorial button is clicked.*/
 .modal-open .all {
     -webkit-filter: blur(10px);
 }
@@ -58,8 +43,8 @@
 }
 /*Modal content background and text.*/
 .modal-content {
-    background-color: #150a1d;
-    color: #e3bbff;
+    background-color: #0e0a1d;
+    color: #c1b6ff;
 }
 /*X button in top right of modal.*/
 button.close {
@@ -68,15 +53,6 @@ button.close {
 /*Turns white when hovered.*/
 button.close:hover {
     color:white;
-}
-/*Button inside modal to start tutorial, expands when hovered*/
-#myModalButton {
-    width: 200px;
-    transition: 0.3s;
-}
-/*Hover animation.*/
-#myModalButton:hover {
-    transform: scale(1.07);
 }
 .moreModalButtons {
     font-weight: bold;
@@ -89,14 +65,14 @@ button.close:hover {
 /*Style of navbar when navbar button is clicked.*/
 #collapse {
     margin-left: 50px;
-    background-color:#150a1d;
+    background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
     font-size: 35px;
 }
 /*Underline animation for links in navbar.*/
 .navTitles {
-    text-decoration: underline #150a1d;
+    text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
 }
 /*Hover animation.*/
@@ -113,14 +89,23 @@ button.close:hover {
 }
 /*About me title header, has border animation when hovered.*/
 #titleHeader3 {
-    text-align: left;
+    width: 27%;
+    margin-left: 32%;
+    text-align: center;
     font-size: 100px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 #folder {
     position: relative;
-    left: 500px;
-    bottom: 140px;
+    bottom: 160px;
+    left: 80px;
+    height: 200px;
+    width: 200px;
+}
+#crown {
+    position: relative;
+    left: 625px;
+    bottom: 165px;
     height: 200px;
     width: 200px;
 }
@@ -128,15 +113,15 @@ button.close:hover {
     width: 200px;
     height: 100px;
     text-align: center;
-    background-color: #2b153a !important;
-    border: 4px solid rgb(79, 0, 98) !important;
+    background-color: #1d1b4b !important;
+    border: 4px solid rgb(18, 0, 98) !important;
     transition: 0.3s;
     margin-bottom: 60px;
-    margin-top: -50px;
+    margin-top: -150px;
 }
 .portfolioButtons:hover {
     transform: scale(1.07);
-    border: 4px solid rgb(161, 0, 201) !important;
+    border: 4px solid rgb(13, 0, 201) !important;
 }
 #projectButton {
     position: relative;
@@ -145,7 +130,7 @@ button.close:hover {
     vertical-align: middle;
     line-height: 57px;
     font-size: 35px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 #achievementButton {
     position: relative;
@@ -154,7 +139,7 @@ button.close:hover {
     vertical-align: middle;
     line-height: 57px;
     font-size: 25px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 #moreButton {
     position: relative;
@@ -163,14 +148,14 @@ button.close:hover {
     vertical-align: middle;
     line-height: 57px;
     font-size: 35px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 /*Projects section title.*/
 #projectsTitle {
     vertical-align: middle;
     text-align: center;
     font-size: 60px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 .allProjects {
     position: relative;
@@ -179,10 +164,18 @@ button.close:hover {
     width: 1110px;
     height: 200px;
     text-align: center;
-    background-color: #150a1d;
-    border: 4px solid rgb(35, 0, 44);
+    background-color: #0e0a1d;
+    border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
-    
+}
+.projectHeaders {
+    font-size: 35px;
+    line-height: 140px;
+    color: #c1b6ff;
+}
+.projectTexts {
+    color: #c1b6ff;
+    font-size: 18px;
 }
 #project1 {
     margin-bottom: 60px;
@@ -190,11 +183,66 @@ button.close:hover {
 #project1:hover {
     transform: scale(1.03);
 }
+#projectHeader1 {
+    line-height: 110px !important;
+    text-align: right;
+    margin-right: 30px;
+    font-size: 40px;
+}
+#project1Subheader {
+    position: relative;
+    color: #e4dfff;
+    text-align: right;
+    margin-right: 110px;
+    bottom: 40px;
+}
+#project1Timeline {
+    text-align: right;
+    color: #e4dfff;
+    font-size: 17px;
+    margin-right: 97px;
+    margin-top: -20px;
+}
+#project1Text {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: -135px;
+}
+#project1Image {
+    width: 25%;
+    border: 3px solid rgb(255, 224, 181);
+    margin-top: -190px;
+    margin-right: -80px; 
+}
 #project2 {
     margin-bottom: 60px;
 }
 #project2:hover {
     transform: scale(1.03);
+}
+#projectHeader2 {
+    font-size: 32px;
+    text-align: left;
+    margin-left: 25px;
+}
+#project2Timeline {
+    text-align: left;
+    color: #e4dfff;
+    font-size: 17px;
+    margin-left: 130px;
+    margin-top: -30px;
+}
+#project2Text {
+    font-size: 17px;
+    text-align: right;
+    margin-right: 25px;
+    margin-top: -120px;
+}
+#project2Image {
+    width: 16%;
+    border: 3px solid rgb(255, 224, 181);
+    margin-top: -180px;
+    margin-left: -70px;
 }
 #project3 {
     margin-left: 0px;
@@ -202,27 +250,53 @@ button.close:hover {
 #project3:hover {
     transform: scale(1.03);
 }
+#projectHeader3 {
+    text-align: right;
+    font-size: 38px;
+    margin-right: 30px;
+}
+#project3Timeline {
+    text-align: right;
+    color: #e4dfff;
+    font-size: 17px;
+    margin-right: 100px;
+    margin-top: -30px;
+}
+#project3Text {
+    margin-top: -135px;
+    text-align: left;
+    margin-left: 30px;
+}
 #line1 {
     position: relative;
     top: 70px;
     height: 7px;
     width: 1110px;
-    border: 4px solid #e3bbff;
+    border: 4px solid #c1b6ff;
     position: absolute; 
 }
 .allAchievements {
     justify-content: space-evenly;
-    width: 360px;
-    height: 200px;
+    width: 430px;
+    height: 210px;
     text-align: center;
-    background-color: #150a1d;
-    border: 4px solid rgb(35, 0, 44);
+    background-color: #0e0a1d;
+    border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
+}
+.achievementHeaders {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #c1b6ff;
+}
+.achievementTexts {
+    color: #c1b6ff;
+    font-size: 16px;
 }
 #achievementsTitle {
     text-align: center;
     font-size: 50px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 #achievement1 {
     margin-top: 150px;
@@ -232,6 +306,43 @@ button.close:hover {
 #achievement1:hover {
     transform: scale(1.07);
 }
+#achievementHeader1 {
+    text-align: left;
+    margin-left: 5px;
+}
+#awsLogo {
+    width: 30%;
+    float: right;
+    margin-right: -15px;
+    margin-top: -80px;
+}
+#achievement1Text {
+    text-align: left;
+    margin-left: 5px;
+}
+#certificationButton {
+    text-align: center;
+    background-color: #1d1b4b !important;
+    border: 4px solid rgb(18, 0, 98) !important;
+    transition: 0.3s;
+    margin-left: 465px;
+    margin-top: -300px;
+    height: 70px;
+    width: 110px;
+    font-size: 15px;
+    color: #c1b6ff;
+}
+#certificationButton:hover {
+    transform: scale(1.07);
+    border: 4px solid rgb(13, 0, 201) !important;
+}
+#certificationoinwicon {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    left: 365px;
+    bottom: 193px;
+}
 #achievement2 {
     margin-top: 150px;
     margin-bottom: 35px;
@@ -240,12 +351,36 @@ button.close:hover {
 #achievement2:hover {
     transform: scale(1.07);
 }
+#achievementHeader2 {
+    text-align: right;
+    margin-right: 5px;
+}
+#achievement2Text {
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 15px;
+}
 #achievement3 {
     margin-left: 0px;
     margin-top: 35px;
 }
 #achievement3:hover {
     transform: scale(1.07);
+}
+#achievementHeader3 {
+    text-align: left;
+    margin-left: 5px;
+}
+#achievement3Text {
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+#collegeBoardLogo {
+    width: 40%;
+    float: right;
+    margin-right: 15px;
+    margin-top: -200px;
 }
 #achievement4 {
     margin-right: 0px;
@@ -254,12 +389,20 @@ button.close:hover {
 #achievement4:hover {
     transform: scale(1.07);
 }
+#achievementHeader4 {
+    text-align: right;
+    margin-right: 5px;
+}
+#achievement4Text {
+    text-align: right;
+    margin-right: 5px;
+}
 #line2 {
     position: relative;
     top: 70px;
     height: 7px;
     width: 1110px;
-    border: 4px solid #e3bbff;
+    border: 4px solid #c1b6ff;
     position: absolute; 
 }
 .allMore {
@@ -267,8 +410,8 @@ button.close:hover {
     width: 240px;
     height: 100px;
     text-align: center;
-    background-color: #150a1d;
-    border: 4px solid rgb(35, 0, 44);
+    background-color: #0e0a1d;
+    border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
 #moreTitle {
@@ -276,7 +419,42 @@ button.close:hover {
     margin-left: 40px;
     text-align: center;
     font-size: 50px;
-    color:#e3bbff;
+    color: #c1b6ff;
+}
+.moreHeaders {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 80px;
+    font-size: 25px;
+    color: #c1b6ff;
+}
+#moreHeader1 {
+    margin-left: 20px;
+}
+#moreHeader2 {
+    margin-left: 25px;
+}
+#moreHeader3 {
+    margin-left: 20px;
+}
+.oinwicons {
+    height: 40px;
+    width: 40px;
+}
+#oinwicon1 {
+    position: relative;
+    left: 26px;
+    bottom: 24px;
+}
+#oinwicon2 {
+    position: relative;
+    left: 52px;
+    bottom: 24px;
+}
+#oinwicon3 {
+    position: relative;
+    left: 22px;
+    bottom: 24px;
 }
 #more1 {
     margin-top: 150px;
@@ -309,17 +487,44 @@ button.close:hover {
 #footerHeader {
     text-align: left;
     font-size: 30px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
 /*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
     text-align: left;
     font-size: 20px;
-    color:#e3bbff;
+    color: #c1b6ff;
 }
-#footer .content p {
-    margin-bottom: 0px;
+#resume {
+    width: 85px;
+    height: 50px;
+    position: relative;
+    left: 272px;
+    bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#resume:hover {
+    transform: scale(1.05);
+}
+#contact {
+    width: 85px;
+    height: 50px;
+    position: relative;
+    left: 273px;
+    bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#contact:hover {
+    transform: scale(1.05);
 }
 /*GitHub button that contains link, expands when hovered.*/
 #github {
@@ -372,7 +577,7 @@ button.close:hover {
 #line3 {
     height: 3px;
     width: 1110px;
-    border: 3px solid #e3bbff;
+    border: 3px solid #c1b6ff;
     position: absolute;
     top: 90px;
 }
@@ -381,7 +586,7 @@ button.close:hover {
     color: rgb(152, 152, 152);
     font-size: 10px;
     position: relative;
-    top: 35px;
+    top: 15px;
 }
 /*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
 #spinner {

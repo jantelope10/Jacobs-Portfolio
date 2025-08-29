@@ -1,16 +1,9 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
-    /*Shows modal when tutorial button is clicked*/
-    $("#buttonTutorial").click(function(){
-        $('#myModal').modal("show");
-    });
-    $("#myModalButton").click(function(){
-        $('#myModal').modal("hide");
-    });
     $("#personButton").click(function(){
         const elem = document.getElementById("personButton");
-        elem.style.backgroundColor = "#e3bbff";
+        elem.style.backgroundColor = "#c1b6ff";
         $('#personModal').modal("show");
     });
     $("#personModalButton").click(function(){
@@ -18,7 +11,7 @@ $(document).ready(function() {
     });
     $("#hobbiesButton").click(function(){
         const elem = document.getElementById("hobbiesButton");
-        elem.style.backgroundColor = "#e3bbff";
+        elem.style.backgroundColor = "#c1b6ff";
         $('#hobbiesModal').modal("show");
     });
     $("#hobbiesModalButton").click(function(){
@@ -26,7 +19,7 @@ $(document).ready(function() {
     });
     $("#schoolButton").click(function(){
         const elem = document.getElementById("schoolButton");
-        elem.style.backgroundColor = "#e3bbff";
+        elem.style.backgroundColor = "#c1b6ff";
         $('#schoolModal').modal("show");
     });
     $("#schoolModalButton").click(function(){
@@ -117,6 +110,14 @@ $(document).ready(function() {
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "mylife.html";
+        }, 500);
+    });
+    $("#resume").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "resume.html";
         }, 500);
     });
     $("#contact").click(function(){

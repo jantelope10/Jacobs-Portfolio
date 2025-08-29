@@ -1,8 +1,8 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
-    /*Shows modal when tutorial button is clicked*/
-    $("#buttonTutorial").click(function(){
+    /*Shows modal when welcome button is clicked*/
+    $("#buttonWelcome").click(function(){
         $('#myModal').modal("show");
     });
     $("#myModalButton").click(function(){
@@ -94,31 +94,13 @@ $(document).ready(function() {
         }, 500); 
     });
     /*Shows spinner and blurs background when the first skill box button is clicked, loads the languages section of skills page after a timeout.*/
-    $("#skillBox1").click(function(){
+    $("#skillButton").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "skills.html";
         }, 500); 
-    });
-    /*Shows spinner and blurs background when the second skill box button is clicked, loads the technical section of skills page after a timeout.*/
-    $("#skillBox2").click(function(){
-        $(".all").css("filter", "blur(10px)");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
-        setTimeout(() => {
-            window.location.href = "skills.html";
-        }, 500); 
-    });
-    /*Shows spinner and blurs background when the third skill box button is clicked, loads the general section of skills page after a timeout.*/
-    $("#skillBox3").click(function(){
-        $(".all").css("filter", "blur(10px)");
-        const elem = document.getElementById("spinner");
-        elem.style.display = "inline";
-        setTimeout(() => {
-            window.location.href = "skills.html";
-        }, 500);
     });
     /*Shows spinner and blurs background when the experience button is clicked, loads experience page after a timeout.*/
     $("#experienceButton").click(function(){
@@ -130,7 +112,7 @@ $(document).ready(function() {
         }, 500);
     });
     /*Shows spinner and blurs background when the contact button is clicked, loads contact page after a timeout.*/
-    $("#contact").click(function(){
+    $("#contactBox").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
         elem.style.display = "inline";
@@ -145,6 +127,22 @@ $(document).ready(function() {
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "mylife.html";
+        }, 500);
+    });
+    $("#resume").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "resume.html";
+        }, 500);
+    });
+    $("#contact").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "contact.html";
         }, 500);
     });
     /*Shows spinner and blurs background when the Discord button is clicked, my Discord profile after a timeout.*/

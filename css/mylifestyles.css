@@ -1,0 +1,342 @@
+/*FadeIn animation to make page fade into view onload, same as index page.*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeText {
+    0% { color: #0e0a1d; }
+    50% { color: #281f4a; }
+    100% { color: #3931d2; }
+}
+/*All container that calls the fadeIn animation.*/
+.all {
+    opacity: 0;
+    animation: fadeIn 2s ease;
+    opacity: 1;
+}
+/*Makes all containers that have this class have a pointer cursor to look clickable.*/
+.clickable {
+    cursor: pointer;
+}
+/*Makes all containers that have this class have a normal cursor to not look clickable/highlightable.*/
+.normal {
+    cursor: default;
+}
+/*Purple background gradient.*/
+.bg-gradient {
+    background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Fixed logo in the top left, stays in that spot when page is scrolled.*/
+#logo {
+    position: fixed;
+    color: white;
+    font-size: 50px;
+    font-family: "Brush Script MT"; 
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal-open .all {
+    -webkit-filter: blur(10px);
+}
+.images {
+    margin: auto;
+}
+/*Modal content background and text.*/
+.modal-content {
+    background-color: #0e0a1d;
+    color: #c1b6ff;
+}
+/*X button in top right of modal.*/
+button.close {
+    color:white;
+}
+/*Turns white when hovered.*/
+button.close:hover {
+    color:white;
+}
+.modalButtons {
+    font-weight: bold;
+    width: 200px;
+    transition: 0.3s;
+}
+.modalButtons:hover {
+    transform: scale(1.07);
+}
+/*Style of navbar when navbar button is clicked.*/
+#collapse {
+    margin-left: 50px;
+    background-color: #0e0a1d;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 33px;
+}
+/*Underline animation for links in navbar.*/
+.navTitles {
+    text-decoration: underline #0e0a1d;
+    transition: text-decoration 1s;
+}
+/*Hover animation.*/
+.navTitles:hover {
+    text-decoration-color: white;
+}
+/*Navbar button that opens navbar when clicked, expands when hovered.*/
+#navicon {
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#navicon:hover {
+    transform: scale(1.1);
+}
+/*About me title header, has border animation when hovered.*/
+#titleHeader5 {
+    text-align: center;
+    font-size: 100px;
+    color: #c1b6ff;
+    margin-bottom: 80px;
+}
+.carouselBoxes {
+    height: 400px;
+    width: 650px;
+    text-align: center;
+    background-color: #0e0a1d;
+    border: 4px solid rgb(12, 0, 44);
+    transition: 0.3s;
+}
+#leftIcon {
+    height: 100px;
+    width: 100px;
+}
+#rightIcon {
+    height: 100px;
+    width: 100px;
+}
+.carouselHeaders {
+    margin-top: 15px;
+    font-size: 40px;
+    color: #c1b6ff;
+    margin-bottom: 80px;
+}
+.carouselTexts {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: -40px;
+    color: #c1b6ff;
+}
+#crossImage {
+    width: 40%;
+    text-align: right;
+    margin-top: -250px;
+    margin-right: -380px;
+}
+#japanImage {
+    width: 25%;
+    text-align: right;
+    margin-right: -380px;
+    margin-top: -280px;
+    border: 3px solid rgb(255, 224, 181);
+}
+#relationshipHeader {
+    text-align: left;
+    margin-left: 20px;
+}
+#relationshipText {
+    margin-top: 30px;
+}
+#girlfriendImage {
+    width: 12%;
+    text-align: right;
+    position: absolute;
+    top: 190px;
+    left: 675px;
+    border: 3px solid rgb(255, 224, 181);
+}
+#familyImage {
+    width: 15%;
+    text-align: right;
+    position: absolute;
+    bottom: 250px;
+    left: 660px;
+    border: 3px solid rgb(255, 224, 181);
+}
+#line {
+    margin-top: 65px;
+    margin-left: 205px;
+    height: 7px;
+    width: 1110px;
+    border: 4px solid #c1b6ff;
+    position: absolute; 
+}
+#moreHeader {
+    margin-top: 130px;
+    text-align: center;
+    font-size: 40px;
+    color: #c1b6ff;
+}
+.moreBoxes {
+    margin-top: 60px;
+    margin-bottom: 140px;
+    width: 250px;
+    height: 110px;
+    text-align: center;
+    background-color: #0e0a1d;
+    border: 4px solid rgb(12, 0, 44);
+    transition: 0.3s;
+}
+.moreBoxes:hover {
+    transform: scale(1.05);
+}
+.moreHeaders {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 95px;
+    text-align: center;
+    font-size: 27px;
+    color: #c1b6ff;
+}
+#moreHeader1 {
+    margin-left: 25px;
+}
+#moreHeader2 {
+    margin-left: 29px;
+}
+#moreHeader3 {
+    margin-left: 20px;
+}
+.moreoinwicons {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+#moreIcon1 {
+    left: 27px;
+    bottom: 34px;
+}
+#moreIcon2 {
+    left: 33px;
+    bottom: 34px;
+}
+#moreIcon3 {
+    left: 25px;
+    bottom: 34px;
+}
+/*About me footer.*/
+.bottom {
+    position: relative;
+    top: -80px;
+    bottom: 150px;
+}
+/*Header of footer, my name.*/
+#footerHeader {
+    text-align: left;
+    font-size: 30px;
+    color: #c1b6ff;
+}
+/*Description of footer, profession and email.*/
+#footerDesc {
+    display: inline;
+    text-align: left;
+    font-size: 20px;
+    color: #c1b6ff;
+}
+#resume {
+    width: 85px;
+    height: 50px;
+    position: relative;
+    left: 272px;
+    bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#resume:hover {
+    transform: scale(1.05);
+}
+#contact {
+    width: 85px;
+    height: 50px;
+    position: relative;
+    left: 273px;
+    bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#contact:hover {
+    transform: scale(1.05);
+}
+/*GitHub button that contains link, expands when hovered.*/
+#github {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#github:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+/*LinkedIn button that contains link, expands when hovered.*/
+#linkedin {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    margin-right: 5px;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#linkedin:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+/*Discord button that contains link, expands when hovered.*/
+#discord {
+    position: relative;
+    bottom: 10px;
+    display: inline;
+    float: right;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+/*Hover animation.*/
+#discord:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+/*Footer line separating content from copyright claim.*/
+#line2 {
+    height: 3px;
+    width: 1110px;
+    border: 3px solid #c1b6ff;
+    position: absolute;
+    top: 90px;
+}
+/*Copyright claim in footer.*/
+#copyright {
+    color: rgb(152, 152, 152);
+    font-size: 10px;
+    position: relative;
+    top: 15px;
+}
+/*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
+#spinner {
+    display: none;
+    position: fixed;
+    bottom: 35%;
+    left: 42%;
+    height: 250px;
+    width: 250px;
+    border-width: 15px;
+}

@@ -1,13 +1,6 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
-    /*Shows modal when tutorial button is clicked*/
-    $("#buttonTutorial").click(function(){
-        $('#myModal').modal("show");
-    });
-    $("#myModalButton").click(function(){
-        $('#myModal').modal("hide");
-    });
     /*Shows spinner and blurs background when logo is clicked, loads home page after a timeout.*/
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
@@ -72,15 +65,62 @@ $(document).ready(function() {
         }, 500);
     });
     $("#projectButton").click(function(){
-        window.scrollTo({ top: 440, behavior: 'smooth' });
+        window.scrollTo({ top: 400, behavior: 'smooth' });
     });
     $("#achievementButton").click(function(){
-        window.scrollTo({ top: 1375, behavior: 'smooth' });
+        window.scrollTo({ top: 1300, behavior: 'smooth' });
     });
     $("#moreButton").click(function(){
-        window.scrollTo({ top: 2050, behavior: 'smooth' });
+        window.scrollTo({ top: 1950, behavior: 'smooth' });
     });
-
+    $("#certificationButton").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://www.credly.com/badges/38ef228e-bc81-4ea7-885c-185f5fe7a411/public_url";
+        }, 500);
+    });
+    $("#more1").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "aboutme.html";
+        }, 500);
+    });
+    $("#more2").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "skills.html";
+        }, 500);
+    });
+    $("#more3").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "experience.html";
+        }, 500);
+    });
+    $("#resume").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "resume.html";
+        }, 500);
+    });
+    $("#contact").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "contact.html";
+        }, 500);
+    });
     /*Shows spinner and blurs background when the Discord button is clicked, my Discord profile after a timeout.*/
     $("#discord").click(function(){
         $(".all").css("filter", "blur(10px)");
