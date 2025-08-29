@@ -22,8 +22,8 @@ $(document).ready(function() {
         }, 500);
         setTimeout(() => {
             elem.style.display = "none";
-            $(".all").css("filter", "none");
-        }, 700);
+            $(".all").style.filter = "none";
+        }, 600);
     });
     /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
     $("#portfolionav").click(function(){
