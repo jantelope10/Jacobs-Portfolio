@@ -22,7 +22,7 @@ $(document).ready(function() {
         }, 500);
         setTimeout(() => {
             elem.style.display = "none";
-            $(".all").style("filter", "none");
+            $(".all").css("filter", "blur(0px)");
         }, 600);
     });
     /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
