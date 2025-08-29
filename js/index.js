@@ -35,12 +35,14 @@ $(document).ready(function() {
     $("#portfolionav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "portfolio.html";
         }, 500);
         setTimeout(() => {
             elem.style.display = "none";
+            all.style.filter = "none";
         }, 700);
     });
     /*Shows spinner and blurs background when skills link in navbar is clicked, loads skills page after a timeout.*/
