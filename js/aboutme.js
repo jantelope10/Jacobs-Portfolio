@@ -2,7 +2,7 @@
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
     window.addEventListener("pageshow", function(event){
-        if (event,persisted) {
+        if (event.persisted) {
             this.window.location.reload();
         }
     });
