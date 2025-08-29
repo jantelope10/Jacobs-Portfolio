@@ -34,6 +34,9 @@ $(document).ready(function() {
         setTimeout(() => {
             window.location.href = "portfolio.html";
         }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+        }, 700);
     });
     /*Shows spinner and blurs background when skills link in navbar is clicked, loads skills page after a timeout.*/
     $("#skillsnav").click(function(){
