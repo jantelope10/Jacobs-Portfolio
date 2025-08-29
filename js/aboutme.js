@@ -1,6 +1,11 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    window.addEventListener("pageshow", function(event){
+        if (event,persisted) {
+            this.window.location.reload();
+        }
+    });
     $("#personButton").click(function(){
         const elem = document.getElementById("personButton");
         elem.style.backgroundColor = "#c1b6ff";
