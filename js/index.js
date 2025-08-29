@@ -16,13 +16,14 @@ $(document).ready(function() {
     $("#aboutmenav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
+        const all = document.getElementsByClassName("all");
         elem.style.display = "inline";
         setTimeout(() => {
             window.location.href = "aboutme.html";
-            elem.style.display = "none";
         }, 500);
         setTimeout(() => {
             elem.style.display = "none";
+            all.style.filter = "none";
         }, 600);
     });
     /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
