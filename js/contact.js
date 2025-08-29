@@ -69,7 +69,7 @@ $(document).ready(function() {
         const elem = document.getElementById("spinner");
         elem.style.display = "inline";
         setTimeout(() => {
-            window.location.href = "mailto:developed.by.jacob@gmail.com&subject=Feedback from Portfolio Website";
+            window.location.href = "mailto:developed.by.jacob@gmail.com?subject=Feedback from Portfolio Website";
         }, 500);
         setTimeout(() => {
             elem.style.display = "none";

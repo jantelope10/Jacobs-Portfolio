@@ -119,17 +119,15 @@ button.close:hover {
     font-size: 20px;
 }
 #churchTimeline {
-    text-align: right;
+    text-align: center;
     color: #e4dfff;
     font-size: 15px;
-    margin-top: -100px;
-    margin-right: 10px;
+    margin-top: 20px;
 }
 #churchLogo {
-    margin-top: 15px;
-    margin-right: 140px;
-    height: 130px;
-    width: 130px;
+    margin-top: -10px;
+    width: 80%;
+    margin-bottom: -100px;
 }
 #chipotle {
     width: 600px;

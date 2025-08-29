@@ -20,6 +20,9 @@ $(document).ready(function() {
         setTimeout(() => {
             window.location.href = "aboutme.html";
         }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+        }, 700);
     });
     /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
     $("#portfolionav").click(function(){
