@@ -120,8 +120,8 @@ button.close:hover {
     margin-bottom: 80px;
 }
 .cardSubheaders {
-    text-align: right;
-    margin-right: 115px;
+    text-align: center;
+    margin-left: 290px;
     margin-top: -60px;
     font-size: 30px;
     color: #c1b6ff;

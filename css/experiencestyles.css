@@ -156,10 +156,9 @@ button.close:hover {
     margin-right: 10px;
 }
 #chipotleLogo {
-    height: 90px;
-    width: 90px;
+    width: 22%;
     float: right;
-    margin-top: -95px;
+    margin-top: -75px;
     margin-right: 205px;
 }
 #chipotleLogo2 {
