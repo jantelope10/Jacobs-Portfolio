@@ -54,12 +54,12 @@ button.close {
 button.close:hover {
     color:white;
 }
-.moreModalButtons {
+#moreModalButton {
     font-weight: bold;
     width: 200px;
     transition: 0.3s;
 }
-.moreModalButtons:hover {
+#moreModalButton:hover {
     transform: scale(1.07);
 }
 /*Style of navbar when navbar button is clicked.*/
@@ -200,13 +200,29 @@ button.close:hover {
     text-align: right;
     color: #e4dfff;
     font-size: 17px;
-    margin-right: 97px;
+    margin-right: 10px;
     margin-top: -20px;
+}
+#project1More {
+    text-align: center;
+    transition: 0.3s;
+    height: 50px;
+    width: 110px;
+    margin-left: 550px;
+    margin-top: -55px;
+    font-size: 15px;
+    color: #c1b6ff;
+    background-color: #1d1b4b !important;
+    border: 4px solid rgb(18, 0, 98) !important;
+}
+#project1More:hover {
+    transform: scale(1.07);
+    border: 4px solid rgb(13, 0, 201) !important;
 }
 #project1Text {
     text-align: left;
     margin-left: 30px;
-    margin-top: -135px;
+    margin-top: -160px;
 }
 #project1Image {
     width: 25%;

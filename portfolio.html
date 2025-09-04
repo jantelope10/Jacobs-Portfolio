@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Favicon picture on browser tab.-->
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
     <!--Metatags that form description and viewport of website.-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +31,30 @@
 </head>
 <body>
     <body class="bg-gradient">
+        <div id="project1Modal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <!--Content inside the modal.-->
+                <div class="modal-content">
+                    <!--Header and exit button inside the modal.-->
+                    <div class="modal-header">
+                        <h5 class="modal-title normal">More Info on Jacob's Portfolio</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!--Description text inside the modal.-->
+                    <div class="modal-body normal">
+                        <p>
+                           • Published to GitHub Pages through GitHub Desktop and commits.<br><br>
+                           • Published to domain 'jacobsportfolio.art' using GoDaddy; uses AWS for storage and quick accessibility (AWS S3, CloudFront, Route 53, Certificate Manager)<br><br>
+                           • Constantly being updated with better organization, updates in my life, or suggestions from other people!
+                        </p>   
+                    </div>
+                    <!--Button that closes welcome modal.-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mx-auto" id="moreModalButton">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--Container containing all content except the spinner so that everything but the spinner blurs when a new page is loaded (look at external JS file).-->
         <div class="all">
             <!--Navigation bar and logo-->
@@ -87,7 +113,8 @@
                     <div class="container rounded standard allProjects" id="project1">
                         <h5 class="normal projectHeaders" id="projectHeader1">Jacob's Portfolio</h5>
                         <h5 class="normal" id="project1Subheader">(this website)</h5>
-                        <h5 class="normal" id="project1Timeline">Mar 2025 - Present</h5>
+                        <h5 class="normal" id="project1Timeline">Mar 2025 - Aug 2025</h5>
+                        <button class="btn btn-dark" id="project1More" type="button">More</button>
                         <p class="normal projectTexts" id="project1Text">• Designed and built an HTML/CSS/JavaScript<br>program in VS Code that displays my portfolio.<br><br>
                             • Utilizes unique customizations and interactivity,<br>including jQuery and Bootstrap; solo project.
                         </p>

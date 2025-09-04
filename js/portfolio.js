@@ -6,6 +6,12 @@ $(document).ready(function() {
             this.window.location.reload();
         }
     });
+    $("#project1More").click(function(){
+        $('#project1Modal').modal("show");
+    });
+    $("#moreModalButton").click(function(){
+        $('#project1Modal').modal("hide");
+    });
     /*Shows spinner and blurs background when logo is clicked, loads home page after a timeout.*/
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
