@@ -25,11 +25,12 @@
         <!--Index external CSS file import.-->
         <link rel="stylesheet" href="css/mylifestyles.css">
         <!--Border animations CSS file import.-->
-        <link rel="stylesheet" href="css/traceanimate.css">
+        <link rel="stylesheet" href="css/fadeborder.css">
         <!--Index external JS file import.-->
         <script src="js/mylife.js"></script>
 </head>
 <body>
+    <!--Entirety of content on page.-->
     <body class="bg-gradient">
         <!--Container containing all content except the spinner so that everything but the spinner blurs when a new page is loaded (look at external JS file).-->
         <div class="all">
@@ -37,18 +38,18 @@
                 <!--Navigation bar containing each individual link to each page within the project.-->
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
-                        <!--The div ID that holds all the links, styles in external CSS file.-->
-                        <div class="p-4 normal" id="collapse">
+                        <!--Holds all the links.-->
+                        <div class="p-4 normal" id="navCollapse">
                             <!--All links; link locations are located in the external JS file in jQuery functions.-->
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="aboutmenav">About Me</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="portfolionav">Portfolio</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="skillsnav">Skills</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
+                            <a href="#" class="navTitles" id="indexnav">Home</a>
+                            <a href="#" class="navTitles" id="aboutmenav">About Me</a>
+                            <a href="#" class="navTitles" id="portfolionav">Portfolio</a>
+                            <a href="#" class="navTitles" id="skillsnav">Skills</a>
+                            <a href="#" class="navTitles" id="experiencenav">Experience</a>
+                            <a href="#" class="navTitles" id="contactnav">Contact</a>
                         </div>
                     </div>
-                    <!--Inital navigation bar when the page is loaded: logo and navigation icon.-->
+                    <!--Initial navigation bar when the page is loaded: logo and navigation icon.-->
                     <nav class="navbar navbar-dark bg-muted">
                         <!--Logo icon that navigates user to the top of the home page when clicked.-->
                         <h5 class="normal logo active" id="logo">JS</h5>
@@ -58,13 +59,9 @@
                         </button>
                     </nav>
                 </div>
+            <!--Contains my life title header.-->
             <div class="container">
-                <h5 class="top normal" id="titleHeader5">My Life
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </h5>
+                <h5 class="top normal" id="titleHeader5">My Life</h5>
             </div>
             <div class="container">
                 <!--Carousel that cycles through images of important events in my life.-->
@@ -75,9 +72,10 @@
                         <li data-target="#carousel3" data-slide-to="1"></li>
                         <li data-target="#carousel3" data-slide-to="2"></li>
                         </ul>
-                        <!--The slideshow: determines the images for each page's project.-->
+                        <!--The slideshow: determines the headers, description texts, and images for each page's project.-->
                         <div class="carousel-inner">
                         <div class="carousel-item active">
+                            <!--Religion slide, containing header, description text, and image.-->
                             <div class="container rounded standard carouselBoxes" id="religion">
                                 <h5 class="standard carouselHeaders" id="religionHeader">Christianity</h5>
                                 <p class="normal carouselTexts" id="religionText">• For my entire life, I have believed in Christianity<br>as well as the importance of the Bible and Jesus<br>dying for our sins.<br>
@@ -87,6 +85,7 @@
                                 <img src="images/cross.png" class="rounded" id="crossImage" alt="Cross Image">
                             </div>
                         </div>
+                        <!--Travel slide, containing header, description text, and image.-->
                         <div class="carousel-item">
                             <div class="container rounded standard carouselBoxes" id="travel">
                                 <h5 class="standard carouselHeaders" id="travelHeader">Traveling</h5>
@@ -97,6 +96,7 @@
                                 <img src="images/japan.jpg" class="rounded" id="japanImage" alt="Tokyo Tower Image">
                             </div>
                         </div>
+                        <!--Family and girlfriend slide, containing header, description text, and images.-->
                         <div class="carousel-item">
                             <div class="container rounded standard carouselBoxes" id="relationship">
                                 <h5 class="standard carouselHeaders" id="relationshipHeader">Family & Girlfriend</h5>
@@ -118,22 +118,28 @@
                         </a>
                     </div>
             </div>
+            <!--Horizontal line separating my life carousel from more boxes containing external links.-->
             <span class="line rounded" id="line"></span>
+            <!--Contains 3 more boxes that have external links each.-->
             <div class="container">
+                <!--More section header.-->
                 <h5 class="normal" id="moreHeader">More:</h5>
                 <div class="row">
+                    <!--Contains about me more box.-->
                     <div class="col-md-4">
                         <div class="container rounded standard clickable moreBoxes" id="moreBox1">
                             <h5 class="clickable moreHeaders" id="moreHeader1">About Me</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded moreoinwicons" id="moreIcon1" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--Contains portfolio more box.-->
                     <div class="col-md-4">
                         <div class="container rounded standard clickable moreBoxes" id="moreBox2">
                             <h5 class="clickable moreHeaders" id="moreHeader2">Portfolio</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded moreoinwicons" id="moreIcon2" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--Contains experience more box.-->
                     <div class="col-md-4">
                         <div class="container rounded standard clickable moreBoxes" id="moreBox3">
                             <h5 class="clickable moreHeaders" id="moreHeader3">Experience</h5>
@@ -145,11 +151,11 @@
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
                 <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline (external CSS file).-->
+                <!--Container that sets everything in it inline.-->
                 <div class="descLine">
                     <!--Subtitle and email.-->
                     <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images that direct users to my socials when clicked.-->
+                    <!--Images/buttons that direct users to my socials when clicked.-->
                     <button class="btn btn-dark" id="resume" type="button">Resume</button>
                     <button class="btn btn-dark" id="contact" type="button">Contact</button>
                     <img class="rounded" id="discord" src="images/discord.png" alt="Discord">

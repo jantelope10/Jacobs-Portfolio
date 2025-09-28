@@ -3,6 +3,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*FadeText animation to gradually change the color of text, used in buttons.*/
 @keyframes fadeText {
     0% { color: #0e0a1d; }
     50% { color: #281f4a; }
@@ -22,9 +23,13 @@
 .normal {
     cursor: default;
 }
-/*Purple background gradient.*/
+/*Dark blue background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Blurs background when modals are opened (keep for all CSS files).*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
 }
 /*Fixed logo in the top left, stays in that spot when page is scrolled.*/
 #logo {
@@ -35,45 +40,64 @@
     background-color: transparent;
     cursor: pointer;
 }
-.modal-open .all {
-    -webkit-filter: blur(10px);
-}
-.images {
-    margin: auto;
-}
 /*Modal content background and text.*/
 .modal-content {
     background-color: #0e0a1d;
     color: #c1b6ff;
 }
-/*X button in top right of modal.*/
-button.close {
-    color:white;
-}
-/*Turns white when hovered.*/
-button.close:hover {
-    color:white;
-}
+/*The return buttons located at the bottom of each modal.*/
 .modalButtons {
     font-weight: bold;
     width: 200px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 .modalButtons:hover {
     transform: scale(1.07);
 }
+/*Allows text to go to a new column when it reaches the bottom of a skill box.*/
+.column-container {
+    text-align: center;
+    column-count: 2;
+    column-gap: 40px;
+}
+/*Allows flex columns to be used for skills boxes.*/
+.flex-columns {
+    display: flex;
+    gap: 20px;
+}
+/*Columns class for all skill boxes.*/
+.column {
+    flex: 1;
+    text-align: center;
+}
+/*First column in first skill box.*/
+#column1 {
+    margin-top: 17px;
+}
+/*X button in top right of modal.*/
+button.close {
+    color:white;
+}
+/*Hover animation.*/
+button.close:hover {
+    color:white;
+}
 /*Style of navbar when navbar button is clicked.*/
-#collapse {
-    margin-left: 50px;
+#navCollapse {
+    text-align: center;
     background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 27px;
 }
 /*Underline animation for links in navbar.*/
 .navTitles {
     text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: white !important;
 }
 /*Hover animation.*/
 .navTitles:hover {
@@ -87,7 +111,7 @@ button.close:hover {
 #navicon:hover {
     transform: scale(1.1);
 }
-/*About me title header, has border animation when hovered.*/
+/*Skills title header, has border animation when hovered.*/
 #titleHeader4 {
     width: 27%;
     margin-left: 36%;
@@ -95,23 +119,7 @@ button.close:hover {
     font-size: 100px;
     color: #c1b6ff;
 }
-.column-container {
-    text-align: center;
-    column-count: 2;
-    column-gap: 40px;
-}
-.flex-columns {
-    display: flex;
-    gap: 20px;
-}
-
-#column1 {
-    margin-top: 17px;
-}
-.column {
-    flex: 1;
-    text-align: center;
-}
+/*Outer box containing all skill boxes.*/
 #allSkills {
     margin-top: 70px;
     width: 100%;
@@ -121,9 +129,11 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #allSkills:hover {
     transform: scale(1.03);
 }
+/*All 3 skill boxes which open their respective modals when clicked.*/
 .skillsBoxes {
     margin-top: 23%;
     width: 250px;
@@ -133,9 +143,11 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation*/
 .skillsBoxes:hover {
     transform: scale(1.05);
 }
+/*All skill headers in each skill box.*/
 .skillHeaders {
     display: inline-block;
     vertical-align: middle;
@@ -144,32 +156,40 @@ button.close:hover {
     font-size: 27px;
     color: #c1b6ff;
 }
-#skill1Header {
-    margin-left: 17px;
-}
-#skill2Header {
-    margin-left: 17px;
-}
-#skill3Header {
-    margin-left: 20px;
-}
+/*All open in new window icons in each skill box.*/
 .skilloinwicons {
     position: relative;
     height: 40px;
     width: 40px;
 }
+/*Header in first skill box.*/
+#skill1Header {
+    margin-left: 17px;
+}
+/*Header in second skill box.*/
+#skill2Header {
+    margin-left: 17px;
+}
+/*Header in third skill box.*/
+#skill3Header {
+    margin-left: 20px;
+}
+/*Open in new window icon in first skill box.*/
 #skillIcon1 {
     left: 23px;
     bottom: 23px;
 }
+/*Open in new window icon in second skill box.*/
 #skillIcon2 {
     left: 33px;
     bottom: 23px;
 }
+/*Open in new window icon in third skill box.*/
 #skillIcon3 {
     left: 40px;
     bottom: 23px;
 }
+/*More section title.*/
 #moreTitle {
     margin-top: 70px;
     margin-left: 25px;
@@ -177,6 +197,7 @@ button.close:hover {
     font-size: 40px;
     color: #c1b6ff;
 }
+/*All more boxes in more section, each containing external links.*/
 .moreBoxes {
     margin-top: 60px;
     margin-bottom: 140px;
@@ -187,9 +208,11 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 .moreBoxes:hover {
     transform: scale(1.05);
 }
+/*All headers in more section.*/
 .moreHeaders {
     display: inline-block;
     vertical-align: middle;
@@ -198,33 +221,40 @@ button.close:hover {
     font-size: 23px;
     color: #c1b6ff;
 }
-#more1Header {
-    margin-left: 15px;
-}
-#more2Header {
-    margin-left: 14px;
-}
-#more3Header {
-    margin-left: 17px;
-}
+/*All open in new window icons in more section.*/
 .moreoinwicons {
     position: relative;
     height: 30px;
     width: 30px;
 }
+/*Header in first more box.*/
+#more1Header {
+    margin-left: 15px;
+}
+/*Header in second more box.*/
+#more2Header {
+    margin-left: 14px;
+}
+/*Header in third more box.*/
+#more3Header {
+    margin-left: 17px;
+}
+/*Open in new window icon in first more box.*/
 #moreIcon1 {
     left: 24px;
     bottom: 21px;
 }
+/*Open in new window icon in second more box.*/
 #moreIcon2 {
     left: 14px;
     bottom: 21px;
 }
+/*Open in new window icon in third more box.*/
 #moreIcon3 {
     left: 31px;
     bottom: 21px;
 }
-/*About me footer.*/
+/*Skills footer.*/
 .bottom {
     position: relative;
     top: -80px;
@@ -243,6 +273,7 @@ button.close:hover {
     font-size: 20px;
     color: #c1b6ff;
 }
+/*Resume button that accesses resume page.*/
 #resume {
     width: 85px;
     height: 50px;
@@ -255,9 +286,11 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #resume:hover {
     transform: scale(1.05);
 }
+/*Contact button that accesses contact page.*/
 #contact {
     width: 85px;
     height: 50px;
@@ -270,6 +303,7 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #contact:hover {
     transform: scale(1.05);
 }

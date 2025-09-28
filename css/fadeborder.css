@@ -1,0 +1,40 @@
+/*Border animation for all containers.*/
+@keyframes fadeBorder {
+    from { border-color: rgb(12, 0, 44); }
+    to { border-color: rgb(18, 0, 137); }
+}
+/*Fade border animation 2.*/
+@keyframes fadeBorder2 {
+    from { border-color: rgb(18, 0, 137); }
+    to { border-color: rgb(54, 0, 230); }
+}
+/*Fade border animation 3.*/
+@keyframes fadeBorder3 {
+    from { border-color: rgb(12, 0, 44); }
+    to { border-color: #c1b6ff; }
+}
+/*Fade border animation 4.*/
+@keyframes fadeBorder4 {
+    from { border-color: rgb(102, 88, 143); }
+    to { border-color: #d7d0ff; }
+}
+/*Calls fadeBorder animation for all containers with standard class when hovered.*/
+.standard:hover {
+    animation: fadeBorder 0.3s ease;
+    border-color: rgb(18, 0, 137) !important;
+}
+/*Calls fadeBorder2 animation.*/
+.slideshow:hover {
+    animation: fadeBorder2 0.3s ease;
+    border-color: rgb(18, 0, 137) !important;
+}
+/*Calls fadeBorder3 animation.*/
+.secondary:hover {
+    animation: fadeBorder3 0.3s ease;
+    border-color: #c1b6ff !important;
+}
+/*Calls fadeBorder4 animation.*/
+#idCard:hover {
+    animation: fadeBorder4 0.3s ease;
+    border-color: #d7d0ff !important;
+}

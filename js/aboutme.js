@@ -1,32 +1,39 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    /*Used for when back arrow in browser is pressed, refreshes if this is the page the user navigates back to.*/
     window.addEventListener("pageshow", function(event){
         if (event.persisted) {
             this.window.location.reload();
         }
     });
+    /*For view button inside me box, opens me box modal on click.*/
     $("#personButton").click(function(){
         const elem = document.getElementById("personButton");
         elem.style.backgroundColor = "#c1b6ff";
         $('#personModal').modal("show");
     });
+    /*For return button inside me box modal, closes me box modal on click.*/
     $("#personModalButton").click(function(){
         $('#personModal').modal("hide");
     });
+    /*For view button inside hobbies box, opens hobbies box modal on click.*/
     $("#hobbiesButton").click(function(){
         const elem = document.getElementById("hobbiesButton");
         elem.style.backgroundColor = "#c1b6ff";
         $('#hobbiesModal').modal("show");
     });
+    /*For return button inside hobbies box modal, closes hobbies box modal on click.*/
     $("#hobbiesModalButton").click(function(){
         $('#hobbiesModal').modal("hide");
     });
+    /*For view button inside school box, opens school box modal on click.*/
     $("#schoolButton").click(function(){
         const elem = document.getElementById("schoolButton");
         elem.style.backgroundColor = "#c1b6ff";
         $('#schoolModal').modal("show");
     });
+    /*For return button inside school box modal, closes school box modal on click.*/
     $("#schoolModalButton").click(function(){
         $('#schoolModal').modal("hide");
     });
@@ -128,6 +135,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when more box 1 (portfolio) is clicked, loads portfolio page after a timeout.*/
     $("#moreBox1").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -141,6 +149,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when more box 2 (skills) is clicked, loads skills page after a timeout.*/
     $("#moreBox2").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -154,6 +163,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when more box 3 (my life) is clicked, loads my life page after a timeout.*/
     $("#moreBox3").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -167,6 +177,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when resume button in footer is clicked, loads resume page after a timeout.*/
     $("#resume").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -180,6 +191,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when contact button in footer is clicked, loads contact page after a timeout.*/
     $("#contact").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");

@@ -3,6 +3,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*FadeText animation to gradually change the color of text, used in buttons.*/
 @keyframes fadeText {
     0% { color: #0e0a1d; }
     50% { color: #281f4a; }
@@ -22,9 +23,13 @@
 .normal {
     cursor: default;
 }
-/*Purple background gradient.*/
+/*Dark blue background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Blurs background when modals are opened (keep for all CSS files).*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
 }
 /*Fixed logo in the top left, stays in that spot when page is scrolled.*/
 #logo {
@@ -35,45 +40,36 @@
     background-color: transparent;
     cursor: pointer;
 }
-.modal-open .all {
-    -webkit-filter: blur(10px);
-}
-.images {
-    margin: auto;
-}
 /*Modal content background and text.*/
 .modal-content {
     background-color: #0e0a1d;
     color: #c1b6ff;
 }
-/*X button in top right of modal.*/
-button.close {
-    color:white;
-}
-/*Turns white when hovered.*/
-button.close:hover {
-    color:white;
-}
+/*The close button located at the bottom of the modal.*/
 #moreModalButton {
     font-weight: bold;
     width: 200px;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #moreModalButton:hover {
     transform: scale(1.07);
 }
 /*Style of navbar when navbar button is clicked.*/
-#collapse {
-    margin-left: 50px;
+#navCollapse {
+    text-align: center;
     background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 27px;
 }
 /*Underline animation for links in navbar.*/
 .navTitles {
     text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: white !important;
 }
 /*Hover animation.*/
 .navTitles:hover {
@@ -87,7 +83,7 @@ button.close:hover {
 #navicon:hover {
     transform: scale(1.1);
 }
-/*About me title header, has border animation when hovered.*/
+/*Portfolio title header.*/
 #titleHeader3 {
     width: 27%;
     margin-left: 32%;
@@ -95,6 +91,7 @@ button.close:hover {
     font-size: 100px;
     color: #c1b6ff;
 }
+/*Folder image at the top of portfolio page.*/
 #folder {
     position: relative;
     bottom: 160px;
@@ -102,6 +99,7 @@ button.close:hover {
     height: 200px;
     width: 200px;
 }
+/*Crown image at the top of portfolio page.*/
 #crown {
     position: relative;
     left: 625px;
@@ -109,6 +107,7 @@ button.close:hover {
     height: 200px;
     width: 200px;
 }
+/*Buttons below header that navigate to that section of portfolio page.*/
 .portfolioButtons {
     width: 200px;
     height: 100px;
@@ -119,10 +118,12 @@ button.close:hover {
     margin-bottom: 60px;
     margin-top: -150px;
 }
+/*Hover animation.*/
 .portfolioButtons:hover {
     transform: scale(1.07);
     border: 4px solid rgb(13, 0, 201) !important;
 }
+/*Button below header that navigates to projects section.*/
 #projectButton {
     position: relative;
     left: 80px;
@@ -132,6 +133,7 @@ button.close:hover {
     font-size: 35px;
     color: #c1b6ff;
 }
+/*Button below header that navigates to achievements section.*/
 #achievementButton {
     position: relative;
     left: 75px;
@@ -141,6 +143,7 @@ button.close:hover {
     font-size: 25px;
     color: #c1b6ff;
 }
+/*Button below header that navigates to more section.*/
 #moreButton {
     position: relative;
     left: 70px;
@@ -157,6 +160,7 @@ button.close:hover {
     font-size: 60px;
     color: #c1b6ff;
 }
+/*All project boxes located in projects section.*/
 .allProjects {
     position: relative;
     right: 15px;
@@ -168,27 +172,33 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*All headers in project boxes.*/
 .projectHeaders {
     font-size: 35px;
     line-height: 140px;
     color: #c1b6ff;
 }
+/*All description texts in project boxes.*/
 .projectTexts {
     color: #c1b6ff;
     font-size: 18px;
 }
+/*First project box in projects section.*/
 #project1 {
     margin-bottom: 60px;
 }
+/*Hover animation.*/
 #project1:hover {
     transform: scale(1.03);
 }
+/*Header of first project box.*/
 #projectHeader1 {
     line-height: 110px !important;
     text-align: right;
     margin-right: 30px;
     font-size: 40px;
 }
+/*(this website) of first project box.*/
 #project1Subheader {
     position: relative;
     color: #e4dfff;
@@ -196,6 +206,7 @@ button.close:hover {
     margin-right: 110px;
     bottom: 40px;
 }
+/*Project timeline of first project box.*/
 #project1Timeline {
     text-align: right;
     color: #e4dfff;
@@ -203,6 +214,7 @@ button.close:hover {
     margin-right: 10px;
     margin-top: -20px;
 }
+/*More box in first project box leading to modal.*/
 #project1More {
     text-align: center;
     transition: 0.3s;
@@ -215,32 +227,39 @@ button.close:hover {
     background-color: #1d1b4b !important;
     border: 4px solid rgb(18, 0, 98) !important;
 }
+/*Hover animation.*/
 #project1More:hover {
     transform: scale(1.07);
     border: 4px solid rgb(13, 0, 201) !important;
 }
+/*Description text of first project box.*/
 #project1Text {
     text-align: left;
     margin-left: 30px;
     margin-top: -160px;
 }
+/*Project image of first project box.*/
 #project1Image {
     width: 25%;
     border: 3px solid rgb(255, 224, 181);
     margin-top: -190px;
     margin-right: -80px; 
 }
+/*Second project box in projects section.*/
 #project2 {
     margin-bottom: 60px;
 }
+/*Hover animation.*/
 #project2:hover {
     transform: scale(1.03);
 }
+/*Header of second project box.*/
 #projectHeader2 {
     font-size: 32px;
     text-align: left;
     margin-left: 25px;
 }
+/*Project timeline of second project box.*/
 #project2Timeline {
     text-align: left;
     color: #e4dfff;
@@ -248,29 +267,35 @@ button.close:hover {
     margin-left: 130px;
     margin-top: -30px;
 }
+/*Description text of second project box.*/
 #project2Text {
     font-size: 17px;
     text-align: right;
     margin-right: 25px;
     margin-top: -120px;
 }
+/*Project image of second project box.*/
 #project2Image {
     width: 16%;
     border: 3px solid rgb(255, 224, 181);
     margin-top: -180px;
     margin-left: -70px;
 }
+/*Third project box in projects section.*/
 #project3 {
     margin-left: 0px;
 }
+/*Hover animation.*/
 #project3:hover {
     transform: scale(1.03);
 }
+/*Header of third project box.*/
 #projectHeader3 {
     text-align: right;
     font-size: 38px;
     margin-right: 30px;
 }
+/*Project timeline of third project box.*/
 #project3Timeline {
     text-align: right;
     color: #e4dfff;
@@ -278,11 +303,13 @@ button.close:hover {
     margin-right: 100px;
     margin-top: -30px;
 }
+/*Description text of third project box.*/
 #project3Text {
     margin-top: -135px;
     text-align: left;
     margin-left: 30px;
 }
+/*Line separating projects and achievements sections.*/
 #line1 {
     position: relative;
     top: 70px;
@@ -291,6 +318,13 @@ button.close:hover {
     border: 4px solid #c1b6ff;
     position: absolute; 
 }
+/*Achievements section title.*/
+#achievementsTitle {
+    text-align: center;
+    font-size: 50px;
+    color: #c1b6ff;
+}
+/*All achievement boxes in achievements sections.*/
 .allAchievements {
     justify-content: space-evenly;
     width: 430px;
@@ -300,42 +334,45 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*All achievement headers in achievement boxes.*/
 .achievementHeaders {
     font-size: 25px;
     margin-top: 10px;
     color: #c1b6ff;
 }
+/*All description texts in achievement boxes*/
 .achievementTexts {
     color: #c1b6ff;
     font-size: 16px;
 }
-#achievementsTitle {
-    text-align: center;
-    font-size: 50px;
-    color: #c1b6ff;
-}
+/*First achievement box in achievements section.*/
 #achievement1 {
     margin-top: 150px;
     margin-bottom: 35px;
     margin-left: 0px;
 }
+/*Hover animation.*/
 #achievement1:hover {
     transform: scale(1.07);
 }
+/*Header of first achievement box.*/
 #achievementHeader1 {
     text-align: left;
     margin-left: 5px;
 }
+/*AWS logo in first achievement box.*/
 #awsLogo {
     width: 30%;
     float: right;
     margin-right: -15px;
     margin-top: -80px;
 }
+/*Description text in first achievement box.*/
 #achievement1Text {
     text-align: left;
     margin-left: 5px;
 }
+/*AWS certification button in between first and second achievement boxes containing external link to certification site.*/
 #certificationButton {
     text-align: center;
     background-color: #1d1b4b !important;
@@ -348,10 +385,12 @@ button.close:hover {
     font-size: 15px;
     color: #c1b6ff;
 }
+/*Hover animation.*/
 #certificationButton:hover {
     transform: scale(1.07);
     border: 4px solid rgb(13, 0, 201) !important;
 }
+/*Open in new window icon in certification button.*/
 #certificationoinwicon {
     height: 18px;
     width: 18px;
@@ -359,60 +398,74 @@ button.close:hover {
     left: 365px;
     bottom: 193px;
 }
+/*Second achievement box in achievements section.*/
 #achievement2 {
     margin-top: 150px;
     margin-bottom: 35px;
     margin-right: 0px;
 }
+/*Hover animation.*/
 #achievement2:hover {
     transform: scale(1.07);
 }
+/*Header in second achievement box.*/
 #achievementHeader2 {
     text-align: right;
     margin-right: 5px;
 }
+/*Description text in second achievement box.*/
 #achievement2Text {
     text-align: right;
     margin-right: 5px;
     margin-top: 15px;
 }
+/*Third achievement box in achievements section.*/
 #achievement3 {
     margin-left: 0px;
     margin-top: 35px;
 }
+/*Hover animation.*/
 #achievement3:hover {
     transform: scale(1.07);
 }
+/*Header in third achievement box.*/
 #achievementHeader3 {
     text-align: left;
     margin-left: 5px;
 }
+/*Description text in third achievement box.*/
 #achievement3Text {
     text-align: left;
     margin-left: 5px;
     margin-top: 15px;
 }
+/*CollegeBoard logo in third achievement box.*/
 #collegeBoardLogo {
     width: 40%;
     float: right;
     margin-right: 15px;
     margin-top: -200px;
 }
+/*Fourth achievement box in achievements section.*/
 #achievement4 {
     margin-right: 0px;
     margin-top: 35px;
 }
+/*Hover animation.*/
 #achievement4:hover {
     transform: scale(1.07);
 }
+/*Header in fourth achievement box.*/
 #achievementHeader4 {
     text-align: right;
     margin-right: 5px;
 }
+/*Description text in fourth achievement box.*/
 #achievement4Text {
     text-align: right;
     margin-right: 5px;
 }
+/*Line between achievements and more sections.*/
 #line2 {
     position: relative;
     top: 70px;
@@ -421,6 +474,7 @@ button.close:hover {
     border: 4px solid #c1b6ff;
     position: absolute; 
 }
+/*All more boxes in more section.*/
 .allMore {
     justify-content: space-evenly;
     width: 240px;
@@ -430,6 +484,7 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*More section title.*/
 #moreTitle {
     margin-top: 40px;
     margin-left: 40px;
@@ -437,6 +492,7 @@ button.close:hover {
     font-size: 50px;
     color: #c1b6ff;
 }
+/*All headers in more boxes.*/
 .moreHeaders {
     display: inline-block;
     vertical-align: middle;
@@ -444,56 +500,68 @@ button.close:hover {
     font-size: 25px;
     color: #c1b6ff;
 }
-#moreHeader1 {
-    margin-left: 20px;
-}
-#moreHeader2 {
-    margin-left: 25px;
-}
-#moreHeader3 {
-    margin-left: 20px;
-}
+/*All open in new window icons in more section.*/
 .oinwicons {
     height: 40px;
     width: 40px;
 }
+/*First more box in more section.*/
+#more1 {
+    margin-top: 150px;
+}
+/*Hover animation.*/
+#more1:hover {
+    transform: scale(1.07);
+}
+/*Header in first more box.*/
+#moreHeader1 {
+    margin-left: 20px;
+}
+/*Open in new window icon in first more box.*/
 #oinwicon1 {
     position: relative;
     left: 26px;
     bottom: 24px;
 }
+/*Second more box in more section.*/
+#more2 {
+    margin-top: 20px;
+    text-align: center;
+}
+/*Hover animation.*/
+#more2:hover {
+    transform: scale(1.07);
+}
+/*Header in second more box.*/
+#moreHeader2 {
+    margin-left: 25px;
+}
+/*Open in new window icon in second more box.*/
 #oinwicon2 {
     position: relative;
     left: 52px;
     bottom: 24px;
 }
+/*Third more box in more section.*/
+#more3 {
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+/*Hover animation.*/
+#more3:hover {
+    transform: scale(1.07);
+}
+/*Header in third more box.*/
+#moreHeader3 {
+    margin-left: 20px;
+}
+/*Open in new window icon in third more box.*/
 #oinwicon3 {
     position: relative;
     left: 22px;
     bottom: 24px;
 }
-#more1 {
-    margin-top: 150px;
-}
-#more1:hover {
-    transform: scale(1.07);
-}
-#more2 {
-    margin-top: 20px;
-    text-align: center;
-}
-#more2:hover {
-    transform: scale(1.07);
-}
-#more3 {
-    margin-top: 20px;
-    margin-bottom: 150px;
-}
-#more3:hover {
-    transform: scale(1.07);
-}
-
-/*About me footer.*/
+/*Portfolio footer.*/
 .bottom {
     position: relative;
     top: -80px;
@@ -512,6 +580,7 @@ button.close:hover {
     font-size: 20px;
     color: #c1b6ff;
 }
+/*Resume button that accesses resume page.*/
 #resume {
     width: 85px;
     height: 50px;
@@ -524,9 +593,11 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #resume:hover {
     transform: scale(1.05);
 }
+/*Contact button that accesses contact page.*/
 #contact {
     width: 85px;
     height: 50px;
@@ -539,6 +610,7 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #contact:hover {
     transform: scale(1.05);
 }

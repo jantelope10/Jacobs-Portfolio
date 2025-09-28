@@ -25,11 +25,12 @@
         <!--Index external CSS file import.-->
         <link rel="stylesheet" href="css/contactstyles.css">
         <!--Border animations CSS file import.-->
-        <link rel="stylesheet" href="css/traceanimate.css">
+        <link rel="stylesheet" href="css/fadeborder.css">
         <!--Index external JS file import.-->
         <script src="js/contact.js"></script>
 </head>
 <body>
+    <!--Entirety of content on page.-->
     <body class="bg-gradient">
         <!--Container containing all content except the spinner so that everything but the spinner blurs when a new page is loaded (look at external JS file).-->
         <div class="all">
@@ -37,18 +38,18 @@
                 <!--Navigation bar containing each individual link to each page within the project.-->
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
-                        <!--The div ID that holds all the links, styles in external CSS file.-->
-                        <div class="p-4 normal" id="collapse">
+                        <!--Holds all the links.-->
+                        <div class="p-4 normal" id="navCollapse">
                             <!--All links; link locations are located in the external JS file in jQuery functions.-->
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="aboutmenav">About Me</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="portfolionav">Portfolio</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="skillsnav">Skills</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="mylifenav">My Life</a>
+                            <a href="#" class="navTitles" id="indexnav">Home</a>
+                            <a href="#" class="navTitles" id="aboutmenav">About Me</a>
+                            <a href="#" class="navTitles" id="portfolionav">Portfolio</a>
+                            <a href="#" class="navTitles" id="skillsnav">Skills</a>
+                            <a href="#" class="navTitles" id="experiencenav">Experience</a>
+                            <a href="#" class="navTitles" id="mylifenav">My Life</a>
                         </div>
                     </div>
-                    <!--Inital navigation bar when the page is loaded: logo and navigation icon.-->
+                    <!--Initial navigation bar when the page is loaded: logo and navigation icon.-->
                     <nav class="navbar navbar-dark bg-muted">
                         <!--Logo icon that navigates user to the top of the home page when clicked.-->
                         <h5 class="normal logo active" id="logo">JS</h5>
@@ -58,14 +59,11 @@
                         </button>
                     </nav>
                 </div>
+            <!--Contact title header.-->
             <div class="container">
-                <h5 class="top normal" id="titleHeader6">Contact Info
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </h5>
+                <h5 class="top normal" id="titleHeader6">Contact Info</h5>
             </div>
+            <!--Container containing ID card with image, header, and subheaders.-->
             <div class="container">
                 <div class="container rounded standard normal" id="idCard">
                     <img src="images/id.jpg" class="rounded" id="cardImage" alt="Card Image">
@@ -74,14 +72,17 @@
                     <h5 class="cardSubheaders">Student, Operations Intern</h5>
                 </div>
             </div>
+            <!--Container containing both external link buttons below ID card.-->
             <div class="container">
                 <div class="row">
+                    <!--Send an Email button with external link.-->
                     <div class="col-md-6">
                         <div class="container rounded standard clickable contactBoxes" id="contactBox1">
                             <h5 class="clickable contactHeaders" id="contact1Header">Send an Email</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded contactoinwicons" id="contactIcon1" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--Connect on LinkedIn with external link.-->
                     <div class="col-md-6">
                         <div class="container rounded standard clickable contactBoxes" id="contactBox2">
                             <h5 class="clickable contactHeaders" id="contact2Header">Connect on LinkedIn</h5>
@@ -92,12 +93,13 @@
             </div>
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
+                <!--Footer header.-->
                 <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline (external CSS file).-->
+                <!--Container that sets everything in it inline.-->
                 <div class="descLine">
                     <!--Subtitle and email.-->
                     <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images that direct users to my socials when clicked.-->
+                    <!--Images/buttons that direct users to my socials when clicked.-->
                     <button class="btn btn-dark" id="resume" type="button">Resume</button>
                     <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
                     <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">

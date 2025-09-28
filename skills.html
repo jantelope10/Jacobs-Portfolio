@@ -25,14 +25,14 @@
         <!--Index external CSS file import.-->
         <link rel="stylesheet" href="css/skillstyles.css">
         <!--Border animations CSS file import.-->
-        <link rel="stylesheet" href="css/traceanimate.css">
+        <link rel="stylesheet" href="css/fadeborder.css">
         <!--Index external JS file import.-->
         <script src="js/skills.js"></script>
 </head>
 <body>
+    <!--Entirety of content on page.-->
     <body class="bg-gradient">
-        <!--Languages button that opens up the languages modal.-->
-            <!--Modal after the languages button is pressed.-->  
+        <!--Modal after the languages button is pressed.-->  
             <div id="languagesModal" class="modal fade">
                 <div class="modal-dialog modal-dialog-centered">
                     <!--Content inside the modal.-->
@@ -66,8 +66,7 @@
                     </div>
                 </div>
             </div>
-        <!--Technical button that opens up the technical modal.-->
-            <!--Modal after the technical button is pressed.-->  
+        <!--Modal after the technical button is pressed.-->  
             <div id="technicalModal" class="modal fade">
                 <div class="modal-dialog modal-dialog-centered">
                     <!--Content inside the modal.-->
@@ -99,8 +98,7 @@
                     </div>
                 </div>
             </div>
-        <!--General button that opens up the general modal.-->
-            <!--Modal after the general button is pressed.-->  
+        <!--Modal after the general button is pressed.-->  
             <div id="generalModal" class="modal fade">
                 <div class="modal-dialog modal-dialog-centered">
                     <!--Content inside the modal.-->
@@ -143,18 +141,18 @@
                 <!--Navigation bar containing each individual link to each page within the project.-->
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
-                        <!--The div ID that holds all the links, styles in external CSS file.-->
-                        <div class="p-4 normal" id="collapse">
+                        <!--Holds all the links.-->
+                        <div class="p-4 normal" id="navCollapse">
                             <!--All links; link locations are located in the external JS file in jQuery functions.-->
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="aboutmenav">About Me</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="portfolionav">Portfolio</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="mylifenav">My Life</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
+                            <a href="#" class="navTitles" id="indexnav">Home</a>
+                            <a href="#" class="navTitles" id="aboutmenav">About Me</a>
+                            <a href="#" class="navTitles" id="portfolionav">Portfolio</a>
+                            <a href="#" class="navTitles" id="experiencenav">Experience</a>
+                            <a href="#" class="navTitles" id="mylifenav">My Life</a>
+                            <a href="#" class="navTitles" id="contactnav">Contact</a>
                         </div>
                     </div>
-                    <!--Inital navigation bar when the page is loaded: logo and navigation icon.-->
+                    <!--Initial navigation bar when the page is loaded: logo and navigation icon.-->
                     <nav class="navbar navbar-dark bg-muted">
                         <!--Logo icon that navigates user to the top of the home page when clicked.-->
                         <h5 class="normal logo active" id="logo">JS</h5>
@@ -164,28 +162,28 @@
                         </button>
                     </nav>
                 </div>
+            <!--Skills title header.-->
             <div class="container">
-                <h5 class="top normal" id="titleHeader4">Skills
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </h5>
+                <h5 class="top normal" id="titleHeader4">Skills</h5>
             </div>
+            <!--Contains all skills and skill boxes: languages, technical, general-->
             <div class="container rounded standard" id="allSkills">
                 <div class="row">
+                    <!--Languages skill box that opens languages modal when clicked.-->
                     <div class="col-md-4">
                         <div class="container rounded secondary clickable skillsBoxes" id="skills1">
                             <h5 class="clickable skillHeaders" id="skill1Header">Languages</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded skilloinwicons" id="skillIcon1" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--Technical skill box that opens technical modal when clicked.-->
                     <div class="col-md-4">
                         <div class="container rounded secondary clickable skillsBoxes" id="skills2">
                             <h5 class="clickable skillHeaders" id="skill2Header">Technical</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded skilloinwicons" id="skillIcon2" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--General skill box that opens general modal when clicked.-->
                     <div class="col-md-4">
                         <div class="container rounded secondary clickable skillsBoxes" id="skills3">
                             <h5 class="clickable skillHeaders" id="skill3Header">General</h5>
@@ -194,23 +192,28 @@
                     </div>
                 </div>
             </div>
+            <!--Contains all 3 more boxes containing external links.-->
             <div class="container">
                 <div class="row">
+                    <!--More section title.-->
                     <div class="col-md-3">
                         <h5 class="normal" id="moreTitle">More:</h5>
                     </div>
+                    <!--Portfolio more box with external link.-->
                     <div class="col-md-3">
                         <div class="container rounded standard clickable moreBoxes" id="moreBox1">
                             <h5 class="clickable moreHeaders" id="more1Header">Portfolio</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded moreoinwicons" id="moreIcon1" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--Experience more box with external link.-->
                     <div class="col-md-3">
                         <div class="container rounded standard clickable moreBoxes" id="moreBox2">
                             <h5 class="clickable moreHeaders" id="more2Header">Experience</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded moreoinwicons" id="moreIcon2" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--My life more box with external link.-->
                     <div class="col-md-3">
                         <div class="container rounded standard clickable moreBoxes" id="moreBox3">
                             <h5 class="clickable moreHeaders" id="more3Header">My Life</h5>
@@ -222,11 +225,11 @@
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
                 <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline (external CSS file).-->
+                <!--Container that sets everything in it inline.-->
                 <div class="descLine">
                     <!--Subtitle and email.-->
                     <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images that direct users to my socials when clicked.-->
+                    <!--Images/buttons that direct users to my socials when clicked.-->
                     <button class="btn btn-dark" id="resume" type="button">Resume</button>
                     <button class="btn btn-dark" id="contact" type="button">Contact</button>
                     <img class="rounded" id="discord" src="images/discord.png" alt="Discord">

@@ -1,26 +1,33 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    /*Used for when back arrow in browser is pressed, refreshes if this is the page the user navigates back to.*/
     window.addEventListener("pageshow", function(event){
         if (event.persisted) {
             this.window.location.reload();
         }
     });
+    /*For first skill box (languages) in skills section, opens languages box modal on click.*/
     $("#skills1").click(function(){
         $('#languagesModal').modal("show");
     });
+    /*For close button inside languages box modal, closes languages box modal on click.*/
     $("#languagesModalButton").click(function(){
         $('#languagesModal').modal("hide");
     });
+    /*For second skill box (technical) in skills section, opens technical box modal on click.*/
     $("#skills2").click(function(){
         $('#technicalModal').modal("show");
     });
+    /*For close button inside technical box modal, closes technical box modal on click.*/
     $("#technicalModalButton").click(function(){
         $('#technicalModal').modal("hide");
     });
+    /*For third skill box (general) in skills section, opens general box modal on click.*/
     $("#skills3").click(function(){
         $('#generalModal').modal("show");
     });
+    /*For close button inside general box modal, closes general box modal on click.*/
     $("#generalModalButton").click(function(){
         $('#generalModal').modal("hide");
     });
@@ -52,7 +59,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
+    /*Shows spinner and blurs background when about me link in navbar is clicked, loads about me page after a timeout.*/
     $("#aboutmenav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -66,7 +73,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when skills link in navbar is clicked, loads skills page after a timeout.*/
+    /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
     $("#portfolionav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -122,6 +129,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when more box 1 (portfolio) is clicked, loads portfolio page after a timeout.*/
     $("#moreBox1").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -135,6 +143,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when more box 2 (experience) is clicked, loads experience page after a timeout.*/
     $("#moreBox2").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -148,6 +157,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when more box 3 (my life) is clicked, loads my life page after a timeout.*/
     $("#moreBox3").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -161,6 +171,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when resume button in footer is clicked, loads resume page after a timeout.*/
     $("#resume").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -174,6 +185,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when contact button in footer is clicked, loads contact page after a timeout.*/
     $("#contact").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");

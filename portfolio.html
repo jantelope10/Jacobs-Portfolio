@@ -25,20 +25,21 @@
         <!--Index external CSS file import.-->
         <link rel="stylesheet" href="css/portfoliostyles.css">
         <!--Border animations CSS file import.-->
-        <link rel="stylesheet" href="css/traceanimate.css">
+        <link rel="stylesheet" href="css/fadeborder.css">
         <!--Index external JS file import.-->
         <script src="js/portfolio.js"></script>
 </head>
 <body>
+    <!--Entirety of content on page.-->
     <body class="bg-gradient">
+        <!--Modal after the more button in Jacob's Portfolio project box is clicked.-->
         <div id="project1Modal" class="modal fade">
             <div class="modal-dialog modal-dialog-centered">
                 <!--Content inside the modal.-->
                 <div class="modal-content">
-                    <!--Header and exit button inside the modal.-->
+                    <!--Header inside the modal.-->
                     <div class="modal-header">
                         <h5 class="modal-title normal">More Info on Jacob's Portfolio</h5>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!--Description text inside the modal.-->
                     <div class="modal-body normal">
@@ -61,18 +62,18 @@
                 <!--Navigation bar containing each individual link to each page within the project.-->
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
-                        <!--The div ID that holds all the links, styles in external CSS file.-->
-                        <div class="p-4 normal" id="collapse">
+                        <!--Holds all the links.-->
+                        <div class="p-4 normal" id="navCollapse">
                             <!--All links; link locations are located in the external JS file in jQuery functions.-->
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="indexnav">Home</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="aboutmenav">About Me</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="skillsnav">Skills</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="experiencenav">Experience</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="mylifenav">My Life</a>
-                            <a href="#" class="navTitles text-white ml-5 mr-5" id="contactnav">Contact</a>
+                            <a href="#" class="navTitles" id="indexnav">Home</a>
+                            <a href="#" class="navTitles" id="aboutmenav">About Me</a>
+                            <a href="#" class="navTitles" id="skillsnav">Skills</a>
+                            <a href="#" class="navTitles" id="experiencenav">Experience</a>
+                            <a href="#" class="navTitles" id="mylifenav">My Life</a>
+                            <a href="#" class="navTitles" id="contactnav">Contact</a>
                         </div>
                     </div>
-                    <!--Inital navigation bar when the page is loaded: logo and navigation icon.-->
+                    <!--Initial navigation bar when the page is loaded: logo and navigation icon.-->
                     <nav class="navbar navbar-dark bg-muted">
                         <!--Logo icon that navigates user to the top of the home page when clicked.-->
                         <h5 class="normal logo active" id="logo">JS</h5>
@@ -82,16 +83,13 @@
                         </button>
                     </nav>
                 </div>
+            <!--Contains portfolio title header and top images.-->
             <div class="container">
-                <h5 class="top normal" id="titleHeader3">Portfolio
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </h5>
+                <h5 class="top normal" id="titleHeader3">Portfolio</h5>
                 <img src="images/transparentfolder.png" class="rounded" id="folder" alt="Folder Icon">
                 <img src="images/crown.png" class="rounded" id="crown" alt="Crown Icon">
             </div>
+            <!--Contains all 3 buttons leading to projects, achievements, and more on the page, respectively.-->
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -105,10 +103,13 @@
                     </div>
                 </div>
             </div>
+            <!--Contains everything in projects section, including title and all 3 project boxes.-->
             <div class="container">
+                <!--Projects section title.-->
                 <div class="col-md-12">
                     <h5 class="normal" id="projectsTitle">PROJECTS</h5>
                 </div>
+                <!--Jacob's Portfolio project box containing header, timeline, image, description and more button for modal.-->
                 <div class="col-md-12">
                     <div class="container rounded standard allProjects" id="project1">
                         <h5 class="normal projectHeaders" id="projectHeader1">Jacob's Portfolio</h5>
@@ -121,6 +122,7 @@
                         <img src="images/project1.png" class="rounded" id="project1Image" alt="Project 1 Image">
                     </div>
                 </div>
+                <!--Real-Estate Website project box containing header, timeline, image, and description.-->
                 <div class="col-md-12">
                     <div class="container rounded standard allProjects" id="project2">
                         <h5 class="normal projectHeaders" id="projectHeader2">Real-Estate Club Website</h5>
@@ -131,6 +133,7 @@
                         <img src="images/project2.png" class="rounded" id="project2Image" alt="Project 2 Image">
                     </div>
                 </div>
+                <!--Casino Game project box containing header, timeline, and description.-->
                 <div class="col-md-12">
                     <div class="container rounded standard allProjects" id="project3">
                         <h5 class="normal projectHeaders" id="projectHeader3">Java Casino Game</h5>
@@ -142,13 +145,16 @@
                     </div>
                 </div>
             </div>
+            <!--Contains horizontal line and everything in achievements section, including title and all 4 achievement boxes.-->
             <div class="container">
                 <div class="row">
+                    <!--Horizontal line separating projects and achievements sections.-->
                     <div class="col-md-12">
                         <span class="line rounded" id="line1"></span>
                     </div>
                 </div>
                 <div class="row">
+                    <!--AWS achievement box containing title, image, description text, and button to the right of box containing external link to certification.-->
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement1">
                             <h5 class="normal achievementHeaders" id="achievementHeader1">AWS Certified Cloud<br>Practitioner Certification</h5>
@@ -160,6 +166,7 @@
                             <img src="images/openinnewwindowicon.png" class="rounded" id="certificationoinwicon" alt="Open in New Window Icon">
                         </div>
                     </div>
+                    <!--GPA achievement box containing title and description text.-->
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement2">
                             <h5 class="normal achievementHeaders" id="achievementHeader2">4.47 Weighted GPA in High School</h5>
@@ -170,11 +177,13 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!--Achievements section title.-->
                     <div class="col-md-12">
                         <h5 class="normal" id="achievementsTitle">ACHIEVEMENTS</h5>
                     </div>
                 </div>
                 <div class="row">
+                    <!--AP Scholar achievement box containing title, image, and description text.-->
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement3">
                             <h5 class="normal achievementHeaders" id="achievementHeader3">AP Scholar with<br>Honor Award</h5>
@@ -184,6 +193,7 @@
                             <img src="images/collegeboard.png" class="rounded" id="collegeBoardLogo" alt="College Board Logo">
                         </div>
                     </div>
+                    <!--SBAC achievement box containing title and description text.-->
                     <div class="col-md-6">
                         <div class="container rounded standard allAchievements" id="achievement4">
                             <h5 class="normal achievementHeaders" id="achievementHeader4">Certificate of Recognition - SBAC Testing</h5>
@@ -194,13 +204,16 @@
                     </div>
                 </div>
             </div>
+            <!--Contains horizontal line and all 3 more boxes containing external links.-->
             <div class="container">
                 <div class="row">
+                    <!--Horizontal line between achievements and more sections.-->
                     <div class="col-md-12">
                         <span class="line rounded" id="line2"></span>
                     </div>
                 </div>
                 <div class="row">
+                    <!--About me more box with external link.-->
                     <div class="col-md-12">
                         <div class="container rounded standard clickable allMore" id="more1">
                             <h5 class="clickable moreHeaders" id="moreHeader1">About Me</h5>
@@ -209,9 +222,11 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!--More section title.-->
                     <div class="col-md-6">
                         <h5 class="normal" id="moreTitle">MORE:</h5>
                     </div>
+                    <!--Skills more box with external link.-->
                     <div class="col-md-6">
                         <div class="container rounded standard clickable allMore" id="more2">
                             <h5 class="clickable moreHeaders" id="moreHeader2">Skills</h5>
@@ -220,6 +235,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!--Experience more box with external link.-->
                     <div class="col-md-12">
                         <div class="container rounded standard clickable allMore" id="more3">
                             <h5 class="clickable moreHeaders" id="moreHeader3">Experience</h5>
@@ -231,11 +247,11 @@
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
                 <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline (external CSS file).-->
+                <!--Container that sets everything in it inline.-->
                 <div class="descLine">
                     <!--Subtitle and email.-->
                     <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images that direct users to my socials when clicked.-->
+                    <!--Images/buttons that direct users to my socials when clicked.-->
                     <button class="btn btn-dark" id="resume" type="button">Resume</button>
                     <button class="btn btn-dark" id="contact" type="button">Contact</button>
                     <img class="rounded" id="discord" src="images/discord.png" alt="Discord">

@@ -3,6 +3,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*FadeText animation to gradually change the color of text, used in buttons.*/
 @keyframes fadeText {
     0% { color: #0e0a1d; }
     50% { color: #281f4a; }
@@ -22,9 +23,13 @@
 .normal {
     cursor: default;
 }
-/*Purple background gradient.*/
+/*Dark blue background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Blurs background when modals are opened (keep for all CSS files).*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
 }
 /*Fixed logo in the top left, stays in that spot when page is scrolled.*/
 #logo {
@@ -35,45 +40,21 @@
     background-color: transparent;
     cursor: pointer;
 }
-.modal-open .all {
-    -webkit-filter: blur(10px);
-}
-.images {
-    margin: auto;
-}
-/*Modal content background and text.*/
-.modal-content {
-    background-color: #0e0a1d;
-    color: #c1b6ff;
-}
-/*X button in top right of modal.*/
-button.close {
-    color:white;
-}
-/*Turns white when hovered.*/
-button.close:hover {
-    color:white;
-}
-.modalButtons {
-    font-weight: bold;
-    width: 200px;
-    transition: 0.3s;
-}
-.modalButtons:hover {
-    transform: scale(1.07);
-}
 /*Style of navbar when navbar button is clicked.*/
-#collapse {
-    margin-left: 50px;
+#navCollapse {
+    text-align: center;
     background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 27px;
 }
 /*Underline animation for links in navbar.*/
 .navTitles {
     text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: white !important;
 }
 /*Hover animation.*/
 .navTitles:hover {
@@ -87,13 +68,14 @@ button.close:hover {
 #navicon:hover {
     transform: scale(1.1);
 }
-/*About me title header, has border animation when hovered.*/
+/*My life title header.*/
 #titleHeader5 {
     text-align: center;
     font-size: 100px;
     color: #c1b6ff;
     margin-bottom: 80px;
 }
+/*Carousel boxes located on each slide of the carousel.*/
 .carouselBoxes {
     height: 400px;
     width: 650px;
@@ -102,32 +84,47 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Left arrow allowing to go back a slide.*/
 #leftIcon {
     height: 100px;
     width: 100px;
 }
+/*Right arrow allowing to go forward a slide.*/
 #rightIcon {
     height: 100px;
     width: 100px;
 }
+/*Headers for each carousel box.*/
 .carouselHeaders {
     margin-top: 15px;
     font-size: 40px;
     color: #c1b6ff;
     margin-bottom: 80px;
 }
+/*Description text boxes for each carousel box.*/
 .carouselTexts {
     text-align: left;
     margin-left: 20px;
     margin-top: -40px;
     color: #c1b6ff;
 }
+/*Header for third slide specifically.*/
+#relationshipHeader {
+    text-align: left;
+    margin-left: 20px;
+}
+/*Description text box for third slide specifically.*/
+#relationshipText {
+    margin-top: 30px;
+}
+/*Cross image on first slide.*/
 #crossImage {
     width: 40%;
     text-align: right;
     margin-top: -250px;
     margin-right: -380px;
 }
+/*Japan image on second slide.*/
 #japanImage {
     width: 25%;
     text-align: right;
@@ -135,21 +132,7 @@ button.close:hover {
     margin-top: -280px;
     border: 3px solid rgb(255, 224, 181);
 }
-#relationshipHeader {
-    text-align: left;
-    margin-left: 20px;
-}
-#relationshipText {
-    margin-top: 30px;
-}
-#girlfriendImage {
-    width: 12%;
-    text-align: right;
-    position: absolute;
-    top: 190px;
-    left: 675px;
-    border: 3px solid rgb(255, 224, 181);
-}
+/*Family image on third slide.*/
 #familyImage {
     width: 15%;
     text-align: right;
@@ -158,6 +141,16 @@ button.close:hover {
     left: 660px;
     border: 3px solid rgb(255, 224, 181);
 }
+/*Girlfriend image on third slide.*/
+#girlfriendImage {
+    width: 12%;
+    text-align: right;
+    position: absolute;
+    top: 190px;
+    left: 675px;
+    border: 3px solid rgb(255, 224, 181);
+}
+/*Line separating carousel from more boxes.*/
 #line {
     margin-top: 65px;
     margin-left: 205px;
@@ -166,12 +159,14 @@ button.close:hover {
     border: 4px solid #c1b6ff;
     position: absolute; 
 }
+/*Header in more box section.*/
 #moreHeader {
     margin-top: 130px;
     text-align: center;
     font-size: 40px;
     color: #c1b6ff;
 }
+/*The 3 more boxes in more box section each containing external links.*/
 .moreBoxes {
     margin-top: 60px;
     margin-bottom: 140px;
@@ -182,9 +177,11 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 .moreBoxes:hover {
     transform: scale(1.05);
 }
+/*Headers for each more box.*/
 .moreHeaders {
     display: inline-block;
     vertical-align: middle;
@@ -193,33 +190,40 @@ button.close:hover {
     font-size: 27px;
     color: #c1b6ff;
 }
+/*Location of header of the first more box.*/
 #moreHeader1 {
     margin-left: 25px;
 }
+/*Location of header of the second more box.*/
 #moreHeader2 {
     margin-left: 29px;
 }
+/*Location of header of the third more box.*/
 #moreHeader3 {
     margin-left: 20px;
 }
+/*All open in new window icons in each more box.*/
 .moreoinwicons {
     position: relative;
     height: 30px;
     width: 30px;
 }
+/*Location of open in new window icon in first more box.*/
 #moreIcon1 {
     left: 27px;
     bottom: 34px;
 }
+/*Location of open in new window icon in second more box.*/
 #moreIcon2 {
     left: 33px;
     bottom: 34px;
 }
+/*Location of open in new window icon in third more box.*/
 #moreIcon3 {
     left: 25px;
     bottom: 34px;
 }
-/*About me footer.*/
+/*My life footer.*/
 .bottom {
     position: relative;
     top: -80px;
@@ -238,6 +242,7 @@ button.close:hover {
     font-size: 20px;
     color: #c1b6ff;
 }
+/*Resume button that accesses resume page.*/
 #resume {
     width: 85px;
     height: 50px;
@@ -250,9 +255,11 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #resume:hover {
     transform: scale(1.05);
 }
+/*Contact button that accesses contact page.*/
 #contact {
     width: 85px;
     height: 50px;
@@ -265,6 +272,7 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #contact:hover {
     transform: scale(1.05);
 }

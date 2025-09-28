@@ -3,12 +3,13 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*FadeText animation to gradually change the color of text, used in buttons.*/
 @keyframes fadeText {
     0% { color: #0e0a1d; }
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
-/*Container containing all elements, calls fadeIn animation.*/
+/*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
     animation: fadeIn 2s ease;
@@ -22,9 +23,13 @@
 .normal {
     cursor: default;
 }
-/*Purple background gradient.*/
+/*Dark blue background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Blurs background when modals are opened (keep for all CSS files).*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
 }
 /*Fixed logo in top left, stays in same spot when page is scrolled.*/
 #logo {
@@ -35,10 +40,12 @@
     background-color: transparent;
     cursor: pointer;
 }
+/*Buttons customizer consisting of buttonWelcome, portfolioButton, skillButton, experienceButton, and myLifeButton.*/
 .buttons {
     background-color: #c1b6ff !important;
     transition: 0.3s;
 }
+/*Hover animation.*/
 .buttons:hover {
     transform: scale(1.07);
     background-color: #c1b6ff;
@@ -46,6 +53,7 @@
     background-color: #c1b6ff;
     color: #3931d2 !important;
 }
+/*Active animation.*/
 .buttons:active {
     background-color: #c1b6ff;
 }
@@ -76,8 +84,9 @@ button.close {
 button.close:hover {
     color:white;
 }
-/*Button inside modal that starts welcome, expands when hovered.*/
+/*Button inside modal that closes welcome modal.*/
 #myModalButton {
+    font-weight: bold;
     width: 200px;
     transition: 0.3s;
 }
@@ -86,12 +95,12 @@ button.close:hover {
     transform: scale(1.07);
 }
 /*Style of navbar when navbar button is clicked.*/
-#collapse {
-    margin-left: 50px;
+#navCollapse {
+    text-align: center;
     background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 27px;
 }
 /*Navbar button that opens navbar when clicked, expands when hovered.*/
 #navicon {
@@ -105,6 +114,9 @@ button.close:hover {
 .navTitles {
     text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: white !important;
 }
 /*Hover animation.*/ 
 .navTitles:hover {
@@ -161,7 +173,7 @@ button.close:hover {
     font-size: 14px;
     color:rgb(255, 224, 181);
 }
-/*GCU image in bio.*/
+/*SCC image in bio.*/
 #scc {
     width: 55%;
     height: 55%;
@@ -175,14 +187,14 @@ button.close:hover {
     font-size: 100px;
     color: #c1b6ff;
 }
-/*Class of all sub-titles underneath the titleHeader.*/
+/*All 3 subheaders below title header.*/
 #subTitles {
     line-height: 2;
     text-align: center;
     font-size: 24px;
     color: #c1b6ff;
 }
-/*About me container below titles, expands when hovered.*/
+/*About me container with external link, expands when hovered.*/
 #aboutMe {
     margin-bottom: 230px;
     width: 350px;
@@ -225,36 +237,23 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
+#portfolio:hover {
+    transform: scale(1.07);
+}
+/*Carousel inside of portfolio container, scrolls through slides.*/
 #carousel {
     margin-top: 30px;
 }
+/*Each of the items part of the carousel, contains a border.*/
 .carouselItems {
     width: 80%;
     border: 3px solid rgb(255, 224, 181);
 }
+/*The second item in the carousel.*/
 #carouselItem2 {
     width: 70%;
     margin-left: 45px;
-}
-#carousel2 {
-    margin-top: -5px;
-}
-.carouselItems2 {
-    width: 40%;
-    border: 2px solid rgb(255, 224, 181);
-}
-#carouselItem4 {
-    width: 60%;
-    margin-left: 64px;
-}
-#carouselItem6 {
-    width: 60%;
-    margin-left: 63px;
-}
-
-/*Hover animation.*/
-#portfolio:hover {
-    transform: scale(1.07);
 }
 /*Header in portfolio container.*/
 #portfolioHeader {
@@ -301,7 +300,7 @@ button.close:hover {
     font-size: 40px;
     color: #c1b6ff;
 }
-/*First box in skills container navigating to languages section of skills page when clicked, expands when hovered.*/
+/*Box showing the 3 different sections of skills, expands when hovered.*/
 #skillBox {
     width: 120px;
     height: 130px;
@@ -317,9 +316,14 @@ button.close:hover {
 #skillBox:hover {
     transform:scale(1.1);
 }
+/*Text inside the skill box showing languages, technical, and general.*/
 #skillBoxHeader {
     height: 0px;
+    line-height: normal;
+    font-size: 18px;
+    color: #c1b6ff;
 }
+/*Button inside skills container.*/
 #skillButton {
     width: 70px;
     height: 100px;
@@ -330,13 +334,7 @@ button.close:hover {
     left: 75px;
     transition: 0.3s;
 }
-/*Properties of box containers in skills container.*/
-.boxHeaders {
-    line-height: normal;
-    font-size: 18px;
-    color: #c1b6ff;
-}
-/*Experience container located below the bio container containing programming languages, expands when hovered.*/
+/*Experience container located below the skills container, expands when hovered.*/
 #experience {
     position: relative;
     bottom: 160px;
@@ -375,7 +373,7 @@ button.close:hover {
 #experienceButton:hover {
     transform: scale(1.1);
 }
-/*Contact container below the skills container, expands when hovered.*/
+/*Contact container below the bio container, expands when hovered.*/
 #contactBox {
     position: relative;
     top: 90px;
@@ -444,7 +442,26 @@ button.close:hover {
 #myLifeButton:hover {
     transform: scale(1.1);
 }
-/*About me footer.*/
+/*Carousel inside of my life container, scrolls through slides.*/
+#carousel2 {
+    margin-top: -5px;
+}
+/*Each of the items part of the carousel, contains a border.*/
+.carouselItems2 {
+    width: 40%;
+    border: 2px solid rgb(255, 224, 181);
+}
+/*The first item in the carousel (4th because of the 3 items in the previous carousel).*/
+#carouselItem4 {
+    width: 60%;
+    margin-left: 64px;
+}
+/*The third item in the carousel.*/
+#carouselItem6 {
+    width: 60%;
+    margin-left: 63px;
+}
+/*Index footer.*/
 .bottom {
     position: relative;
     top: -80px;
@@ -463,6 +480,7 @@ button.close:hover {
     font-size: 20px;
     color: #c1b6ff;
 }
+/*Resume button that accesses resume page.*/
 #resume {
     width: 85px;
     height: 50px;
@@ -475,9 +493,11 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #resume:hover {
     transform: scale(1.05);
 }
+/*Contact button that accesses contact page.*/
 #contact {
     width: 85px;
     height: 50px;
@@ -490,6 +510,7 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #contact:hover {
     transform: scale(1.05);
 }

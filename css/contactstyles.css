@@ -3,6 +3,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*FadeText animation to gradually change the color of text, used in buttons.*/
 @keyframes fadeText {
     0% { color: #0e0a1d; }
     50% { color: #281f4a; }
@@ -22,9 +23,13 @@
 .normal {
     cursor: default;
 }
-/*Purple background gradient.*/
+/*Dark blue background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Blurs background when modals are opened (keep for all CSS files).*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
 }
 /*Fixed logo in the top left, stays in that spot when page is scrolled.*/
 #logo {
@@ -35,45 +40,21 @@
     background-color: transparent;
     cursor: pointer;
 }
-.modal-open .all {
-    -webkit-filter: blur(10px);
-}
-.images {
-    margin: auto;
-}
-/*Modal content background and text.*/
-.modal-content {
-    background-color: #150a1d;
-    color: #c1b6ff;
-}
-/*X button in top right of modal.*/
-button.close {
-    color:white;
-}
-/*Turns white when hovered.*/
-button.close:hover {
-    color:white;
-}
-.modalButtons {
-    font-weight: bold;
-    width: 200px;
-    transition: 0.3s;
-}
-.modalButtons:hover {
-    transform: scale(1.07);
-}
 /*Style of navbar when navbar button is clicked.*/
-#collapse {
-    margin-left: 50px;
+#navCollapse {
+    text-align: center;
     background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 27px;
 }
 /*Underline animation for links in navbar.*/
 .navTitles {
     text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: white !important;
 }
 /*Hover animation.*/
 .navTitles:hover {
@@ -87,13 +68,15 @@ button.close:hover {
 #navicon:hover {
     transform: scale(1.1);
 }
-/*About me title header, has border animation when hovered.*/
+/*Contact title header.*/
 #titleHeader6 {
     text-align: center;
     font-size: 100px;
     color: #c1b6ff;
     margin-bottom: 80px;
 }
+/*ID card containing image, my name, location, student, and current position.*/
+/*This CSS is just for the container/background.*/
 #idCard {
     width: 800px;
     height: 300px;
@@ -103,15 +86,18 @@ button.close:hover {
     border: 4px solid rgb(102, 88, 143);
     transition: 0.3s;
 }
+/*Hover animation.*/
 #idCard:hover {
     transform: scale(1.07);
 }
+/*Image in ID card.*/
 #cardImage {
     width: 30%;
     border: 4px solid rgb(255, 224, 181);
     margin-left: -460px;
     margin-bottom: -260px;
 }
+/*Header in ID card.*/
 #cardHeader {
     text-align: right;
     margin-right: 40px;
@@ -119,6 +105,7 @@ button.close:hover {
     color: #c1b6ff;
     margin-bottom: 80px;
 }
+/*Subheaders of my name, location, student, and current position.*/
 .cardSubheaders {
     text-align: center;
     margin-left: 290px;
@@ -127,6 +114,7 @@ button.close:hover {
     color: #c1b6ff;
     margin-bottom: 80px;
 }
+/*Contact boxes allowing to send email or connect on LinkedIn.*/
 .contactBoxes {
     margin-top: 40px;
     margin-bottom: 180px;
@@ -137,9 +125,11 @@ button.close:hover {
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
 }
+/*Hover animation.*/
 .contactBoxes:hover {
     transform: scale(1.05);
 }
+/*Headers for the contact boxes containing external links.*/
 .contactHeaders {
     margin-top: 7px;
     display: inline-block;
@@ -149,26 +139,31 @@ button.close:hover {
     font-size: 23px;
     color: #c1b6ff;
 }
+/*Send an email header.*/
 #contact1Header {
     margin-left: 15px;
 }
+/*Connect on LinkedIn header.*/
 #contact2Header {
     margin-left: 14px;
 }
+/*Open in new window icons in the contact boxes.*/
 .contactoinwicons {
     position: relative;
     height: 30px;
     width: 30px;
 }
+/*Open in new window icon in send an email contact box.*/
 #contactIcon1 {
     left: 54px;
     bottom: 21px;
 }
+/*Open in new window icon in connect on LinkedIn contact box.*/
 #contactIcon2 {
     left: 20px;
     bottom: 21px;
 }
-/*About me footer.*/
+/*Contact footer.*/
 .bottom {
     position: relative;
     top: -80px;
@@ -187,6 +182,7 @@ button.close:hover {
     font-size: 20px;
     color: #c1b6ff;
 }
+/*Resume button that accesses resume page.*/
 #resume {
     width: 85px;
     height: 50px;
@@ -199,6 +195,7 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #resume:hover {
     transform: scale(1.05);
 }

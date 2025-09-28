@@ -1,6 +1,7 @@
 /*Uses jQuery, all functions within this function can be performed on document load.*/
 /*Includes the initialization and function of each command.*/
 $(document).ready(function() {
+    /*Used for when back arrow in browser is pressed, refreshes if this is the page the user navigates back to.*/
     window.addEventListener("pageshow", function(event){
         if (event.persisted) {
             this.window.location.reload();
@@ -34,7 +35,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
+    /*Shows spinner and blurs background when about me link in navbar is clicked, loads about me page after a timeout.*/
     $("#aboutmenav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -48,7 +49,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when skills link in navbar is clicked, loads skills page after a timeout.*/
+    /*Shows spinner and blurs background when portfolio link in navbar is clicked, loads portfolio page after a timeout.*/
     $("#portfolionav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -62,7 +63,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when experience link in navbar is clicked, loads experience page after a timeout.*/
+    /*Shows spinner and blurs background when skills link in navbar is clicked, loads skills page after a timeout.*/
     $("#skillsnav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -76,7 +77,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when my life link in navbar is clicked, loads my life page after a timeout.*/
+    /*Shows spinner and blurs background when experience link in navbar is clicked, loads experience page after a timeout.*/
     $("#experiencenav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -90,7 +91,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
-    /*Shows spinner and blurs background when contact link in navbar is clicked, loads contact page after a timeout.*/
+    /*Shows spinner and blurs background when my life link in navbar is clicked, loads my life page after a timeout.*/
     $("#mylifenav").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -104,6 +105,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when send an email button is clicked, loads the user's primary email provider with my email and an email topic automatically included after a timeout.*/
     $("#contactBox1").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -117,6 +119,7 @@ $(document).ready(function() {
             $(".all").css("filter", "none");
         }, 2000);
     });
+    /*Shows spinner and blurs background when connect on LinkedIn button is clicked, loads my LinkedIn profile page after a timeout.*/
     $("#contactBox2").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");
@@ -130,6 +133,7 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when resume button in footer is clicked, loads resume page after a timeout.*/
     $("#resume").click(function(){
         $(".all").css("filter", "blur(10px)");
         const elem = document.getElementById("spinner");

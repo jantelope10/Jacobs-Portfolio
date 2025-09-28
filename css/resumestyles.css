@@ -3,6 +3,7 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/*FadeText animation to gradually change the color of text, used in buttons.*/
 @keyframes fadeText {
     0% { color: #0e0a1d; }
     50% { color: #281f4a; }
@@ -22,9 +23,13 @@
 .normal {
     cursor: default;
 }
-/*Purple background gradient.*/
+/*Dark blue background gradient.*/
 .bg-gradient {
     background: linear-gradient(to right, #0e0b1f, #1f1b48);
+}
+/*Blurs background when modals are opened (keep for all CSS files).*/
+.modal-open .all {
+    -webkit-filter: blur(10px);
 }
 /*Fixed logo in the top left, stays in that spot when page is scrolled.*/
 #logo {
@@ -35,45 +40,21 @@
     background-color: transparent;
     cursor: pointer;
 }
-.modal-open .all {
-    -webkit-filter: blur(10px);
-}
-.images {
-    margin: auto;
-}
-/*Modal content background and text.*/
-.modal-content {
-    background-color: #150a1d;
-    color: #c1b6ff;
-}
-/*X button in top right of modal.*/
-button.close {
-    color:white;
-}
-/*Turns white when hovered.*/
-button.close:hover {
-    color:white;
-}
-.modalButtons {
-    font-weight: bold;
-    width: 200px;
-    transition: 0.3s;
-}
-.modalButtons:hover {
-    transform: scale(1.07);
-}
 /*Style of navbar when navbar button is clicked.*/
-#collapse {
-    margin-left: 50px;
+#navCollapse {
+    text-align: center;
     background-color: #0e0a1d;
     justify-content: space-evenly;
     font-weight: bold;
-    font-size: 33px;
+    font-size: 27px;
 }
 /*Underline animation for links in navbar.*/
 .navTitles {
     text-decoration: underline #0e0a1d;
     transition: text-decoration 1s;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    color: white !important;
 }
 /*Hover animation.*/
 .navTitles:hover {
@@ -87,13 +68,14 @@ button.close:hover {
 #navicon:hover {
     transform: scale(1.1);
 }
-/*About me title header, has border animation when hovered.*/
+/*Resume title header, has border animation when hovered.*/
 #titleHeader6 {
     text-align: center;
     font-size: 100px;
     color: #c1b6ff;
     margin-bottom: 80px;
 }
+/*My resume pdf that allows for viewing, printing, and download.*/
 .pdf-container embed {
     display: flex;
     justify-content: center;
@@ -103,7 +85,7 @@ button.close:hover {
     margin-bottom: 140px;
     border: 6px solid #c1b6ff;
 }
-/*About me footer.*/
+/*Resume footer.*/
 .bottom {
     position: relative;
     top: -80px;
@@ -122,6 +104,7 @@ button.close:hover {
     font-size: 20px;
     color: #c1b6ff;
 }
+/*Contact button that accesses contact page.*/
 #contact {
     width: 85px;
     height: 50px;
@@ -134,6 +117,7 @@ button.close:hover {
     font-weight: bold;
     transition: 0.3s;
 }
+/*Hover animation.*/
 #contact:hover {
     transform: scale(1.05);
 }
