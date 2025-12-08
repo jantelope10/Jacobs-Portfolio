@@ -61,19 +61,11 @@
     column-count: 2;
     column-gap: 40px;
 }
-/*Allows flex columns to be used for skills boxes.*/
-.flex-columns {
-    display: flex;
-    gap: 20px;
-}
-/*Columns class for all skill boxes.*/
-.column {
-    flex: 1;
+#row1 {
     text-align: center;
 }
-/*First column in first skill box.*/
-#column1 {
-    margin-top: 17px;
+#row2 {
+    text-align: center;
 }
 /*X button in top right of modal.*/
 button.close {

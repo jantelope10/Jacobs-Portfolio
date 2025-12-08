@@ -180,6 +180,36 @@
     margin-top: -55px;
     margin-right: 20px;
 }
+#it {
+    width: 1110px;
+    height: 200px;
+    margin-top: 60px;
+}
+/*IT box header.*/
+#itHeader {
+    margin-top: 15px;
+    margin-right: -20px;
+    font-size: 40px;
+    color: #c1b6ff;
+}
+/*IT box position name.*/
+#itSubheader {
+    margin-top: -46px;
+    text-align: left;
+    color: #e4dfff;
+}
+/*IT box timeline of work.*/
+#itTimeline {
+    text-align: left;
+    color: #e4dfff;
+    font-size: 15px;
+    margin-left: 80px;
+}
+/*IT box image.*/
+#itLogo {
+    float: right;
+    margin-top: -80px;
+}
 /*Description text boxes for all work boxes.*/
 .experienceTexts {
     text-align: center;
@@ -198,6 +228,11 @@
 /*Premium parts box description text.*/
 #premiumText {
     margin-top: 25px;
+}
+/*IT box description text.*/
+#itText {
+    margin-top: 20px;
+    margin-left: -40px;
 }
 /*Line separating work boxes from more boxes.*/
 #line {
