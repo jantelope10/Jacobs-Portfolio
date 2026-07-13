@@ -54,7 +54,7 @@ body {
     position: fixed;
     color: white;
     font-size: 50px;
-    font-family: "Brush Script MT"; 
+    font-family: 'Brush Script MT', 'brush-script-mt', sans-serif; 
     background-color: transparent;
     cursor: pointer;
 }
