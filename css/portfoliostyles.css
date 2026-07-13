@@ -9,6 +9,13 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+/*Downloaded font for JS logo to work across all devices.*/
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/brush-script-mt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 /*Navbar modifications fixated at the top, disappears when clicked to open.*/
 .navbar {
     position: fixed;
@@ -45,7 +52,7 @@
     position: fixed;
     color: white;
     font-size: 50px;
-    font-family: "Brush Script MT"; 
+    font-family: 'MyFont', sans-serif; 
     background-color: transparent;
     cursor: pointer;
 }
