@@ -7,6 +7,23 @@ $(document).ready(function() {
             this.window.location.reload();
         }
     });
+
+    /*Navbar functionality that hides dark blue banner portion when open, shows when closed.*/
+    let clickCount = 0;
+    $("#navicon").click(function(){
+        clickCount++;
+        if (clickCount % 2 !== 0) {
+            $(".navbar").css("background", "linear-gradient(to right, #0e0b1f, #1f1b48)");
+            $(".navbar").css("position", "sticky");
+
+        } else {
+            $(".navbar").css("background", "#ffffff");
+            $(".navbar").css("background-color", "rgb(12, 0, 44)");
+            setTimeout(function() {
+                $(".navbar").css("position", "fixed");
+            }, 150);
+        }
+    });
     /*For more button inside first project box (Jacob's Portfolio), opens project 1 modal on click.*/
     $("#project1More").click(function(){
         $('#project1Modal').modal("show");
@@ -115,15 +132,18 @@ $(document).ready(function() {
     });
     /*For projects button below title header, scrolls screen down to projects section on click.*/
     $("#projectButton").click(function(){
-        window.scrollTo({ top: 400, behavior: 'smooth' });
+        const projectTarget = $("#projects-section").offset().top;
+        window.scrollTo({ top: projectTarget, behavior: 'smooth' });
     });
     /*For achievements button below title header, scrolls screen down to achievements section on click.*/
     $("#achievementButton").click(function(){
-        window.scrollTo({ top: 1300, behavior: 'smooth' });
+        const achievementTarget = $("#achievements-section").offset().top;
+        window.scrollTo({ top: achievementTarget, behavior: 'smooth' });
     });
     /*For more button below title header, scrolls screen down to more section on click.*/
     $("#moreButton").click(function(){
-        window.scrollTo({ top: 1950, behavior: 'smooth' });
+        const moreTarget = $("#more-section").offset().top;
+        window.scrollTo({ top: moreTarget, behavior: 'smooth' });
     });
     /*For AWS certification button between achievement box 1 and 2, loads my AWS certification proof page on click.*/
     $("#certificationButton").click(function(){

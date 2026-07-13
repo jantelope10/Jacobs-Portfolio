@@ -60,24 +60,30 @@
                     </nav>
                 </div>
             <!--Experience title header.-->
-            <div class="container">
+            <div class="container mt-4">
                 <h5 class="top normal" id="titleHeader5">Work Experience</h5>
             </div>
             <!--Container containing all experience boxes, each with header, subheader, timeline, image, and description.-->
             <div class="container">
                 <!--Top row containing Web Dev and IT experience box.-->
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-12">
                         <!--SCC work experience box (header, subheader, timeline, description).-->
                         <div class="container rounded standard workBoxes" id="scc">
                             <h5 class="top normal" id="sccHeader">Santiago Canyon College</h5>
-                            <h5 class="top normal" id="itSubheader">Information Technology Intern</h5>
                             <img src="images/itlogo.png" class="rounded" id="itLogo" alt="Information Technology Logo">
-                            <h5 class="normal" id="itTimeline">Nov 2025 - Feb 2026</h5>
-                            <p class="normal experienceTexts" id="itText">• Performed network boots on college computers and laptops for data erasure and reimaging.<br>
-                                • Organized and maintained inventory of network hardware, such as Ethernet cables and computer equipment.<br>
-                                • Assisted campus technology specialists with hardware troubleshooting and equipment setup.
-                            </p>
+                            <div class="row" id="wd">
+                                <div class="col-md-4">
+                                    <h5 class="top normal" id="wdSubheader">Web Development Intern</h5>
+                                    <h5 class="normal" id="wdTimeline">Feb 2026 - Present</h5>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="normal experienceTexts" id="wdText">• Creating and restructuring live Santiago Canyon College, Santa Ana College, and RSCCD webpages through collaboration with a web dev team.<br>
+                                        • Incorporating XML/HTML elements and structures to provide seamless pages through Modern Campus CMS for thousands of daily website users.<br>
+                                        • Executing/executed full website migration projects for Santiago Canyon College and RSCCD (RSCCD Website Migration Project).<br>
+                                    </p>
+                                </div>
+                            </div>
                             <!--Horizontal line separating SCC experiences.-->
                             <div class="container">
                                 <div class="row">
@@ -86,38 +92,32 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" id="wd">
-                                <div class="col-md-4">
-                                    <h5 class="top normal" id="wdSubheader">Web Development Intern</h5>
-                                    <h5 class="normal" id="wdTimeline">Feb 2026 - Present</h5>
-                                </div>
-                                <div class="col-md-8">
-                                    <p class="normal experienceTexts" id="wdText">• Creating and modifying live Santa Ana College, Santiago Canyon College, and RSCCD webpages.<br>
-                                        • Incorporating website skills to provide seamless pages through CMS for thousands of daily users.<br>
-                                        • Collaborating with a web development team to complete tickets in a fast-paced environment.<br>
-                                    </p>
-                                </div>
-                            </div>
+                            <h5 class="top normal" id="itSubheader">Information Technology Intern</h5>
+                            <h5 class="normal" id="itTimeline">Nov 2025 - Feb 2026</h5>
+                            <p class="normal experienceTexts" id="itText">• Performed network boots on college computers and laptops for data erasure and reimaging.<br>
+                                • Organized and maintained inventory of network hardware, such as Ethernet cables and computer equipment.<br>
+                                • Assisted campus technology specialists with hardware troubleshooting and equipment setup.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <!--Left column containing Church Tech box.-->
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-12">
                         <!--Church Tech volunteer experience box (header, subheader, timeline, image, description).-->
                         <div class="container rounded standard workBoxes" id="churchtech">
                             <h5 class="top normal" id="churchHeader">Cornerstone Church Anaheim</h5>
                             <h5 class="top normal" id="churchSubheader">Media and Sound Tech Operator<br>Volunteer</h5>
                             <h5 class="normal" id="churchTimeline">May 2025 - Present</h5>
                             <img src="images/cornerstonelogo.png" class="rounded" id="churchLogo" alt="Church Logo">
-                            <p class="normal experienceTexts" id="churchtechText">• Creating and operating slides and videos for worship and sermons using Apple ProPresenter.<br><br>
-                                • Controlling the soundboard to ensure quality audio from performers and pastors.<br><br>
+                            <p class="normal experienceTexts" id="churchtechText">• Creating and operating slides and videos for worship and sermons using Apple ProPresenter.<br>
+                                • Controlling the soundboard to ensure quality audio from performers and pastors.<br>
                                 • Utilizes teamwork and time management to arrive early and confirm everything is organized and works properly.
                             </p>
                         </div>
                     </div>
                     <!--Right column containing Chipotle and Premium boxes.-->
-                    <div class="col-md-8">
+                    <div class="col-lg-8 col-12">
                         <!--Chipotle work experience box (header, subheader, timeline, description).-->
                         <div class="container rounded standard workBoxes" id="chipotle">
                             <h5 class="top normal" id="chipotleHeader">Chipotle</h5>
@@ -145,42 +145,55 @@
             <!--Horizontal line separating experience boxes from more boxes containing external links.-->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-12">
                         <span class="line rounded" id="lineBottom"></span>
                     </div>
                 </div>
             </div>
             <!--More box with 3 buttons that have external links each.-->
             <div class="container rounded standard" id="more">
-                <div class="col-md-12">
-                    <!--3 buttons with external links.-->
-                    <div class="row">
-                        <h5 class="normal" id="moreHeader">More:</h5>
-                        <button class="btn btn-light moreButtons" id="moreButton1" type="button">About Me</button>
-                        <button class="btn btn-light moreButtons" id="moreButton2" type="button">Portfolio</button>
-                        <button class="btn btn-light moreButtons" id="moreButton3" type="button">Skills</button>
+                <div class="row">
+                    <div class="col-12">
+                        <!--3 buttons with external links.-->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5 class="normal" id="moreHeader">More:</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-light moreButtons" id="moreButton1" type="button">About Me</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-light moreButtons" id="moreButton2" type="button">Portfolio</button>
+ 
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-light moreButtons" id="moreButton3" type="button">Skills</button>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
-                <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline.-->
-                <div class="descLine">
-                    <!--Subtitle and email.-->
-                    <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images/buttons that direct users to my socials when clicked.-->
-                    <button class="btn btn-dark" id="resume" type="button">Resume</button>
-                    <button class="btn btn-dark" id="contact" type="button">Contact</button>
-                    <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
-                    <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
-                    <img class="rounded" id="github" src="images/github2.png" alt="GitHub">
+                <div class="row">
+                    <div class="col-12 text-center text-md-left">
+                        <!--Footer header.-->
+                        <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
+                        <!--Container that sets everything in it inline.-->
+                        <div class="descLine float-none">
+                            <!--Subtitle and email.-->
+                            <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
+                            <!--Images/buttons that direct users to my socials when clicked.-->
+                            <img class="footerButtons rounded" id="discord" src="images/discord.png" alt="Discord">
+                            <img class="footerButtons rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
+                            <img class="footerButtons rounded" id="github" src="images/github2.png" alt="GitHub">
+                            <button class="footerButtons btn btn-dark" id="contact" type="button">Contact</button>
+                            <button class="footerButtons btn btn-dark" id="resume" type="button">Resume</button>
+                        </div>
+                        <!--Copyright claim with line above.-->
+                        <h5 class="normal" id="copyright">© Copyright 2026 All Rights Reserved</h5>
+                    </div>
                 </div>
-                <!--Footer line.-->
-                <span class="line" id="line2"></span>
-                <!--Copyright claim.-->
-                <h5 class="normal" id="copyright">© Copyright 2026 All Rights Reserved</h5>
             </div>
         </div>
         <!--Spinner located outside of all container so that it doesn't get blurred when a user clicks a button navigating to a new page.-->

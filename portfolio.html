@@ -84,184 +84,247 @@
                     </nav>
                 </div>
             <!--Contains portfolio title header and top images.-->
-            <div class="container">
-                <h5 class="top normal" id="titleHeader3">Portfolio</h5>
-                <img src="images/transparentfolder.png" class="rounded" id="folder" alt="Folder Icon">
-                <img src="images/crown.png" class="rounded" id="crown" alt="Crown Icon">
-            </div>
-            <!--Contains all 3 buttons leading to projects, achievements, and more on the page, respectively.-->
-            <div class="container">
+            <div class="container mt-4">
                 <div class="row">
-                    <div class="col-md-4">
-                        <button class="btn btn-dark mr-5 ml-auto portfolioButtons" id="projectButton" type="button">Projects</button>
+                    <div class="col-lg-3 col-md-2 col-12">
+                        <img src="images/transparentfolder.png" class="rounded" id="folder" alt="Folder Icon">
                     </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-dark mr-5 ml-auto portfolioButtons" id="achievementButton" type="button">Achievements</button>
+                    <div class="col-lg-6 col-md-8 col-12">
+                        <h5 class="normal" id="titleHeader3">Portfolio</h5>
                     </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-dark mr-5 ml-auto portfolioButtons" id="moreButton" type="button">More</button>
-                    </div>
-                </div>
-            </div>
-            <!--Contains everything in projects section, including title and all 3 project boxes.-->
-            <div class="container">
-                <!--Projects section title.-->
-                <div class="col-md-12">
-                    <h5 class="normal" id="projectsTitle">PROJECTS</h5>
-                </div>
-                <!--Jacob's Portfolio project box containing header, timeline, image, description and more button for modal.-->
-                <div class="col-md-12">
-                    <div class="container rounded standard allProjects" id="project1">
-                        <h5 class="normal projectHeaders" id="projectHeader1">Jacob's Portfolio</h5>
-                        <h5 class="normal" id="project1Subheader">(this website)</h5>
-                        <h5 class="normal" id="project1Timeline">Mar 2025 - Aug 2025</h5>
-                        <button class="btn btn-dark" id="project1More" type="button">More</button>
-                        <p class="normal projectTexts" id="project1Text">• Designed and built an HTML/CSS/JavaScript<br>program in VS Code that displays my portfolio.<br><br>
-                            • Utilizes unique customizations and interactivity,<br>including jQuery and Bootstrap; solo project.
-                        </p>
-                        <img src="images/project1.png" class="rounded" id="project1Image" alt="Project 1 Image">
+                    <div class="col-lg-3 col-md-2 col-12">
+                        <img src="images/crown.png" class="rounded" id="crown" alt="Crown Icon">
                     </div>
                 </div>
-                <!--Real-Estate Website project box containing header, timeline, image, and description.-->
-                <div class="col-md-12">
-                    <div class="container rounded standard allProjects" id="project2">
-                        <h5 class="normal projectHeaders" id="projectHeader2">Real-Estate Club Website</h5>
-                        <h5 class="normal" id="project2Timeline">Sep 2024 - Dec 2024</h5>
-                        <p class="normal projectTexts" id="project2Text">• Developed an interactive website with other members<br>of the GCU Software Development Club for another club.<br><br>
-                            • Created in TypeScript within VS Code; utilized GitHub<br>and Docker, with Firebase for database management.
-                        </p>
-                        <img src="images/project2.png" class="rounded" id="project2Image" alt="Project 2 Image">
-                    </div>
+                <div class="col-12">
+                    <img src="images/transparentfolder.png" class="rounded" id="folderMobile" alt="Folder Icon Mobile">
                 </div>
-                <!--Casino Game project box containing header, timeline, and description.-->
-                <div class="col-md-12">
-                    <div class="container rounded standard allProjects" id="project3">
-                        <h5 class="normal projectHeaders" id="projectHeader3">Java Casino Game</h5>
-                        <h5 class="normal" id="project3Timeline">Mar 2022 - June 2022</h5>
-                        <p class="normal projectTexts" id="project3Text">• Designed and build a Java program that simulated a casino consisting of<br>blackjack, slots and roulette.<br>
-                            • Consisted of a full-working application, conditional statements, a points<br>system, and graphics.<br>
-                            • Collaboration to complete the project efficiently, with me appointed as<br>project manager; group project.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--Contains horizontal line and everything in achievements section, including title and all 4 achievement boxes.-->
-            <div class="container">
+                <!--Contains all 3 buttons leading to projects, achievements, and more on the page, respectively.-->
                 <div class="row">
-                    <!--Horizontal line separating projects and achievements sections.-->
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <button class="btn btn-dark portfolioButtons" id="projectButton" type="button">Projects</button>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <button class="btn btn-dark portfolioButtons" id="achievementButton" type="button">Achievements</button>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <button class="btn btn-dark portfolioButtons" id="moreButton" type="button">More</button>
+                    </div>
+                </div>
+                <!--Contains everything in projects section, including title and all 6 project boxes.-->
+                <div class="container" id="projects-section">
+                    <!--Projects section title.-->
                     <div class="col-md-12">
-                        <span class="line rounded" id="line1"></span>
+                        <h5 class="normal" id="projectsTitle">PROJECTS</h5>
+                    </div>
+                    <!--Jacob's Portfolio project box containing header, timeline, image, description and more button for modal.-->
+                    <div class="col-md-12">
+                        <div class="container rounded standard allProjects" id="project1">
+                            <h5 class="normal projectHeaders" id="projectHeader1">Jacob's Portfolio</h5>
+                            <h5 class="normal" id="project1Subheader">(this website)</h5>
+                            <h5 class="normal" id="project1Timeline">Mar 2025 - Present</h5>
+                            <button class="btn btn-dark" id="project1More" type="button">More</button>
+                            <p class="normal projectTexts" id="project1Text">• Designed and built a vanilla HTML/CSS/JavaScript<br>program in VS Code that displays my portfolio;<br>made entirely from scratch.<br><br>
+                                • Utilizes unique customizations and interactivity,<br>including jQuery and Bootstrap; solo project.
+                            </p>
+                            <img src="images/project1.png" class="rounded" id="project1Image" alt="Project 1 Image">
+                        </div>
+                    </div>
+                    <!--Project 2-->
+                    <div class="col-md-12">
+                        <div class="container rounded standard allProjects" id="project2">
+                            <h5 class="normal projectHeaders" id="projectHeader2">RSCCD Website Migration<br>(through SCC Internship)</h5>
+                            <h5 class="normal" id="project2Timeline">Feb 2026 - July 2026</h5>
+                            <h5 id="project2Website"><u>rsccd.edu</u></h5>
+                            <p class="normal projectTexts" id="project2Text">• Collaborated with my web development team at<br>Santiago Canyon College to migrate over 500 district<br>webpages to a new system through Modern Campus CMS.<br><br>
+                                • Applied my knowledge of XML/HTML to create elements<br>and structures for better user convenience and accessibility.
+                            </p>
+                            <img src="images/project2.png" class="rounded" id="project2Image" alt="Project 2 Image">
+                        </div>
+                    </div>
+                    <!--Project 3-->
+                    <div class="col-md-12">
+                        <div class="container rounded standard allProjects" id="project3">
+                            <h5 class="normal projectHeaders" id="projectHeader3">Chef Claude AI<br>Recipe Maker</h5>
+                            <h5 class="normal" id="project3Timeline">Dec 2025 - Jan 2026</h5>
+                            <button class="btn btn-dark" id="project3More" type="button">Github</button>
+                            <p class="normal projectTexts" id="project3Text">• Developed a React web application that<br>allows the user to input their ingredients<br>to receive an accurate recipe.<br><br>
+                                • Utilizes a Claude/Anthropic AI API for<br>exceptional results and guided steps<br>for user convenience.
+                            </p>
+                            <img src="images/project3.png" class="rounded" id="project3Image" alt="Project 3 Image">
+                        </div>
+                    </div>
+                    <!--Project 4-->
+                    <div class="col-md-12">
+                        <div class="container rounded standard allProjects" id="project4">
+                            <h5 class="normal projectHeaders" id="projectHeader4">Emergency Room<br>Simulator</h5>
+                            <h5 class="normal" id="project4Timeline">Sep 2025 - Dec 2025</h5>
+                            <button class="btn btn-dark" id="project4More" type="button">Github</button>
+                            <p class="normal projectTexts" id="project4Text">• Developed a game application that simulates<br>an emergency room, using various C++ packages.<br><br>
+                                • Allows users to create and treat patients based on the<br>severity of injury, as well as upgrade their hospital.
+                            </p>
+                            <img src="images/project4.png" class="rounded" id="project4Image" alt="Project 4 Image">
+                        </div>
+                    </div>
+                    <!--Casino Game project box containing header, timeline, and description.-->
+                    <div class="col-md-12">
+                        <div class="container rounded standard allProjects" id="project5">
+                            <h5 class="normal projectHeaders" id="projectHeader5">Tic-Tac-Toe Game</h5>
+                            <h5 class="normal" id="project5Timeline">Oct 2025 - Dec 2025</h5>
+                            <button class="btn btn-dark" id="project5More" type="button">Github</button>
+                            <p class="normal projectTexts" id="project5Text">• Designed and built a Python program that<br>simulates a tic-tac-toe game with single-player<br>against a CPU and multiplayer options.<br><br>
+                                • Consists of a clean UI through Tkinter with a<br>multi-round scoreboard and seamless functionality. 
+                            </p>
+                            <img src="images/project5.jpg" class="rounded" id="project5Image" alt="Project 5 Image">
+                        </div>
+                    </div>
+                    <!--Real-Estate Website project box containing header, timeline, image, and description.-->
+                    <div class="col-md-12">
+                        <div class="container rounded standard allProjects" id="project6">
+                            <h5 class="normal projectHeaders" id="projectHeader6">Real-Estate Club Website</h5>
+                            <h5 class="normal" id="project6Timeline">Sep 2024 - Dec 2024</h5>
+                            <h5 id="project6Website"><u>gcurealestateclub.wixsite.com/gcu-real-estate-club</u></h5>
+                            <p class="normal projectTexts" id="project6Text">• Developed an interactive website with other members<br>of the GCU Software Development Club for another club.<br><br>
+                                • Created in TypeScript within VS Code; utilized GitHub<br>and Docker, with Firebase for database management.
+                            </p>
+                            <img src="images/project6.png" class="rounded" id="project6Image" alt="Project 6 Image">
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <!--AWS achievement box containing title, image, description text, and button to the right of box containing external link to certification.-->
-                    <div class="col-md-6">
-                        <div class="container rounded standard allAchievements" id="achievement1">
-                            <h5 class="normal achievementHeaders" id="achievementHeader1">AWS Certified Cloud<br>Practitioner Certification</h5>
-                            <img src="images/aws.png" class="rounded" id="awsLogo" alt="AWS Logo">
-                            <p class="normal achievementTexts" id="achievement1Text">• Successfully completed the AWS Cloud Foundations course and Practitioner Exam.<br>
-                                • Formed basic knowledge and navigation of cloud computing and each AWS service through labs and coursework.
-                            </p>
+                <!--Contains horizontal line and everything in achievements section, including title and all 4 achievement boxes.-->
+                <div class="container" id="achievements-section">
+                    <div class="row">
+                        <!--Horizontal line separating projects and achievements sections.-->
+                        <div class="col-md-12">
+                            <span class="line rounded" id="line1"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Achievements section title.-->
+                        <div class="col-12">
+                            <h5 class="normal" id="achievementsTitleMobile">ACHIEVEMENTS</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--AWS achievement box containing title, image, description text, and button to the right of box containing external link to certification.-->
+                        <div class="col-lg-6 col-12">
+                            <div class="container rounded standard allAchievements" id="achievement1">
+                                <h5 class="normal achievementHeaders" id="achievementHeader1">AWS Certified Cloud<br>Practitioner Certification</h5>
+                                <img src="images/aws.png" class="rounded" id="awsLogo" alt="AWS Logo">
+                                <p class="normal achievementTexts" id="achievement1Text">• Successfully completed the AWS Cloud Foundations course and Practitioner Exam.<br>
+                                    • Formed basic knowledge and navigation of cloud computing and the most important AWS services through labs and coursework.<br>
+                                    • Applied this knowledge to this current site!
+                                </p>
+                            </div>
                             <button class="btn btn-dark" id="certificationButton" type="button">AWS Certification</button>
-                            <img src="images/openinnewwindowicon.png" class="rounded" id="certificationoinwicon" alt="Open in New Window Icon">
+                        </div>
+                        <!--GPA achievement box containing title and description text.-->
+                        <div class="col-lg-6 col-12">
+                            <div class="container rounded standard allAchievements" id="achievement2">
+                                <h5 class="normal achievementHeaders" id="achievementHeader2">Associate in Science for Transfer<br>in Computer Science (AS-T)</h5>
+                                <p class="normal achievementTexts" id="achievement2Text">• Completed at Santiago Canyon College in Spring 2026.<br>
+                                    • Achieved Highest and Departmental Honors<br>(4.0 GPA and exceptional success in CS).<br>
+                                    • Received a Cal-GETC certification.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <!--GPA achievement box containing title and description text.-->
-                    <div class="col-md-6">
-                        <div class="container rounded standard allAchievements" id="achievement2">
-                            <h5 class="normal achievementHeaders" id="achievementHeader2">4.47 Weighted GPA in High School</h5>
-                            <p class="normal achievementTexts" id="achievement2Text">• Achieved a 4.47 Weighted GPA (4.00 Nonweighted), showing academic excellence.<br>
-                                • Completed 5 AP classes and received straight As as a High Honor Roll student.
-                            </p>
+                    <div class="row">
+                        <!--Achievements section title.-->
+                        <div class="col-md-12">
+                            <h5 class="normal" id="achievementsTitle">ACHIEVEMENTS</h5>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <!--Achievements section title.-->
-                    <div class="col-md-12">
-                        <h5 class="normal" id="achievementsTitle">ACHIEVEMENTS</h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <!--AP Scholar achievement box containing title, image, and description text.-->
-                    <div class="col-md-6">
-                        <div class="container rounded standard allAchievements" id="achievement3">
-                            <h5 class="normal achievementHeaders" id="achievementHeader3">AP Scholar with<br>Honor Award</h5>
-                            <p class="normal achievementTexts" id="achievement3Text">• Granted to high-school students who received an average score of at least 3.25 on each AP Exam taken.<br>
-                                • Designated for students who also had scores of 3 or higher on four or more AP Exams.
-                            </p>
-                            <img src="images/collegeboard.png" class="rounded" id="collegeBoardLogo" alt="College Board Logo">
+                    <div class="row">
+                        <!--AP Scholar achievement box containing title, image, and description text.-->
+                        <div class="col-lg-6 col-12">
+                            <div class="container rounded standard allAchievements" id="achievement3">
+                                <h5 class="normal achievementHeaders" id="achievementHeader3">AP Scholar with<br>Honor Award</h5>
+                                <p class="normal achievementTexts" id="achievement3Text">• Granted to high-school students who received an average score of at least 3.25 on each AP Exam taken.<br>
+                                    • Designated for students who also had scores of 3 or higher on four or more AP Exams.
+                                </p>
+                                <img src="images/collegeboard.png" class="rounded" id="collegeBoardLogo" alt="College Board Logo">
+                            </div>
                         </div>
-                    </div>
-                    <!--SBAC achievement box containing title and description text.-->
-                    <div class="col-md-6">
-                        <div class="container rounded standard allAchievements" id="achievement4">
-                            <h5 class="normal achievementHeaders" id="achievementHeader4">Certificate of Recognition - SBAC Testing</h5>
-                            <p class="normal achievementTexts" id="achievement4Text">• Granted to high-school students who showed scholar excellence in the areas of English language arts and mathematics from 11th grade SBAC testing.<br>
-                                • Designated for students within the top 10 percent of all scores in the grade.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Contains horizontal line and all 3 more boxes containing external links.-->
-            <div class="container">
-                <div class="row">
-                    <!--Horizontal line between achievements and more sections.-->
-                    <div class="col-md-12">
-                        <span class="line rounded" id="line2"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <!--About me more box with external link.-->
-                    <div class="col-md-12">
-                        <div class="container rounded standard clickable allMore" id="more1">
-                            <h5 class="clickable moreHeaders" id="moreHeader1">About Me</h5>
-                            <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon1" alt="Open in New Window Icon">
+                        <!--SBAC achievement box containing title and description text.-->
+                        <div class="col-lg-6 col-12">
+                            <div class="container rounded standard allAchievements" id="achievement4">
+                                <h5 class="normal achievementHeaders" id="achievementHeader4">2 Scholarships Awarded at SCC</h5>
+                                <p class="normal achievementTexts" id="achievement4Text">• <b>Joseph A. Geissler Memorial Scholarship</b> - Awarded in Spring 2026; heavily based on high GPA and giving back to the community through volunteering and leadership.<br>
+                                    • <b>Edison International STEM Scholarship</b> - Awarded in Fall 2025; heavily based on high GPA as well as involvement and success in the STEM program of SCC.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <!--More section title.-->
-                    <div class="col-md-6">
-                        <h5 class="normal" id="moreTitle">MORE:</h5>
-                    </div>
-                    <!--Skills more box with external link.-->
-                    <div class="col-md-6">
-                        <div class="container rounded standard clickable allMore" id="more2">
-                            <h5 class="clickable moreHeaders" id="moreHeader2">Skills</h5>
-                            <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon2" alt="Open in New Window Icon">
+                <!--Contains horizontal line and all 3 more boxes containing external links.-->
+                <div class="container" id="more-section">
+                    <div class="row">
+                        <!--Horizontal line between achievements and more sections.-->
+                        <div class="col-12">
+                            <span class="line rounded" id="line2"></span>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <!--Experience more box with external link.-->
-                    <div class="col-md-12">
-                        <div class="container rounded standard clickable allMore" id="more3">
-                            <h5 class="clickable moreHeaders" id="moreHeader3">Experience</h5>
-                            <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon3" alt="Open in New Window Icon">
+                    <div class="row">
+                        <!--About me more box with external link.-->
+                        <div class="col-12">
+                            <h5 class="normal" id="moreTitleMobile">MORE</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--About me more box with external link.-->
+                        <div class="col-12">
+                            <div class="container rounded standard clickable allMore" id="more1">
+                                <h5 class="clickable moreHeaders" id="moreHeader1">About Me</h5>
+                                <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon1" alt="Open in New Window Icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--More section title.-->
+                        <div class="col-md-6">
+                            <h5 class="normal" id="moreTitle">MORE:</h5>
+                        </div>
+                        <!--Skills more box with external link.-->
+                        <div class="col-md-6 col-12">
+                            <div class="container rounded standard clickable allMore" id="more2">
+                                <h5 class="clickable moreHeaders" id="moreHeader2">Skills</h5>
+                                <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon2" alt="Open in New Window Icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Experience more box with external link.-->
+                        <div class="col-md-12">
+                            <div class="container rounded standard clickable allMore" id="more3">
+                                <h5 class="clickable moreHeaders" id="moreHeader3">Experience</h5>
+                                <img src="images/openinnewwindowicon.png" class="rounded oinwicons" id="oinwicon3" alt="Open in New Window Icon">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
-                <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline.-->
-                <div class="descLine">
-                    <!--Subtitle and email.-->
-                    <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images/buttons that direct users to my socials when clicked.-->
-                    <button class="btn btn-dark" id="resume" type="button">Resume</button>
-                    <button class="btn btn-dark" id="contact" type="button">Contact</button>
-                    <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
-                    <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
-                    <img class="rounded" id="github" src="images/github2.png" alt="GitHub">
+                <div class="row">
+                    <div class="col-12 text-center text-md-left">    
+                        <!--Footer header.-->
+                        <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
+                        <!--Container that sets everything in it inline.-->
+                        <div class="descLine float-none">
+                            <!--Subtitle and email.-->
+                            <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
+                            <!--Images/buttons that direct users to my socials when clicked.-->
+                            <img class="footerButtons rounded" id="discord" src="images/discord.png" alt="Discord">
+                            <img class="footerButtons rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
+                            <img class="footerButtons rounded" id="github" src="images/github2.png" alt="GitHub">
+                            <button class="footerButtons btn btn-dark" id="contact" type="button">Contact</button>
+                            <button class="footerButtons btn btn-dark" id="resume" type="button">Resume</button>
+                        </div>
+                        <!--Copyright claim with line above.-->
+                        <h5 class="normal" id="copyright">© Copyright 2026 All Rights Reserved</h5>
+                    </div>
                 </div>
-                <!--Footer line.-->
-                <span class="line" id="line3"></span>
-                <!--Copyright claim.-->
-                <h5 class="normal" id="copyright">© Copyright 2026 All Rights Reserved</h5>
             </div>
         </div>
         <!--Spinner located outside of all container so that it doesn't get blurred when a user clicks a button navigating to a new page.-->

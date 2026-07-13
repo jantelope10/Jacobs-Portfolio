@@ -9,6 +9,15 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+/*Navbar modifications fixated at the top, disappears when clicked to open.*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(12, 0, 44);
+}
 /*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
@@ -70,6 +79,7 @@
 }
 /*Contact title header.*/
 #titleHeader6 {
+    margin-top: 5rem;
     text-align: center;
     font-size: 100px;
     color: #c1b6ff;
@@ -78,7 +88,7 @@
 /*ID card containing image, my name, location, student, and current position.*/
 /*This CSS is just for the container/background.*/
 #idCard {
-    width: 800px;
+    width: 880px;
     height: 300px;
     margin-bottom: 50px;
     text-align: center;
@@ -92,15 +102,15 @@
 }
 /*Image in ID card.*/
 #cardImage {
-    width: 30%;
+    width: 100%;
     border: 4px solid rgb(255, 224, 181);
-    margin-left: -460px;
-    margin-bottom: -260px;
+    margin-top: 1.2rem;
+    margin-left: 2rem;
 }
 /*Header in ID card.*/
 #cardHeader {
-    text-align: right;
-    margin-right: 40px;
+    text-align: center;
+    margin-top: 2rem;
     font-size: 60px;
     color: #c1b6ff;
     margin-bottom: 80px;
@@ -108,7 +118,7 @@
 /*Subheaders of my name, location, student, and current position.*/
 .cardSubheaders {
     text-align: center;
-    margin-left: 290px;
+    
     margin-top: -60px;
     font-size: 30px;
     color: #c1b6ff;
@@ -117,7 +127,7 @@
 /*Contact boxes allowing to send email or connect on LinkedIn.*/
 .contactBoxes {
     margin-top: 40px;
-    margin-bottom: 180px;
+    margin-bottom: 50px;
     width: 320px;
     height: 100px;
     text-align: center;
@@ -163,33 +173,33 @@
     left: 20px;
     bottom: 21px;
 }
-/*Contact footer.*/
+/*Full footer at bottom.*/
 .bottom {
-    position: relative;
-    top: -80px;
-    bottom: 150px;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 /*Header of footer, my name.*/
 #footerHeader {
-    text-align: left;
     font-size: 30px;
     color: #c1b6ff;
 }
 /*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
-    text-align: left;
     font-size: 20px;
     color: #c1b6ff;
 }
+/*All 5 footer buttons.*/
+.footerButtons {
+    float: right;
+    margin-top: -1.5rem;
+}
 /*Resume button that accesses resume page.*/
 #resume {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 362px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -201,11 +211,8 @@
 }
 /*GitHub button that contains link, expands when hovered.*/
 #github {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -217,11 +224,8 @@
 }
 /*LinkedIn button that contains link, expands when hovered.*/
 #linkedin {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -233,10 +237,7 @@
 }
 /*Discord button that contains link, expands when hovered.*/
 #discord {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -246,28 +247,287 @@
     cursor: pointer;
     transform: scale(1.07);
 }
-/*Footer line separating content from copyright claim.*/
-#line2 {
-    height: 3px;
-    width: 1110px;
-    border: 3px solid #c1b6ff;
-    position: absolute;
-    top: 90px;
-}
 /*Copyright claim in footer.*/
 #copyright {
+    width: 100%;
+    border-top: 5px solid #c1b6ff;
+    padding-top: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     color: rgb(152, 152, 152);
     font-size: 10px;
-    position: relative;
-    top: 15px;
 }
 /*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
 #spinner {
     display: none;
     position: fixed;
-    bottom: 35%;
-    left: 42%;
+    inset: 0;
+    margin: auto;
     height: 250px;
     width: 250px;
     border-width: 15px;
+}
+/*Exclusive nav title modifications for screens 1280 px or less.*/
+@media (max-width: 1280px) {
+    .navTitles {
+        padding: 0.7rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 992-1200.5 px.*/
+@media (min-width: 992px) and (max-width: 1200.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #idCard {
+        width: 800px;
+    }
+    #cardImage {
+        margin-left: 1rem;
+        margin-top: 1.7rem;
+    }
+    .bottom {
+        margin-top: 3rem;
+        max-width: 992px;
+    }
+}
+/*Exclusive modifications to elements for screen width 768-991.5 px.*/
+@media (min-width: 768px) and (max-width: 991.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #idCard {
+        width: 680px;
+    }
+    #cardImage {
+        margin-left: 0.7rem;
+        margin-top: 3rem;
+    }
+    #footerHeader {
+        font-size: 25px;
+    }
+    #footerDesc {
+        font-size: 16px;
+    }
+    #resume {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        height: 40px;
+        width: 40px;
+    }
+    .footerButtons {
+        margin-top: -1rem;
+    }
+}
+/*Exclusive nav title modifications for screens 830 px or less.*/
+@media (max-width: 830px) {
+    .navTitles {
+        padding: 0rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 576-767.5 px.*/
+@media (min-width: 576px) and (max-width: 767.5px) {
+    #titleHeader6 {
+        font-size: 90px;
+    }
+    #idCard {
+        width: 510px;
+    }
+    #cardImage {
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+    #cardHeader {
+        margin-top: 0.5rem;
+        font-size: 50px;
+        margin-bottom: 70px;
+    }
+    .cardSubheaders {
+        margin-bottom: 70px;
+    }
+    .contactBoxes {
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 685 px or less.*/
+@media (max-width: 685px) {
+    .navTitles {
+        padding: 6.9rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 575.5 px or less.*/
+@media (max-width: 575.5px) {
+    #titleHeader6 {
+        font-size: 77px;
+    }
+    #idCard {
+        width: 90%;
+    }
+    #cardImage {
+        width: 150px;
+        float: left;
+        margin-left: 0rem;
+        margin-top: 3rem;
+    }
+    #cardHeader {
+        text-align: right;
+        margin-top: 0.5rem;
+        font-size: 50px;
+        margin-bottom: 75px;
+    }
+    .cardSubheaders {
+        text-align: right;
+        font-size: 25px;
+        margin-bottom: 75px;
+    }
+    .contactBoxes {
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 495 px or less.*/
+@media (max-width: 495px) {
+    .navTitles {
+        padding: 3.5rem;
+    }
+}
+/*Exclusive nav title modifications for screens 480 px or less.*/
+@media (max-width: 480px) {
+    .navTitles {
+        padding: 2.7rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 470 px or less.*/
+@media (max-width: 470px) {
+    #titleHeader6 {
+        font-size: 60px;
+    }
+    #idCard {
+        height: 460px;
+    }
+    #cardImage {
+        margin-left: 0rem;
+        margin-top: 1.5rem;
+    }
+    #cardHeader {
+        text-align: right;
+        margin-top: 11.5rem;
+        margin-left: -6.5rem;
+    }
+    .cardSubheaders {
+        text-align: right;
+        margin-left: -6.5rem;
+    }
+}
+/*Exclusive title and card modifications for screens 370 px or less.*/
+@media (max-width: 370px) {
+    #titleHeader6 {
+        font-size: 50px;
+    }
+    #cardHeader {
+        font-size: 50px;
+    }
+    .contactBoxes {
+        width: 260px;
+    }
+    #contact2Header {
+        font-size: 21px;
+        margin-left: -7px;
+    }
+    #contactIcon1 {
+        left: 25px;
+        bottom: 21px;
+    }
+    #contactIcon2 {
+        left: 107px;
+        bottom: 77px;
+    }
+
+}
+/*Exclusive nav title modifications for screens 360 px or less.*/
+@media (max-width: 360px) {
+    .navTitles {
+        padding: 0.2rem;
+    }
 }

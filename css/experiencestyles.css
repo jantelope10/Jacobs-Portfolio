@@ -9,6 +9,15 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+/*Navbar modifications fixated at the top, disappears when clicked to open.*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(12, 0, 44);
+}
 /*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
@@ -70,12 +79,13 @@
 }
 /*Experience title header.*/
 #titleHeader5 {
+    margin-top: 5rem;
     text-align: center;
     font-size: 100px;
     color: #c1b6ff;
     margin-bottom: 80px;
 }
-/*Common settings of all 3 work boxes containing info about each job.*/
+/*Common settings of all 4 work boxes containing info about each job.*/
 .workBoxes {
     text-align: center;
     background-color: #0e0a1d;
@@ -180,6 +190,7 @@
     margin-top: -55px;
     margin-right: 20px;
 }
+/*Size and location of SCC work box.*/
 #scc {
     width: 1110px;
     height: 390px;
@@ -188,14 +199,27 @@
 /*IT box header.*/
 #sccHeader {
     margin-left: 550px;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 40px;
     color: #c1b6ff;
 }
+/*Web Dev box position name.*/
+#wdSubheader {
+    color: #e4dfff;
+    margin-top: -50px;
+    margin-right: -300px;
+}
+/*Web Dev box timeline of work.*/
+#wdTimeline {
+    color: #e4dfff;
+    font-size: 15px;
+    margin-right: -300px;
+}
 /*IT box position name.*/
 #itSubheader {
-    margin-top: -46px;
-    margin-left: 140px;
+    float: right;
+    margin-right: -270px;
+    margin-top: 20px;
     text-align: left;
     color: #e4dfff;
 }
@@ -204,32 +228,24 @@
     text-align: left;
     color: #e4dfff;
     font-size: 15px;
-    margin-left: 210px;
+    float: right;
+    margin-right: -210px;
+    margin-top: 55px;
 }
 /*IT box image.*/
 #itLogo {
     float: right;
+    margin-top: -25px;
+    margin-right: 70px;
 }
 /*Line separating SCC experiences.*/
 #lineTop {
     height: 3px;
-    width: 500px;
+    width: 550px;
     border: 4px solid #c1b6ff;
     position: absolute;
-    margin-left: -300px;
-    margin-top: 35px;
-}
-#wd {
-    margin-top: 100px;
-}
-/*Web Dev box position name.*/
-#wdSubheader {
-    color: #e4dfff;
-}
-/*Web Dev box timeline of work.*/
-#wdTimeline {
-    color: #e4dfff;
-    font-size: 15px;
+    margin-left: -350px;
+    margin-top: 18px;
 }
 /*Description text boxes for all work boxes.*/
 .experienceTexts {
@@ -252,27 +268,33 @@
 }
 /*IT box description text.*/
 #itText {
-    margin-top: 20px;
-    margin-left: -40px;
+    text-align: right;
+    margin-top: 60px;
+    margin-left: 0px;
+    width: 800px;
 }
 /*Web Dev box description text.*/
 #wdText {
-    margin-left: -50px;
+    text-align: left;
+    width: 700px;
+    margin-left: -270px;
+    margin-top: 10px;
 }
 /*Line separating work boxes from more boxes.*/
 #lineBottom {
     margin-top: 60px;
     margin-bottom: 40px;
     height: 7px;
-    width: 1110px;
+    width: 100%;
+    max-width: 1110px;
     border: 4px solid #c1b6ff;
-    position: absolute;
+    display: inline-block;
 }
 /*Outer more box consisting of 3 external links.*/
 #more {
-    margin-top: 120px;
-    margin-bottom: 140px;
-    width: 73%;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+    width: 1200px;
     height: 150px;
     text-align: center;
     background-color: #0e0a1d;
@@ -285,17 +307,15 @@
 }
 /*More box header.*/
 #moreHeader {
-    margin-top: 40px;
-    margin-left: 50px;
     text-align: center;
+    margin-top: 2.5rem;
     font-size: 40px;
     color: #c1b6ff;
 }
 /*Buttons inside outer more box containing each of the 3 external links.*/
 .moreButtons {
-    margin-left: auto;
-    margin-top: 27px;
-    margin-right: 50px;
+    margin-top: 1.7rem;
+    margin-right: 4rem;
     height: 80px;
     width: 150px;
     font-size: 20px;
@@ -311,33 +331,33 @@
     animation: fadeText 0.8s ease;
     color: #3931d2 !important;
 }
-/*Experience footer.*/
+/*Full footer at bottom.*/
 .bottom {
-    position: relative;
-    top: -80px;
-    bottom: 150px;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 /*Header of footer, my name.*/
 #footerHeader {
-    text-align: left;
     font-size: 30px;
     color: #c1b6ff;
 }
 /*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
-    text-align: left;
     font-size: 20px;
     color: #c1b6ff;
 }
+/*All 5 footer buttons.*/
+.footerButtons {
+    float: right;
+    margin-top: -1.5rem;
+}
 /*Resume button that accesses resume page.*/
 #resume {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 272px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -349,12 +369,9 @@
 }
 /*Contact button that accesses contact page.*/
 #contact {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 273px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -366,11 +383,8 @@
 }
 /*GitHub button that contains link, expands when hovered.*/
 #github {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -382,11 +396,8 @@
 }
 /*LinkedIn button that contains link, expands when hovered.*/
 #linkedin {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -398,10 +409,7 @@
 }
 /*Discord button that contains link, expands when hovered.*/
 #discord {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -411,28 +419,642 @@
     cursor: pointer;
     transform: scale(1.07);
 }
-/*Footer line separating content from copyright claim.*/
-#line2 {
-    height: 3px;
-    width: 1110px;
-    border: 3px solid #c1b6ff;
-    position: absolute;
-    top: 90px;
-}
 /*Copyright claim in footer.*/
 #copyright {
+    width: 100%;
+    border-top: 5px solid #c1b6ff;
+    padding-top: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     color: rgb(152, 152, 152);
     font-size: 10px;
-    position: relative;
-    top: 15px;
 }
 /*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
 #spinner {
     display: none;
     position: fixed;
-    bottom: 35%;
-    left: 42%;
+    inset: 0;
+    margin: auto;
     height: 250px;
     width: 250px;
     border-width: 15px;
+}
+
+/*Exclusive modifications to elements for screen width 992-1200.5 px.*/
+@media (min-width: 992px) and (max-width: 1200.5px) {
+    .navTitles {
+        padding: 2rem;
+    }
+    #titleHeader5 {
+        font-size: 95px;
+    }
+    #scc {
+        width: 900px;
+        height: 430px;
+    }
+    #sccHeader {
+        width: 400px;
+        margin-left: 500px;
+    }
+    #wdSubheader {
+        margin-top: -95px;
+        margin-right: -300px;
+    }
+    #wdTimeline {
+        font-size: 15px;
+        margin-right: -300px;
+    }
+    #itSubheader {
+        margin-right: -250px;
+        margin-top: 20px;
+    }
+    #itTimeline {
+        text-align: left;
+        margin-right: -210px;
+        margin-top: 55px;
+    }
+    #itLogo {
+        float: right;
+        margin-top: -40px;
+        margin-right: 30px;
+    }
+    #lineTop {
+        width: 500px;
+        margin-left: -275px;
+        margin-top: 28px;
+    }
+    #wdText {
+        width: 550px;
+        margin-top: -30px;
+        margin-left: -190px;
+    }
+    #itText {
+        text-align: left;
+        margin-top: 90px;
+        margin-left: 15px;
+    }
+    #churchtechText {
+        margin-top: 80px;
+    }
+    #lineBottom {
+        width: 930px;
+    }
+    #more {
+        margin-top: 1rem;
+    }
+    .moreButtons {
+        margin-left: 1rem;
+    }
+    .bottom {
+        margin-top: 3rem;
+        max-width: 992px;
+    }
+}
+/*Exclusive modifications to elements for screen width 768-991.5 px.*/
+@media (min-width: 769px) and (max-width: 991.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #titleHeader5 {
+        font-size: 85px;
+    }
+    #scc {
+        width: 670px;
+        height: 650px;
+    }
+    #sccHeader {
+        margin-left: 0rem;
+        width: 400px;
+    }
+    #wdSubheader {
+        margin-top: 10px;
+        margin-right: -500px;
+        text-align: center;
+    }
+    #wdTimeline {
+        font-size: 15px;
+        margin-right: -500px;
+    }
+    #itSubheader {
+        text-align: center;
+        margin-right: 175px;
+        margin-top: 50px;
+    }
+    #itTimeline {
+        text-align: center;
+        margin-right: -210px;
+        margin-top: 85px;
+    }
+    #itLogo {
+        float: right;
+        margin-top: -160px;
+        margin-right: 0px;
+    }
+    #lineTop {
+        width: 300px;
+        margin-left: -150px;
+        margin-top: 20px;
+    }
+    #wdText {
+        width: 600px;
+        margin-top: 80px;
+        margin-left: -110px;
+    }
+    #itText {
+        width: 600px;
+        text-align: left;
+        margin-top: 120px;
+        margin-left: 30px;
+    }
+    #churchtech {
+        width: 600px;
+        height: 550px;
+        margin-bottom: 60px;
+    }
+    #churchLogo {
+        margin-top: 10px;
+        width: 80%;
+        margin-bottom: -100px;
+    }
+    #churchtechText {
+        margin-top: 130px;
+    }
+    #chipotle {
+        float: none;
+        margin-bottom: 60px;
+    }
+    #premium {
+        float: none;
+    }
+    #lineBottom {
+        width: 690px;
+    }
+    #more {
+        width: 700px;
+    }
+    .moreButtons {
+        margin-left: -1rem;
+    }
+    #footerHeader {
+        font-size: 25px;
+    }
+    #footerDesc {
+        font-size: 16px;
+    }
+    #resume {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #contact {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        height: 40px;
+        width: 40px;
+    }
+    .footerButtons {
+        margin-top: -1rem;
+    }
+}
+/*Exclusive nav title modifications for screens 830 px or less.*/
+@media (max-width: 830px) {
+    .navTitles {
+        padding: 0rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 576-767.5 px.*/
+@media (min-width: 576px) and (max-width: 768.5px) {
+    #titleHeader5 {
+        font-size: 85px;
+    }
+    #scc {
+        width: 500px;
+        height: 720px;
+    }
+    #sccHeader {
+        text-align: center;
+        margin-left: 0rem;
+        font-size: 38px;
+    }
+    #wdSubheader {
+        margin-top: 10px;
+        margin-right: 0px;
+        text-align: center;
+    }
+    #wdTimeline {
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #itSubheader {
+        text-align: center;
+        margin-right: 90px;
+        margin-top: 60px;
+    }
+    #itTimeline {
+        text-align: center;
+        margin-right: -210px;
+        margin-top: 95px;
+    }
+    #itLogo {
+        float: right;
+        margin-top: -60px;
+        margin-right: 0px;
+    }
+    #lineTop {
+        width: 300px;
+        margin-left: -150px;
+        margin-top: 20px;
+    }
+    #wdText {
+        width: 450px;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    #itText {
+        width: 450px;
+        text-align: left;
+        margin-top: 130px;
+        margin-left: 15px;
+    }
+    #churchtech {
+        width: 500px;
+        height: 530px;
+        margin-bottom: 60px;
+    }
+    #chipotle {
+        width: 500px;
+        float: none;
+        margin-bottom: 60px;
+    }
+    #chipotleHeader {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    #chipotleSubheader {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #chipotleTimeline {
+        margin-top: -60px;
+        margin-right:10px;
+    }
+    #premium {
+        float: none;
+        width: 500px;
+        height: 350px;
+    }
+    #premiumHeader {
+        text-align: left;
+        margin-left: 10px;
+    }
+    #premiumLogo {
+        float: right;
+        margin-top: -110px;
+    }
+    #premiumSubheader {
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    #premiumTimeline {
+        margin-top: -30px;
+        margin-right: 20px;
+    }
+    #lineBottom {
+        width: 510px;
+    }
+    #more {
+        width: 300px;
+        height: 480px;
+    }
+    .moreButtons {
+        margin: auto;
+        margin-top: 2rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 685 px or less.*/
+@media (max-width: 685px) {
+    .navTitles {
+        padding: 7.9rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 575.5 px or less.*/
+@media (max-width: 575.5px) {
+    #titleHeader5 {
+        font-size: 75px;
+    }
+    #scc {
+        width: 380px;
+        height: 970px;
+    }
+    #sccHeader {
+        text-align: center;
+        margin-left: 0rem;
+        font-size: 38px;
+    }
+    #wdSubheader {
+        width: 300px;
+        margin-top: -40px;
+        margin-left: 25px;
+        text-align: center;
+    }
+    #wdTimeline {
+        width: 200px;
+        font-size: 15px;
+        margin-left: 70px;
+    }
+    #itSubheader {
+        text-align: center;
+        margin-right: 30px;
+        margin-top: 50px;
+    }
+    #itTimeline {
+        text-align: center;
+        margin-right: -210px;
+        margin-top: 85px;
+    }
+    #itLogo {
+        float: none;
+        margin-top: -40px;
+        margin-right: 0px;
+    }
+    #lineTop {
+        width: 250px;
+        margin-left: -120px;
+        margin-top: 15px;
+    }
+    #wdText {
+        width: 330px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #itText {
+        width: 330px;
+        text-align: left;
+        margin-top: 130px;
+        margin-left: 10px;
+    }
+    #churchtech {
+        width: 380px;
+        height: 600px;
+        margin-bottom: 60px;
+    }
+    #chipotle {
+        width: 380px;
+        height: 380px;
+        float: none;
+        margin-bottom: 60px;
+    }
+    #chipotleTimeline {
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #chipotleText {
+        margin-top: 20px;
+    }
+    #premium {
+        float: none;
+        width: 380px;
+        height: 490px;
+    }
+    #premiumLogo {
+        margin-top: -150px;
+    }
+    #premiumSubheader {
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 60px;
+    }
+    #premiumTimeline {
+        text-align: center;
+        margin-right: 0px;
+        margin-top: -20px;
+    }
+    #more {
+        width: 300px;
+        height: 480px;
+    }
+    .moreButtons {
+        margin: auto;
+        margin-top: 2rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 525 px or less.*/
+@media (max-width: 525px) {
+    .navTitles {
+        padding: 4.6rem;
+    }
+}
+/*Exclusive nav title modifications for screens 480 px or less.*/
+@media (max-width: 480px) {
+    .navTitles {
+        padding: 3.7rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 450 px or less.*/
+@media (max-width: 450px) {
+    #titleHeader5 {
+        font-size: 55px;
+    }
+    #scc {
+        width: 280px;
+        height: 1120px;
+    }
+    #sccHeader {
+        font-size: 34px;
+        text-align: center;
+        margin-left: 0rem;
+    }
+    #wdSubheader {
+        width: 300px;
+        margin-top: -40px;
+        margin-left: -30px;
+        text-align: center;
+    }
+    #wdTimeline {
+        width: 200px;
+        font-size: 15px;
+        margin-left: 20px;
+    }
+    #itSubheader {
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 55px;
+    }
+    #itTimeline {
+        text-align: center;
+        margin-right: -190px;
+        margin-top: 110px;
+    }
+    #itLogo {
+        float: none;
+        margin-top: -50px;
+        margin-right: 0px;
+    }
+    #lineTop {
+        width: 150px;
+        margin-left: -70px;
+        margin-top: 15px;
+    }
+    #wdText {
+        width: 240px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #itText {
+        width: 240px;
+        margin-top: 150px;
+        margin-left: 10px;
+    }
+    #churchtech {
+        width: 280px;
+        height: 650px;
+        margin-bottom: 60px;
+    }
+    #churchLogo {
+        margin-top: -50px;
+    }
+    #churchtechText {
+        margin-top: 60px;
+        font-size: 16px;
+    }
+    #chipotle {
+        width: 280px;
+        height: 440px;
+        float: none;
+        margin-bottom: 60px;
+    }
+    #chipotleHeader {
+        text-align: center;
+        margin-left: 0px;
+    }
+    #chipotleSubheader {
+        text-align: center;
+        margin-left: 0px;
+    }
+    #chipotleText {
+        font-size: 16px;
+    }
+    #premium {
+        float: none;
+        width: 280px;
+        height: 510px;
+    }
+    #premiumHeader {
+        font-size: 30px;
+    }
+    #premiumText {
+        margin-top: 20px;
+    }
+    #more {
+        width: 250px;
+        height: 480px;
+    }
+    .moreButtons {
+        margin: auto;
+        margin-top: 2rem;
+    }
+}
+/*Exclusive nav title modifications for screens 390 px or less.*/
+@media (max-width: 390px) {
+    .navTitles {
+        padding: 1.8rem;
+    }
+}
+/*Exclusive nav title modifications for screens 360 px or less.*/
+@media (max-width: 360px) {
+    .navTitles {
+        padding: 1.2rem;
+    }
 }

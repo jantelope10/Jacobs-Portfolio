@@ -9,6 +9,15 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+/*Navbar modifications fixated at the top, disappears when clicked to open.*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(12, 0, 44);
+}
 /*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
@@ -89,44 +98,17 @@
 }
 /*About me title header.*/
 #titleHeader2 {
-    width: 41%;
+    margin-top: 4rem;
     text-align: left;
     font-size: 100px;
     color: #c1b6ff;
 }
-/*First title image (big image).*/
-#titleImg {
-    position: relative;
-    left: 550px;
-    bottom: 95px;
-    width: 27%;
-    border: 6px solid rgb(255, 224, 181);
-}
-/*Second title image.*/
-#titleImg2 {
-    position: relative;
-    bottom: 95px;
-    float: right;
-    width: 15%;
-    border: 6px solid rgb(255, 224, 181);
-}
-/*Third title image.*/
-#titleImg3 {
-    position: relative;
-    top: 183px;
-    left: 165px;
-    float: right;
-    width: 15%;
-    border: 6px solid rgb(255, 224, 181);
-}
 /*About me title description container, expands when hovered.*/
 #titleDesc {
-    position: relative;
-    right: 330px;
-    bottom: 475px;
+    float: left;
     width: 450px;
     height: 270px;
-    text-align: center;
+    margin-top: 1.5rem;
     background-color: #0e0a1d;
     border: 4px solid rgb(12, 0, 44);
     transition: 0.3s;
@@ -137,11 +119,8 @@
 }
 /*Titles class for all headings in titleDesc.*/
 .titles {
-    position: relative;
-    bottom: 20px;
-    margin-top: 35px;
+    margin-top: 1.6rem;
     text-align: center;
-    vertical-align: middle;
     font-size: 20px;
     color: #c1b6ff;
 }
@@ -165,13 +144,30 @@
     width: 80%;
     margin-left: 10%;
 }
+/*First title image (big image).*/
+#titleImg {
+    float: left;
+    width: 120%;
+    margin-top: 5rem;
+    border: 6px solid rgb(255, 224, 181);
+}
+/*Second title image.*/
+#titleImg2 {
+    float: right;
+    width: 65%;
+    margin-top: 5rem;
+    border: 6px solid rgb(255, 224, 181);
+}
+/*Third title image.*/
+#titleImg3 {
+    float: right;
+    width: 65%;
+    margin-top: 3.8rem;
+    border: 6px solid rgb(255, 224, 181);
+}
 /*Column of content for the 4 boxes (me and hobbies, and school and more).*/
 .content {
-    position: relative;
-    bottom: 300px;
-    margin-left: 17px;
-    margin-top: 60px;
-    margin-bottom: -90px;
+    margin-top: 8rem;
 }
 /*View buttons in each of the 3 boxes, calls FadeText animation when hovered.*/
 .viewButtons {
@@ -187,23 +183,34 @@
 }
 /*Vertical purple line in between 4 boxes.*/
 #vertLine {
+    display: inline-block;
+    margin-left: 4.5rem;
+    margin-top: 8rem;
     height: 640px;
     width: 7px;
     color: #c1b6ff;
     border: 7px solid #c1b6ff;
-    position: absolute;
-    bottom: 210px;
-    left: 95px;
 }
 /*Horizontal purple line in between 4 boxes.*/
 #horizLine {
+    display: inline-block;
+    margin-top: 2.2rem;
+    margin-bottom: -2.2rem;
+    margin-left: -41rem;
     height: 5px;
     width: 1105px;
     color: #c1b6ff;
     border: 5px solid #c1b6ff;
-    position: absolute;
-    bottom: 317px;
-    right: 1px;
+}
+/*Horizontal purple lines that appears with smaller screens, hidden here.*/
+#smallHorizLine1 {
+    display: none;
+}
+#smallHorizLine2 {
+    display: none;
+}
+#smallHorizLine3 {
+    display: none;
 }
 /*Me box container containing header, view button, and image.*/
 #person {
@@ -361,7 +368,7 @@
 }
 /*More box container containing 3 external link boxes.*/
 #more {
-    margin-top: 100px;
+    margin-top: 76px;
     width: 450px;
     height: 270px;
     text-align: center;
@@ -410,33 +417,33 @@
     height: 20px;
     width: 20px;
 }
-/*About me footer.*/
+/*Full footer at bottom.*/
 .bottom {
-    position: relative;
-    top: -80px;
-    bottom: 150px;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 /*Header of footer, my name.*/
 #footerHeader {
-    text-align: left;
     font-size: 30px;
     color: #c1b6ff;
 }
 /*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
-    text-align: left;
     font-size: 20px;
     color: #c1b6ff;
 }
+/*All 5 footer buttons.*/
+.footerButtons {
+    float: right;
+    margin-top: -1.5rem;
+}
 /*Resume button that accesses resume page.*/
 #resume {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 272px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -448,12 +455,9 @@
 }
 /*Contact button that accesses contact page.*/
 #contact {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 273px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -465,11 +469,8 @@
 }
 /*GitHub button that contains link, expands when hovered.*/
 #github {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -481,11 +482,8 @@
 }
 /*LinkedIn button that contains link, expands when hovered.*/
 #linkedin {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -497,10 +495,7 @@
 }
 /*Discord button that contains link, expands when hovered.*/
 #discord {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -510,28 +505,444 @@
     cursor: pointer;
     transform: scale(1.07);
 }
-/*Footer line separating content from copyright claim.*/
-#line {
-    height: 5px;
-    width: 1110px;
-    border: 3px solid #c1b6ff;
-    position: absolute;
-    top: 90px;
-}
 /*Copyright claim in footer.*/
 #copyright {
+    width: 100%;
+    border-top: 5px solid #c1b6ff;
+    padding-top: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     color: rgb(152, 152, 152);
     font-size: 10px;
-    position: relative;
-    top: 15px;
 }
 /*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
 #spinner {
     display: none;
     position: fixed;
-    bottom: 35%;
-    left: 42%;
+    inset: 0;
+    margin: auto;
     height: 250px;
     width: 250px;
     border-width: 15px;
+}
+
+/*Exclusive modifications to elements for screen width 992-1200.5 px.*/
+@media (min-width: 992px) and (max-width: 1200.5px) {  
+    .navTitles {
+        padding: 1.8rem;
+    }
+    #titleHeader2 {
+        font-size: 90px;
+    }
+    #titleDesc {
+        width: 400px;
+        height: 300px;
+    }
+    .titles {
+        margin-top: 1.1rem;
+    }
+    #person {
+        width: 350px;
+    }
+    #hobbies {
+        width: 350px;
+    }
+    #school {
+        width: 350px;
+    }
+    #more {
+        width: 350px;
+    }
+    #vertLine {
+        margin-left: 3.7rem;
+    }
+    #horizLine {
+        width: 905px;
+        margin-left: -34rem;
+    }
+    .bottom {
+        margin-top: 3rem;
+        max-width: 992px;
+    }
+}
+/*Exclusive modifications to elements for screen width 768-991.5 px.*/
+@media (min-width: 768px) and (max-width: 991.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #titleHeader2 {
+        text-align: center;
+        font-size: 80px;
+    }
+    #titleDesc {
+        width: 300px;
+        height: 270px;
+        margin-top: 1.5rem;
+    }
+    .titles {
+        margin-top: 1rem;
+        font-size: 18px;
+    }
+    #titleImg {
+        margin-top: 6rem;
+        width: 130%;
+    }
+    #titleImg2 {
+        margin-top: 6rem;
+        width: 65%;
+    }
+    #titleImg3 {
+        width: 65%;
+        margin-top: 3.8rem;
+    }
+    #person {
+        width: 280px;
+    }
+    #personHeader {
+        left: 10px;
+    }
+    #personButton {
+        left: 0px;
+    }
+    #personImage {
+        margin-left: -85px;
+    }
+    #hobbies {
+        width: 280px;
+    }
+    #hobbiesHeader {
+        font-size: 30px;
+        right: 35px;
+    }
+    #hobbiesButton {
+        left: 30px;
+    }
+    #hobbiesImage {
+        margin-left: -150px;
+    }
+    #school {
+        width: 280px;
+    }
+    #schoolHeader {
+        right: 35px;
+    }
+    #schoolButton {
+        left: 35px;
+    }
+    #schoolImage {
+        margin-left: -145px;
+    }
+    #more {
+        width: 280px;
+    }
+    #vertLine {
+        border: 6px solid #c1b6ff;
+        width: 6px;
+        margin-left: 2.9rem;
+    }
+    #horizLine {
+        border: 4px solid #c1b6ff;
+        width: 695px;
+        height: 4px;
+        margin-left: -26rem;
+    }
+    #footerHeader {
+        font-size: 25px;
+    }
+    #footerDesc {
+        font-size: 16px;
+    }
+    #resume {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #contact {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        height: 40px;
+        width: 40px;
+    }
+    .footerButtons {
+        margin-top: -1rem;
+    }
+}
+/*Exclusive nav title modifications for screens 830 px or less.*/
+@media (max-width: 830px) {
+    .navTitles {
+        padding: 0rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 576-767.5 px.*/
+@media (min-width: 576px) and (max-width: 767.5px) {
+    #titleHeader2 {
+        text-align: center;
+        font-size: 80px;
+    }
+    #titleDesc {
+       float: none;
+    }
+    #titleImg {
+        margin-top: 4rem;
+        margin-left: 2rem;
+        width: 90%;
+    }
+    #titleImg2 {
+        margin-top: 4rem;
+        margin-right: 2rem;
+        width: 50%;
+    }
+    #titleImg3 {
+        margin-top: 16.5rem;
+        margin-right: -7.5rem;
+        width: 50%;
+    }
+    #vertLine {
+        display: none;
+    }
+    #horizLine {
+        display: none;
+    }
+    #smallHorizLine1 {
+        display: inline-block;
+        height: 4px;
+        width: 450px;
+        margin-top: 3rem;
+        margin-bottom: -3rem;
+        margin-left: 2rem;
+        color: #c1b6ff;
+        border: 4px solid #c1b6ff;
+    }
+    #smallHorizLine2 {
+        display: inline-block;
+        height: 4px;
+        width: 450px;
+        margin-top: 4rem;
+        margin-bottom: -4rem;
+        margin-left: 2.7rem;
+        color: #c1b6ff;
+        border: 4px solid #c1b6ff;
+    }
+    #smallHorizLine3 {
+        display: inline-block;
+        height: 4px;
+        width: 450px;
+        margin-top: 3.1rem;
+        margin-bottom: -3.1rem;
+        margin-left: 2rem;
+        color: #c1b6ff;
+        border: 4px solid #c1b6ff;
+    }
+    #person {
+        margin-top: -2rem;
+    }
+    #hobbies {
+        margin-top: 7rem;
+    }
+    #more {
+        margin-top: 7rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 685 px or less.*/
+@media (max-width: 685px) {
+    .navTitles {
+        padding: 6.5rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 575.5 px or less.*/
+@media (max-width: 575.5px) {
+    #titleHeader2 {
+        text-align: center;
+        font-size: 80px;
+    }
+    #titleImg {
+        width: 80%;
+        margin-top: 4rem;
+        margin-left: 5rem;
+        border: 4px solid rgb(255, 224, 181);
+    }
+    #titleImg2 {
+        width: 41%;
+        margin-top: 4rem;
+        margin-right: 5rem;
+        border: 4px solid rgb(255, 224, 181);
+    }
+    #titleImg3 {
+        width: 41%;
+        margin-right: 5rem;
+        border: 4px solid rgb(255, 224, 181);
+    }
+    #titleDesc {
+       float: none;
+    }
+    #vertLine {
+        display: none;
+    }
+    #horizLine {
+        display: none;
+    }
+    #person {
+        margin-top: -2rem;
+    }
+    #hobbies {
+        margin-top: 4rem;
+    }
+    #school {
+        margin-top: -4rem;
+    }
+    #more {
+        margin-top: 4rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 480 px or less.*/
+@media (max-width: 480px) {
+    .navTitles {
+        padding: 2.2rem;
+    }
+    #titleDesc {
+        width: 290px;
+    }
+    .titles {
+        font-size: 16px;
+        margin-top: 1.3rem;
+    }
+    #titleImg {
+        width: 115%;
+        margin-top: 4rem;
+        margin-left: 1rem;
+    }
+    #titleImg2 {
+        width: 56%;
+        margin-top: 4rem;
+        margin-right: 1rem;
+    }
+    #titleImg3 {
+        width: 56%;
+        margin-right: 1rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 390 px or less.*/
+@media (max-width: 390px) {
+    #personButton {
+        margin-left: -2rem;
+    }
+    #personHeader {
+        float: left;
+        margin-top: 3rem;
+    }
+    #hobbiesButton {
+        margin-left: -2rem;
+    }
+    #hobbiesHeader {
+        float: left;
+        font-size: 30px;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    #schoolButton {
+        margin-left: -3rem;
+    }
+    #schoolHeader {
+        float: left;
+        font-size: 30px;
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 360 px or less.*/
+@media (max-width: 360px) {
+    .navTitles {
+        padding: 0rem;
+    }
 }

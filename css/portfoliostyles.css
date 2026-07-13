@@ -9,6 +9,15 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+/*Navbar modifications fixated at the top, disappears when clicked to open.*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(12, 0, 44);
+}
 /*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
@@ -85,38 +94,41 @@
 }
 /*Portfolio title header.*/
 #titleHeader3 {
-    width: 27%;
-    margin-left: 32%;
+    margin-top: 4rem;
     text-align: center;
     font-size: 100px;
     color: #c1b6ff;
 }
 /*Folder image at the top of portfolio page.*/
 #folder {
-    position: relative;
-    bottom: 160px;
-    left: 80px;
+    margin-top: 2rem;
+    float: right;
     height: 200px;
     width: 200px;
 }
+/*Folder image at the top of portfolio page for mobile.*/
+#folderMobile {
+    display: none;
+    height: 150px;
+    width: 150px;
+}
 /*Crown image at the top of portfolio page.*/
 #crown {
-    position: relative;
-    left: 625px;
-    bottom: 165px;
+    margin-top: 1.5rem;
+    float: left;
     height: 200px;
     width: 200px;
 }
 /*Buttons below header that navigate to that section of portfolio page.*/
 .portfolioButtons {
+    margin-top: 1rem;
+    margin-left: 4.8rem;
     width: 200px;
     height: 100px;
     text-align: center;
     background-color: #1d1b4b !important;
     border: 4px solid rgb(18, 0, 98) !important;
     transition: 0.3s;
-    margin-bottom: 60px;
-    margin-top: -150px;
 }
 /*Hover animation.*/
 .portfolioButtons:hover {
@@ -125,47 +137,31 @@
 }
 /*Button below header that navigates to projects section.*/
 #projectButton {
-    position: relative;
-    left: 80px;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 57px;
     font-size: 35px;
     color: #c1b6ff;
 }
 /*Button below header that navigates to achievements section.*/
 #achievementButton {
-    position: relative;
-    left: 75px;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 57px;
     font-size: 25px;
     color: #c1b6ff;
 }
 /*Button below header that navigates to more section.*/
 #moreButton {
-    position: relative;
-    left: 70px;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 57px;
     font-size: 35px;
     color: #c1b6ff;
 }
 /*Projects section title.*/
 #projectsTitle {
-    vertical-align: middle;
+    margin-top: 4rem;
     text-align: center;
     font-size: 60px;
     color: #c1b6ff;
 }
 /*All project boxes located in projects section.*/
 .allProjects {
-    position: relative;
-    right: 15px;
+    margin-left: -1rem;
     margin-top: 35px;
-    width: 1110px;
+    width: 1080px;
     height: 200px;
     text-align: center;
     background-color: #0e0a1d;
@@ -175,7 +171,6 @@
 /*All headers in project boxes.*/
 .projectHeaders {
     font-size: 35px;
-    line-height: 140px;
     color: #c1b6ff;
 }
 /*All description texts in project boxes.*/
@@ -234,9 +229,10 @@
 }
 /*Description text of first project box.*/
 #project1Text {
+    font-size: 16px;
     text-align: left;
     margin-left: 30px;
-    margin-top: -160px;
+    margin-top: -170px;
 }
 /*Project image of first project box.*/
 #project1Image {
@@ -256,8 +252,9 @@
 /*Header of second project box.*/
 #projectHeader2 {
     font-size: 32px;
-    text-align: left;
-    margin-left: 25px;
+    text-align: center;
+    margin-left: -625px;
+    margin-top: 5px;
 }
 /*Project timeline of second project box.*/
 #project2Timeline {
@@ -265,25 +262,33 @@
     color: #e4dfff;
     font-size: 17px;
     margin-left: 130px;
-    margin-top: -30px;
+    margin-top: 0px;
+}
+/*Project website of second project box.*/
+#project2Website {
+    text-align: left;
+    color: #e4dfff;
+    font-size: 15px;
+    margin-left: 180px;
+    margin-top: 20px;
 }
 /*Description text of second project box.*/
 #project2Text {
-    font-size: 17px;
+    font-size: 16px;
     text-align: right;
     margin-right: 25px;
-    margin-top: -120px;
+    margin-top: -135px;
 }
 /*Project image of second project box.*/
 #project2Image {
-    width: 16%;
+    width: 18%;
     border: 3px solid rgb(255, 224, 181);
-    margin-top: -180px;
+    margin-top: -140px;
     margin-left: -70px;
 }
 /*Third project box in projects section.*/
 #project3 {
-    margin-left: 0px;
+    margin-bottom: 60px;
 }
 /*Hover animation.*/
 #project3:hover {
@@ -291,35 +296,223 @@
 }
 /*Header of third project box.*/
 #projectHeader3 {
-    text-align: right;
-    font-size: 38px;
-    margin-right: 30px;
+    text-align: center;
+    font-size: 35px;
+    margin-left: 625px;
+    margin-top: 5px;
 }
 /*Project timeline of third project box.*/
 #project3Timeline {
     text-align: right;
     color: #e4dfff;
     font-size: 17px;
-    margin-right: 100px;
-    margin-top: -30px;
+    margin-right: 130px;
+    margin-top: 0px;
+}
+/*Github box in third project box leading to Github repo.*/
+#project3More {
+    text-align: center;
+    transition: 0.3s;
+    height: 50px;
+    width: 110px;
+    margin-right: -635px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #c1b6ff;
+    background-color: #1d1b4b !important;
+    border: 4px solid rgb(18, 0, 98) !important;
+}
+/*Hover animation.*/
+#project3More:hover {
+    transform: scale(1.07);
+    border: 4px solid rgb(13, 0, 201) !important;
 }
 /*Description text of third project box.*/
 #project3Text {
-    margin-top: -135px;
+    font-size: 16px;
+    margin-top: -170px;
     text-align: left;
     margin-left: 30px;
 }
+/*Project image of third project box.*/
+#project3Image {
+    width: 17%;
+    border: 3px solid rgb(255, 224, 181);
+    margin-top: -230px;
+    margin-left: -70px;
+}
+/*Fourth project box in projects section.*/
+#project4 {
+    margin-bottom: 60px;
+}
+/*Hover animation.*/
+#project4:hover {
+    transform: scale(1.03);
+}
+/*Header of fourth project box.*/
+#projectHeader4 {
+    font-size: 32px;
+    text-align: center;
+    margin-left: -740px;
+    margin-top: 5px;
+}
+/*Project timeline of fourth project box.*/
+#project4Timeline {
+    text-align: left;
+    color: #e4dfff;
+    font-size: 17px;
+    margin-left: 70px;
+    margin-top: 0px;
+}
+/*Github box in fourth project box leading to Github repo.*/
+#project4More {
+    text-align: center;
+    transition: 0.3s;
+    height: 50px;
+    width: 110px;
+    margin-left: -740px;
+    margin-top: 7px;
+    font-size: 15px;
+    color: #c1b6ff;
+    background-color: #1d1b4b !important;
+    border: 4px solid rgb(18, 0, 98) !important;
+}
+/*Hover animation.*/
+#project4More:hover {
+    transform: scale(1.07);
+    border: 4px solid rgb(13, 0, 201) !important;
+}
+/*Description text of fourth project box.*/
+#project4Text {
+    font-size: 17px;
+    text-align: right;
+    margin-right: 25px;
+    margin-top: -150px;
+}
+/*Project image of fourth project box.*/
+#project4Image {
+    width: 16%;
+    border: 3px solid rgb(255, 224, 181);
+    margin-top: -180px;
+    margin-left: -70px;
+}
+/*Fifth project box in projects section.*/
+#project5 {
+    margin-bottom: 60px;
+}
+/*Hover animation.*/
+#project5:hover {
+    transform: scale(1.03);
+}
+/*Header of fifth project box.*/
+#projectHeader5 {
+    text-align: right;
+    font-size: 38px;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+/*Project timeline of fifth project box.*/
+#project5Timeline {
+    text-align: right;
+    color: #e4dfff;
+    font-size: 17px;
+    margin-right: 100px;
+    margin-top: 0px;
+}
+/*Github box in fifth project box leading to Github repo.*/
+#project5More {
+    text-align: center;
+    transition: 0.3s;
+    height: 50px;
+    width: 110px;
+    margin-left: 690px;
+    margin-top: 7px;
+    font-size: 15px;
+    color: #c1b6ff;
+    background-color: #1d1b4b !important;
+    border: 4px solid rgb(18, 0, 98) !important;
+}
+/*Hover animation.*/
+#project5More:hover {
+    transform: scale(1.07);
+    border: 4px solid rgb(13, 0, 201) !important;
+}
+/*Description text of fifth project box.*/
+#project5Text {
+    font-size: 16px;
+    margin-top: -124px;
+    text-align: left;
+    margin-left: 30px;
+}
+/*Project image of fifth project box.*/
+#project5Image {
+    width: 13%;
+    border: 3px solid rgb(255, 224, 181);
+    margin-top: -200px;
+    margin-left: -40px;
+}
+/*Hover animation.*/
+#project6:hover {
+    transform: scale(1.03);
+}
+/*Header of sixth project box.*/
+#projectHeader6 {
+    line-height: 50px !important;
+    font-size: 32px;
+    text-align: left;
+    margin-left: 25px;
+}
+/*Project timeline of sixth project box.*/
+#project6Timeline {
+    text-align: left;
+    color: #e4dfff;
+    font-size: 17px;
+    margin-left: 130px;
+    margin-top: -10px;
+}
+/*Project website of sixth project box.*/
+#project6Website {
+    text-align: left;
+    color: #e4dfff;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+/*Description text of sixth project box.*/
+#project6Text {
+    font-size: 16px;
+    text-align: right;
+    margin-right: 25px;
+    margin-top: -120px;
+}
+/*Project image of sixth project box.*/
+#project6Image {
+    width: 16%;
+    border: 3px solid rgb(255, 224, 181);
+    margin-top: -160px;
+    margin-left: -70px;
+}
 /*Line separating projects and achievements sections.*/
 #line1 {
-    position: relative;
-    top: 70px;
     height: 7px;
-    width: 1110px;
+    width: 100%;
+    max-width: 1110px;
+    margin-top: 4rem;
     border: 4px solid #c1b6ff;
-    position: absolute; 
+    display: inline-block;
+    color: #c1b6ff;
 }
 /*Achievements section title.*/
 #achievementsTitle {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 50px;
+    color: #c1b6ff;
+}
+/*Achievements section title for mobile devices.*/
+#achievementsTitleMobile {
+    display: none;
+    margin-top: 2.5rem;
     text-align: center;
     font-size: 50px;
     color: #c1b6ff;
@@ -328,7 +521,7 @@
 .allAchievements {
     justify-content: space-evenly;
     width: 430px;
-    height: 210px;
+    height: 240px;
     text-align: center;
     background-color: #0e0a1d;
     border: 4px solid rgb(12, 0, 44);
@@ -347,9 +540,8 @@
 }
 /*First achievement box in achievements section.*/
 #achievement1 {
-    margin-top: 150px;
-    margin-bottom: 35px;
-    margin-left: 0px;
+    margin-top: 4rem;
+    float: left;
 }
 /*Hover animation.*/
 #achievement1:hover {
@@ -378,7 +570,7 @@
     background-color: #1d1b4b !important;
     border: 4px solid rgb(18, 0, 98) !important;
     transition: 0.3s;
-    margin-left: 465px;
+    margin-left: 485px;
     margin-top: -300px;
     height: 70px;
     width: 110px;
@@ -390,19 +582,10 @@
     transform: scale(1.07);
     border: 4px solid rgb(13, 0, 201) !important;
 }
-/*Open in new window icon in certification button.*/
-#certificationoinwicon {
-    height: 18px;
-    width: 18px;
-    position: relative;
-    left: 365px;
-    bottom: 193px;
-}
 /*Second achievement box in achievements section.*/
 #achievement2 {
-    margin-top: 150px;
-    margin-bottom: 35px;
-    margin-right: 0px;
+    margin-top: 4rem;
+    float: right;
 }
 /*Hover animation.*/
 #achievement2:hover {
@@ -421,8 +604,8 @@
 }
 /*Third achievement box in achievements section.*/
 #achievement3 {
-    margin-left: 0px;
-    margin-top: 35px;
+    margin-top: 2rem;
+    float: left;
 }
 /*Hover animation.*/
 #achievement3:hover {
@@ -437,19 +620,19 @@
 #achievement3Text {
     text-align: left;
     margin-left: 5px;
-    margin-top: 15px;
+    margin-top: 40px;
 }
 /*CollegeBoard logo in third achievement box.*/
 #collegeBoardLogo {
     width: 40%;
     float: right;
     margin-right: 15px;
-    margin-top: -200px;
+    margin-top: -215px;
 }
 /*Fourth achievement box in achievements section.*/
 #achievement4 {
-    margin-right: 0px;
-    margin-top: 35px;
+    margin-top: 2rem;
+    float: right;
 }
 /*Hover animation.*/
 #achievement4:hover {
@@ -467,12 +650,13 @@
 }
 /*Line between achievements and more sections.*/
 #line2 {
-    position: relative;
-    top: 70px;
     height: 7px;
-    width: 1110px;
+    width: 100%;
+    max-width: 1110px;
+    margin-top: 4rem;
     border: 4px solid #c1b6ff;
-    position: absolute; 
+    display: inline-block;
+    color: #c1b6ff;
 }
 /*All more boxes in more section.*/
 .allMore {
@@ -486,8 +670,16 @@
 }
 /*More section title.*/
 #moreTitle {
-    margin-top: 40px;
-    margin-left: 40px;
+    margin-top: 2.5rem;
+    margin-left: 5rem;
+    text-align: center;
+    font-size: 50px;
+    color: #c1b6ff;
+}
+/*More section title for mobile.*/
+#moreTitleMobile {
+    display: none;
+    margin-top: 3rem;
     text-align: center;
     font-size: 50px;
     color: #c1b6ff;
@@ -507,7 +699,7 @@
 }
 /*First more box in more section.*/
 #more1 {
-    margin-top: 150px;
+    margin-top: 4rem;
 }
 /*Hover animation.*/
 #more1:hover {
@@ -525,7 +717,7 @@
 }
 /*Second more box in more section.*/
 #more2 {
-    margin-top: 20px;
+    margin-top: 1.5rem;
     text-align: center;
 }
 /*Hover animation.*/
@@ -544,8 +736,7 @@
 }
 /*Third more box in more section.*/
 #more3 {
-    margin-top: 20px;
-    margin-bottom: 150px;
+    margin-top: 1.5rem;
 }
 /*Hover animation.*/
 #more3:hover {
@@ -561,33 +752,33 @@
     left: 22px;
     bottom: 24px;
 }
-/*Portfolio footer.*/
+/*Full footer at bottom.*/
 .bottom {
-    position: relative;
-    top: -80px;
-    bottom: 150px;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 /*Header of footer, my name.*/
 #footerHeader {
-    text-align: left;
     font-size: 30px;
     color: #c1b6ff;
 }
 /*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
-    text-align: left;
     font-size: 20px;
     color: #c1b6ff;
 }
+/*All 5 footer buttons.*/
+.footerButtons {
+    float: right;
+    margin-top: -1.5rem;
+}
 /*Resume button that accesses resume page.*/
 #resume {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 272px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -599,12 +790,9 @@
 }
 /*Contact button that accesses contact page.*/
 #contact {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 273px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -616,11 +804,8 @@
 }
 /*GitHub button that contains link, expands when hovered.*/
 #github {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -632,11 +817,8 @@
 }
 /*LinkedIn button that contains link, expands when hovered.*/
 #linkedin {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -648,10 +830,7 @@
 }
 /*Discord button that contains link, expands when hovered.*/
 #discord {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -661,28 +840,1453 @@
     cursor: pointer;
     transform: scale(1.07);
 }
-/*Footer line separating content from copyright claim.*/
-#line3 {
-    height: 3px;
-    width: 1110px;
-    border: 3px solid #c1b6ff;
-    position: absolute;
-    top: 90px;
-}
 /*Copyright claim in footer.*/
 #copyright {
+    width: 100%;
+    border-top: 5px solid #c1b6ff;
+    padding-top: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     color: rgb(152, 152, 152);
     font-size: 10px;
-    position: relative;
-    top: 15px;
 }
 /*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
 #spinner {
     display: none;
     position: fixed;
-    bottom: 35%;
-    left: 42%;
+    inset: 0;
+    margin: auto;
     height: 250px;
     width: 250px;
     border-width: 15px;
+}
+
+/*Exclusive modifications to elements for screen width 992-1200.5 px.*/
+@media (min-width: 992px) and (max-width: 1200.5px) {
+    .navTitles {
+        padding: 1.7rem;
+    }
+    .portfolioButtons {
+        margin-left: 3rem;
+    }
+    .allProjects {
+        width: 900px;
+    }
+    #projectHeader1 {
+        line-height: 50px !important;
+        margin-right: 30px;
+        font-size: 38px;
+    }
+    #project1Subheader {
+        margin-right: 110px;
+        position: relative;
+        bottom: 10px;
+    }
+    #project1Timeline {
+        margin-right: 55px;
+        position: relative;
+        top: 15px;
+    }
+    #project1More {
+        margin-left: 600px;
+        margin-bottom: -120px;
+    }
+    #project1Text {
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -105px;
+    }
+    #project1Image {
+        margin-top: -150px;
+        margin-right: -120px; 
+    }
+    #projectHeader2 {
+        font-size: 30px;
+        margin-left: -500px;
+        margin-top: 5px;
+    }
+    #project2Timeline {
+        font-size: 16px;
+        margin-left: 110px;
+        margin-top: 0px;
+    }
+    #project2Website {
+        font-size: 15px;
+        margin-left: 310px;
+        margin-top: 20px;
+    }
+    #project2Text {
+        font-size: 16px;
+        margin-right: 25px;
+        margin-top: -135px;
+    }
+    #project2Image {
+        width: 18%;
+        margin-top: -85px;
+        margin-left: -495px;
+    }
+    #projectHeader3 {
+        font-size: 35px;
+        margin-left: 530px;
+        margin-top: 5px;
+    }
+    #project3Timeline {
+        font-size: 17px;
+        margin-right: 90px;
+        margin-top: 0px;
+    }
+    #project3More {
+        margin-right: -535px;
+        margin-top: 5px;
+    }
+    #project3Text {
+        font-size: 16px;
+        margin-top: -170px;
+        margin-left: 30px;
+    }
+    #project3Image {
+        width: 19%;
+        margin-top: -230px;
+        margin-left: 40px;
+    }
+    #projectHeader4 {
+        font-size: 32px;
+        margin-left: -550px;
+        margin-top: 5px;
+    }
+    #project4Timeline {
+        font-size: 17px;
+        margin-left: 75px;
+        margin-top: 0px;
+    }
+    #project4More {
+        margin-left: -550px;
+        margin-top: 7px;
+    }
+    #project4Text {
+        font-size: 16px;
+        margin-right: 0px;
+        margin-top: -150px;
+    }
+    #project4Image {
+        width: 18%;
+        margin-top: -160px;
+        margin-left: -110px;
+    }
+    #projectHeader5 {
+        font-size: 38px;
+        margin-right: 30px;
+        margin-top: 5px;
+    }
+    #project5Timeline {
+        font-size: 17px;
+        margin-right: 100px;
+        margin-top: 0px;
+    }
+    #project5More {
+        margin-left: 510px;
+        margin-top: 7px;
+    }
+    #project5Text {
+        font-size: 16px;
+        margin-top: -124px;
+        margin-left: 0px;
+    }
+    #project5Image {
+        width: 15%;
+        margin-top: -200px;
+        margin-left: 30px;
+    }
+    #project6Website {
+        font-size: 13px;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+    #project6Text {
+        font-size: 15px;
+        margin-right: 0px;
+        margin-top: -120px;
+    }
+    #project6Image {
+        width: 15%;
+        margin-top: -100px;
+        margin-left: -40px;
+    }
+    #achievementsTitle {
+        margin-top: -4rem;
+    }
+    #certificationButton {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+    #line1 {
+        width: 100%;
+    }
+    .bottom {
+        margin-top: 3rem;
+        max-width: 992px;
+    }
+}
+/*Exclusive modifications to elements for screen width 768-991.5 px.*/
+@media (min-width: 768px) and (max-width: 991.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #titleHeader3 {
+        font-size: 90px;
+    }
+    #folder {
+        float: left;
+        height: 150px;
+        width: 150px;
+        margin-top: 3rem;
+    }
+    #crown {
+        float: right;
+        height: 150px;
+        width: 150px;
+        margin-top: 2.7rem;
+    }
+    #projectButton {
+        font-size: 30px;
+    }
+    #achievementButton {
+        font-size: 25px;
+    }
+    #moreButton {
+        font-size: 30px;
+    }
+    .portfolioButtons {
+        margin-left: 0.3rem;
+    }
+    .allProjects {
+        width: 665px;
+        height: 250px;
+    }
+    #projectHeader1 {
+        line-height: 50px !important;
+        margin-right: 0px;
+        margin-top: 30px;
+        font-size: 38px;
+    }
+    #project1Subheader {
+        margin-right: 80px;
+        position: relative;
+        bottom: 10px;
+    }
+    #project1Timeline {
+        margin-right: 65px;
+        position: relative;
+        top: 15px;
+    }
+    #project1More {
+        margin-left: 350px;
+        margin-bottom: -120px;
+    }
+    #project1Text {
+        font-size: 15px;
+        margin-left: 0px;
+        margin-top: -145px;
+    }
+    #project1Image {
+        width: 26%;
+        margin-top: -10px;
+        margin-right: 200px; 
+    }
+    #projectHeader2 {
+        font-size: 28px;
+        margin-left: -280px;
+        margin-top: 5px;
+    }
+    #project2Timeline {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    #project2Website {
+        font-size: 15px;
+        margin-left: 450px;
+        margin-top: -70px;
+    }
+    #project2Text {
+        font-size: 16px;
+        margin-right: 0px;
+        margin-top: 30px;
+    }
+    #project2Image {
+        width: 25%;
+        margin-top: -180px;
+        margin-left: -440px;
+    }
+    #projectHeader3 {
+        font-size: 32px;
+        margin-left: 360px;
+        margin-top: 5px;
+    }
+    #project3Timeline {
+        font-size: 17px;
+        margin-right: 40px;
+        margin-top: 0px;
+    }
+    #project3More {
+        margin-right: -470px;
+        margin-top: 30px;
+    }
+    #project3Text {
+        font-size: 16px;
+        margin-top: -170px;
+        margin-left: 30px;
+    }
+    #project3Image {
+        width: 20%;
+        margin-top: -95px;
+        margin-left: 150px;
+    }
+    #projectHeader4 {
+        font-size: 32px;
+        margin-left: -350px;
+        margin-top: 5px;
+    }
+    #project4Timeline {
+        font-size: 17px;
+        margin-left: 60px;
+        margin-top: 0px;
+    }
+    #project4More {
+        margin-left: 200px;
+        margin-bottom: -110px;
+    }
+    #project4Text {
+        font-size: 16px;
+        margin-right: 0px;
+        margin-top: -120px;
+    }
+    #project4Image {
+        width: 18%;
+        margin-top: -40px;
+        margin-left: -350px;
+    }
+    #projectHeader5 {
+        font-size: 35px;
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    #project5Timeline {
+        font-size: 17px;
+        margin-right: 60px;
+        margin-top: 0px;
+    }
+    #project5More {
+        margin-left: 510px;
+        margin-top: 5px;
+    }
+    #project5Text {
+        font-size: 16px;
+        margin-top: -95px;
+        margin-left: 0px;
+    }
+    #project5Image {
+        width: 17%;
+        margin-top: -120px;
+        margin-left: 240px;
+    }
+    #projectHeader6 {
+        font-size: 30px;
+    }
+    #project6Timeline {
+        margin-left: 28px;
+    }
+    #project6Website {
+        font-size: 13px;
+        margin-left: 300px;
+        margin-top: -20px;
+    }
+    #project6Text {
+        font-size: 15px;
+        margin-right: 15px;
+        margin-top: 30px;
+    }
+    #project6Image {
+        width: 20%;
+        margin-top: -180px;
+        margin-left: -400px;
+    }
+    #achievementsTitle {
+        display: none;
+    }
+    #achievementsTitleMobile {
+        display: block;
+    }
+    #certificationButton {
+        margin-left: 575px;
+    }
+    #achievement1 {
+        float: none;
+        margin-top: 2.5rem;
+    }
+    #achievement2 {
+        float: none;
+        margin-top: 2rem;
+    }
+    #achievement3 {
+        float: none;
+    }
+    #achievement4 {
+        float: none;
+    }
+    #footerHeader {
+        font-size: 25px;
+    }
+    #footerDesc {
+        font-size: 16px;
+    }
+    #resume {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #contact {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        height: 40px;
+        width: 40px;
+    }
+    .footerButtons {
+        margin-top: -1rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 830 px.*/
+@media (max-width: 830px) {
+    .navTitles {
+        padding: 0rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 576-767.5 px.*/
+@media (min-width: 576px) and (max-width: 767.5px) {
+    #titleHeader3 {
+        font-size: 85px;
+    }
+    #folder {
+        display: none;
+    }
+    #folderMobile {
+        display: block;
+        margin-top: -9rem;
+        margin-left: 6rem;
+    }
+    #crown {
+        float: right;
+        height: 150px;
+        width: 150px;
+        margin-right: 6rem;
+        margin-top: -1rem;
+
+    }
+    .portfolioButtons {
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+    #moreButton {
+        margin-top: 3rem;
+        margin-left: 9.5rem;
+    }
+    .allProjects {
+        margin-left: -1.5rem;
+        width: 500px;
+        height: 270px;
+    }
+    #projectHeader1 {
+        line-height: 50px !important;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 38px;
+    }
+    #project1Subheader {
+        margin-right: 80px;
+        position: relative;
+        top: -15px;
+    }
+    #project1Timeline {
+        margin-right: 0px;
+        margin-top: -10px;
+    }
+    #project1More {
+        margin-left: 350px;
+        margin-bottom: -190px;
+    }
+    #project1Text {
+        font-size: 15px;
+        margin-left: 0px;
+        margin-top: -20px;
+    }
+    #project1Image {
+        width: 33%;
+        margin-top: -440px;
+        margin-right: 300px; 
+    }
+    #projectHeader2 {
+        font-size: 26px;
+        margin-left: -150px;
+        margin-top: 5px;
+    }
+    #project2Timeline {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    #project2Website {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    #project2Text {
+        font-size: 15px;
+        margin-right: 0px;
+        margin-top: -35px;
+    }
+    #project2Image {
+        width: 28%;
+        margin-top: -450px;
+        margin-left: 320px;
+    }
+    #projectHeader3 {
+        font-size: 28px;
+        margin-left: 260px;
+        margin-top: 5px;
+    }
+    #project3Timeline {
+        font-size: 17px;
+        margin-right: 15px;
+        margin-top: 0px;
+    }
+    #project3More {
+        margin-right: 0px;
+        margin-left: -200px;
+        margin-top: -150px;
+    }
+    #project3Text {
+        font-size: 15px;
+        margin-top: -45px;
+        margin-left: 0px;
+    }
+    #project3Image {
+        width: 27%;
+        margin-top: -190px;
+        margin-left: 290px;
+    }
+    #projectHeader4 {
+        font-size: 30px;
+        margin-left: -200px;
+        margin-top: 5px;
+    }
+    #project4Timeline {
+        font-size: 17px;
+        margin-left: 60px;
+        margin-top: 0px;
+    }
+    #project4More {
+        height: 40px;
+        width: 95px;
+        margin-left: 100px;
+        margin-top: -120px;
+    }
+    #project4Text {
+        font-size: 16px;
+        margin-right: 0px;
+        margin-top: -10px;
+    }
+    #project4Image {
+        width: 24%;
+        margin-top: -425px;
+        margin-left: 350px;
+    }
+    #projectHeader5 {
+        font-size: 35px;
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    #project5Timeline {
+        font-size: 17px;
+        margin-right: 60px;
+        margin-top: 0px;
+    }
+    #project5More {
+        margin-left: -300px;
+        margin-top: -100px;
+    }
+    #project5Text {
+        font-size: 15px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    #project5Image {
+        width: 25%;
+        margin-top: -220px;
+        margin-left: 350px;
+    }
+    #projectHeader6 {
+        font-size: 30px;
+        text-align: left;
+        margin-left: 0px;
+    }
+    #project6Timeline {
+        text-align: left;
+        color: #e4dfff;
+        font-size: 17px;
+        margin-left: 28px;
+        margin-top: -10px;
+    }
+    #project6Website {
+        font-size: 13px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    #project6Text {
+        font-size: 15px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    #project6Image {
+        width: 22%;
+        margin-top: -410px;
+        margin-right: -430px;
+    }
+    #achievementsTitle {
+        display: none;
+    }
+    #achievementsTitleMobile {
+        display: block;
+    }
+    #achievement1 {
+        float: none;
+        margin-top: 2.5rem;
+    }
+    #certificationButton {
+        margin-left: 11.5rem;
+        margin-top: 2rem;
+    }
+    #achievement2 {
+        float: none;
+        margin-top: 2rem;
+    }
+    #achievement3 {
+        float: none;
+    }
+    #achievement4 {
+        float: none;
+    }
+    #moreTitle {
+        display: none;
+    }
+    #moreTitleMobile {
+        display: block;
+    }
+    #more1 {
+        margin-top: 3rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 685 px.*/
+@media (max-width: 685px) {
+    .navTitles {
+        padding: 6.9rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 575.5 px or less.*/
+@media (max-width: 575.5px) {
+    #titleHeader3 {
+        font-size: 80px;
+    }
+    #folder {
+        display: none;
+    }
+    #folderMobile {
+        display: block;
+        margin-top: -9rem;
+        margin-left: 3rem;
+    }
+    #crown {
+        float: right;
+        height: 150px;
+        width: 150px;
+        margin-right: 3rem;
+        margin-top: -1rem;
+    }
+    .portfolioButtons {
+        display: block;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+    #projectButton {
+        margin-top: 1rem;
+    }
+    #achievementButton {
+        margin-top: 1rem;
+    }
+    #moreButton {
+        margin-top: 1rem;
+    }
+    #projectsTitle {
+        margin-bottom: 2.5rem;
+    }
+    .allProjects {
+        width: 380px;
+        height: 380px;
+        display: block;
+        margin: 0 auto;
+    }
+    #projectHeader1 {
+        line-height: 50px !important;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 38px;
+        text-align: center;
+    }
+    #project1Subheader {
+        margin-right: 0px;
+        position: relative;
+        top: -15px;
+        text-align: center;
+    }
+    #project1Timeline {
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    #project1More {
+        margin-left: 0px;
+        margin-right: -200px;
+        margin-bottom: -100px;
+    }
+    #project1Text {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    #project1Image {
+        width: 50%;
+        margin-top: -500px;
+        margin-left: -240px;
+    }
+    #projectHeader2 {
+        text-align: center;
+        font-size: 26px;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    #project2Timeline {
+        text-align: center;
+        font-size: 15px;
+        margin-left: 80px;
+        margin-top: 0px;
+    }
+    #project2Website {
+        font-size: 15px;
+        margin-left: 40px;
+        margin-top: -25px;
+    }
+    #project2Text {
+        width: 350px;
+        font-size: 15px;
+        margin-right: 5px;
+        margin-top: 15px;
+    }
+    #project2Image {
+        width: 35%;
+        margin-top: -30px;
+        margin-left: -90px;
+    }
+    #projectHeader3 {
+        font-size: 26px;
+        margin-left: 150px;
+        margin-top: 5px;
+    }
+    #project3Timeline {
+        font-size: 16px;
+        margin-right: 23px;
+        margin-top: 0px;
+    }
+    #project3More {
+        margin-right: 0px;
+        margin-left: -200px;
+        margin-top: -150px;
+    }
+    #project3Text {
+        font-size: 15px;
+        margin-top: -15px;
+        margin-left: 0px;
+    }
+    #project3Image {
+        width: 32%;
+        margin-top: -30px;
+        margin-left: 160px;
+    }
+    #projectHeader4 {
+        font-size: 30px;
+        margin-left: -100px;
+        margin-top: 5px;
+    }
+    #project4Timeline {
+        font-size: 16px;
+        margin-left: 45px;
+        margin-top: 0px;
+    }
+    #project4More {
+        height: 40px;
+        width: 95px;
+        margin-left: 230px;
+        margin-top: -90px;
+    }
+    #project4Text {
+        font-size: 15px;
+        margin-right: 0px;
+        margin-top: -10px;
+    }
+    #project4Image {
+        width: 28%;
+        margin-top: -10px;
+        margin-left: 0px;
+    }
+    #projectHeader5 {
+        font-size: 35px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    #project5Timeline {
+        font-size: 17px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #project5More {
+        margin-left: 170px;
+        margin-bottom: -390px;
+    }
+    #project5Text {
+        font-size: 15px;
+        margin-top: -10px;
+        margin-left: 0px;
+    }
+    #project5Image {
+        width: 28%;
+        margin-top: -10px;
+        margin-left: -150px;
+    }
+    #projectHeader6 {
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    #project6Timeline {
+        text-align: center;
+        color: #e4dfff;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+    #project6Website {
+        text-align: center;
+        font-size: 13px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    #project6Text {
+        font-size: 15px;
+        text-align: left;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    #project6Image {
+        width: 24%;
+        margin-top: -90px;
+        margin-right: -340px;
+    }
+    #achievementsTitle {
+        display: none;
+    }
+    #achievementsTitleMobile {
+        display: block;
+    }
+    .allAchievements {
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+    .achievementHeaders {
+        font-size: 22px;
+    }
+    .achievementTexts {
+        font-size: 15px;
+    }
+    #achievement1 {
+        float: none;
+        margin-top: 2.5rem;
+    }
+    #achievement1Text {
+        margin-top: 20px;
+    }
+    #certificationButton {
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    #achievement2 {
+        float: none;
+        margin-top: 2rem;
+    }
+    #achievement2Text {
+        margin-top: 20px;
+    }
+    #achievement3 {
+        float: none;
+    }
+    #achievement4 {
+        margin-top: 1rem;
+        float: none;
+    }
+    #moreTitle {
+        display: none;
+    }
+    #moreTitleMobile {
+        display: block;
+    }
+    #more1 {
+        margin-top: 3rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 495 px.*/
+@media (max-width: 495px) {
+    .navTitles {
+        padding: 3.0rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 470 px or less.*/
+@media (max-width: 470px) {
+    #projectsTitle {
+        font-size: 50px;
+    }
+    .allProjects {
+        width: 300px;
+        height: 470px;
+    }
+    #projectHeader1 {
+        line-height: 40px !important;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 38px;
+        text-align: center;
+    }
+    #project1Subheader {
+        margin-right: 0px;
+        position: relative;
+        top: -5px;
+        text-align: center;
+    }
+    #project1Timeline {
+        text-align: center;
+        margin-top: 10px;
+    }
+    #project1More {
+        margin-left: 0px;
+        margin-right: -150px;
+        margin-bottom: -90px;
+    }
+    #project1Text {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    #project1Image {
+        width: 50%;
+        margin-top: -590px;
+        margin-left: -200px;
+    }
+    #projectHeader2 {
+        text-align: center;
+        font-size: 23px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    #project2Timeline {
+        text-align: right;
+        font-size: 15px;
+        margin-left: 0px;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    #project2Website {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: -25px;
+    }
+    #project2Text {
+        width: 100%;
+        font-size: 15px;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+    #project2Image {
+        width: 47%;
+        margin-top: -10px;
+        margin-left: 0px;
+    }
+    #projectHeader3 {
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    #project3Timeline {
+        font-size: 16px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #project3More {
+        margin-right: 0px;
+        margin-left: -130px;
+        margin-top: 0px;
+        margin-bottom: -550px;
+    }
+    #project3Text {
+        font-size: 15px;
+        margin-top: -15px;
+        margin-left: 10px;
+    }
+    #project3Image {
+        width: 40%;
+        margin-top: -10px;
+        margin-left: 140px;
+    }
+    #projectHeader4 {
+        font-size: 30px;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    #project4Timeline {
+        font-size: 15px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    #project4More {
+        height: 40px;
+        width: 95px;
+        margin-left: 150px;
+        margin-bottom: -620px;
+    }
+    #project4Text {
+        font-size: 15px;
+        margin-right: 0px;
+        margin-top: -10px;
+    }
+    #project4Image {
+        width: 44%;
+        margin-top: -20px;
+        margin-left: -110px;
+    }
+    #projectHeader5 {
+        font-size: 30px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    #project5Timeline {
+        font-size: 17px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #project5More {
+        height: 40px;
+        width: 95px;
+        margin-left: 120px;
+        margin-bottom: -600px;
+    }
+    #project5Text {
+        width: 180px;
+        font-size: 15px;
+        margin-top: -10px;
+        margin-left: 50px;
+    }
+    #project5Image {
+        width: 30%;
+        margin-top: -5px;
+        margin-left: -120px;
+    }
+    #projectHeader6 {
+        line-height: 35px !important;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    #project6Timeline {
+        text-align: center;
+        color: #e4dfff;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+    #project6Website {
+        text-align: center;
+        font-size: 13px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    #project6Text {
+        font-size: 15px;
+        text-align: left;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    #project6Image {
+        width: 35%;
+        margin-top: -30px;
+        margin-right: -170px;
+    }
+    #achievementsTitleMobile {
+        font-size: 40px;
+    }
+    .allAchievements {
+        width: 320px;
+        height: 330px;
+    }
+    #achievementHeader1 {
+        width: 210px;
+    }
+    #awsLogo {
+        margin-top: -60px;
+        margin-right: 30px;
+    }
+    #achievement2Text {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    #achievement3Text {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+    #collegeBoardLogo {
+        margin-right: -5px;
+        margin-top: -240px;
+    }
+    #achievement4 {
+        margin-top: 2rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 380 px or less.*/
+@media (max-width: 380px) {
+    #titleHeader3 {
+        font-size: 70px;
+    }
+    #folderMobile {
+        margin-left: 0rem;
+    }
+    #crown {
+        margin-right: 0rem;
+    }
+    .allProjects {
+        width: 230px;
+        height: 480px;
+    }
+    #projectHeader1 {
+        line-height: 40px !important;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 35px;
+        text-align: center;
+    }
+    #project1Subheader {
+        font-size: 16px;
+        margin-right: 0px;
+        position: relative;
+        top: -5px;
+        text-align: center;
+    }
+    #project1Timeline {
+        text-align: center;
+        margin-top: 10px;
+    }
+    #project1More {
+        height: 40px;
+        width: 90px;
+        margin-right: -120px;
+        margin-bottom: -90px;
+    }
+    #project1Text {
+        font-size: 14px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    #project1Image {
+        width: 55%;
+        margin-top: -630px;
+        margin-left: -180px;
+    }
+    #projectHeader2 {
+        text-align: center;
+        font-size: 23px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    #project2Timeline {
+        text-align: center;
+        font-size: 14px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #project2Website {
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    #project2Text {
+        width: 100%;
+        font-size: 14px;
+        margin-right: 20px;
+        margin-top: 25px;
+    }
+    #project2Image {
+        width: 50%;
+        margin-top: -625px;
+        margin-left: 80px;
+    }
+    #projectHeader3 {
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    #project3Timeline {
+        font-size: 16px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #project3More {
+        height: 45px;
+        width: 95px;
+        margin-right: 0px;
+        margin-left: -110px;
+        margin-top: 0px;
+        margin-bottom: -570px;
+    }
+    #project3Text {
+        font-size: 14px;
+        margin-top: -15px;
+        margin-left: 10px;
+    }
+    #project3Image {
+        width: 49%;
+        margin-top: 0px;
+        margin-left: 100px;
+    }
+    #projectHeader4 {
+        font-size: 30px;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    #project4Timeline {
+        font-size: 16px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    #project4More {
+        height: 40px;
+        width: 95px;
+        margin-left: 105px;
+        margin-bottom: -590px;
+    }
+    #project4Text {
+        font-size: 15px;
+        margin-right: 0px;
+        margin-top: -25px;
+    }
+    #project4Image {
+        width: 52%;
+        margin-top: -10px;
+        margin-left: -100px;
+    }
+    #projectHeader5 {
+        font-size: 30px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 5px;
+    }
+    #project5Timeline {
+        font-size: 17px;
+        text-align: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #project5More {
+        height: 40px;
+        width: 95px;
+        margin-left: 85px;
+        margin-bottom: -570px;
+    }
+    #project5Text {
+        width: 180px;
+        font-size: 15px;
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+    #project5Image {
+        width: 34%;
+        margin-top: -5px;
+        margin-left: -120px;
+    }
+    #projectHeader6 {
+        line-height: 35px !important;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    #project6Timeline {
+        text-align: center;
+        color: #e4dfff;
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+    #project6Website {
+        text-align: center;
+        font-size: 13px;
+        margin-left: -5px;
+        margin-top: 20px;
+    }
+    #project6Text {
+        font-size: 14px;
+        text-align: left;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+    #project6Image {
+        width: 40%;
+        margin-top: -10px;
+        margin-right: -70px;
+    }
+    #achievementsTitleMobile {
+        font-size: 35px;
+    }
+    .allAchievements {
+        width: 260px;
+        height: 360px;
+    }
+    #awsLogo {
+        margin-top: -60px;
+        margin-right: 10px;
+    }
+    #achievement2Text {
+        width: 100%;
+        margin-top: 20px;
+    }
+    #collegeBoardLogo {
+        margin-right: 60px;
+        margin-top: -245px;
+    }
+    #achievement3Text {
+        margin-top: 70px;
+    }
+}
+/*Exclusive modifications to elements for screen width 370 px.*/
+@media (max-width: 370px) {
+    .navTitles {
+        padding: 0.4rem;
+    }
 }

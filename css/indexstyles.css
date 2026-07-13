@@ -9,6 +9,24 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+/*Fixes overflowing elements that I couldn't figure out how to fix.*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*Fixes overflowing elements that I couldn't figure out how to fix.*/
+body {
+    overflow: visible !important;
+}
+/*Navbar modifications fixated at the top, disappears when clicked to open.*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(12, 0, 44);
+}
 /*All container that calls the fadeIn animation.*/
 .all {
     opacity: 0;
@@ -124,11 +142,13 @@ button.close:hover {
 }
 /*Profile card on left of screen, defined with image, header, body, and footer.*/
 #profileCard {
+    margin: auto;
+    margin-top: 5rem;
     background-color: #0e0a1d;
     border: 4px solid rgb(255, 224, 181);
     color: rgb(255, 224, 181);
     text-align: center;
-    width: 310px;
+    width: 309px;
 }
 /*Profile header with border.*/
 #profileHeader {
@@ -158,7 +178,6 @@ button.close:hover {
 }
 /*Bio container below profile card, matches profile card with styles.*/
 #bio {
-    margin-left: 0px;
     width: 309px;
     height: 168px;
     line-height: 90px;
@@ -181,6 +200,7 @@ button.close:hover {
 }
 /*Home title header at top.*/
 #titleHeader1 {
+    margin-top: 4rem;
     width: 90%;
     margin-left: 5%;
     text-align: center;
@@ -189,6 +209,7 @@ button.close:hover {
 }
 /*All 3 subheaders below title header.*/
 #subTitles {
+    margin-bottom: 3rem;
     line-height: 2;
     text-align: center;
     font-size: 24px;
@@ -196,8 +217,7 @@ button.close:hover {
 }
 /*About me container with external link, expands when hovered.*/
 #aboutMe {
-    margin-bottom: 230px;
-    width: 350px;
+    width: 308px;
     height: 100px;
     line-height: 90px;
     text-align: center;
@@ -227,11 +247,9 @@ button.close:hover {
 }
 /*Portfolio container to the right of about me and skills containers, expands when hovered.*/
 #portfolio {
-    margin-top: 70px;
-    margin-left: 70px;
-    width: 400px;
+    width: 351px;
     height: 400px;
-    line-height: 90px;
+    margin-left: 2rem;
     text-align: center;
     background-color: #0e0a1d;
     border: 4px solid rgb(12, 0, 44);
@@ -241,6 +259,9 @@ button.close:hover {
 #portfolio:hover {
     transform: scale(1.07);
 }
+#portfolioButton {
+    margin-top: 10px;
+}
 /*Carousel inside of portfolio container, scrolls through slides.*/
 #carousel {
     margin-top: 30px;
@@ -248,18 +269,24 @@ button.close:hover {
 /*Each of the items part of the carousel, contains a border.*/
 .carouselItems {
     width: 80%;
+    text-align: center;
     border: 3px solid rgb(255, 224, 181);
 }
-/*The second item in the carousel.*/
-#carouselItem2 {
+#carouselImage3 {
     width: 70%;
-    margin-left: 45px;
+}
+#carouselImage4 {
+    width: 60%;
+}
+#carouselImage5 {
+    width: 50%;
+}
+#carouselImage6 {
+    width: 60%;
 }
 /*Header in portfolio container.*/
 #portfolioHeader {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+    margin-top: 1rem;
     font-size: 40px;
     color: #c1b6ff;
 }
@@ -277,9 +304,7 @@ button.close:hover {
 }
 /*Skills container below the about me container, expands when hovered.*/
 #skills {
-    position: relative;
-    bottom: 384px;
-    left: 366px;
+    margin-top: 4.6rem;
     width: 308px;
     height: 228px;
     line-height: 90px;
@@ -336,8 +361,6 @@ button.close:hover {
 }
 /*Experience container located below the skills container, expands when hovered.*/
 #experience {
-    position: relative;
-    bottom: 160px;
     width: 309px;
     height: 200px;
     line-height: 90px;
@@ -375,8 +398,7 @@ button.close:hover {
 }
 /*Contact container below the bio container, expands when hovered.*/
 #contactBox {
-    position: relative;
-    top: 90px;
+    margin-top: 6rem;
     width: 309px;
     height: 100px;
     line-height: 90px;
@@ -407,9 +429,7 @@ button.close:hover {
 }
 /*My life container below the portfolio container, expands when hovered.*/
 #myLife {
-    position: relative;
-    bottom: 112px;
-    left: 13px;
+    margin-left: 2rem;
     width: 351px;
     height: 200px;
     line-height: 90px;
@@ -448,46 +468,45 @@ button.close:hover {
 }
 /*Each of the items part of the carousel, contains a border.*/
 .carouselItems2 {
-    width: 40%;
+    width: 20%;
     border: 2px solid rgb(255, 224, 181);
 }
-/*The first item in the carousel (4th because of the 3 items in the previous carousel).*/
-#carouselItem4 {
-    width: 60%;
-    margin-left: 64px;
+#carouselImage7 {
+    width: 23%;
 }
-/*The third item in the carousel.*/
-#carouselItem6 {
-    width: 60%;
-    margin-left: 63px;
+#carouselImage8 {
+    width: 40%;
 }
-/*Index footer.*/
+#carouselImage9 {
+    width: 23%;
+}
+/*Full footer at bottom.*/
 .bottom {
-    position: relative;
-    top: -80px;
-    bottom: 150px;
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 1200px;
 }
 /*Header of footer, my name.*/
 #footerHeader {
-    text-align: left;
     font-size: 30px;
     color: #c1b6ff;
 }
 /*Description of footer, profession and email.*/
 #footerDesc {
     display: inline;
-    text-align: left;
     font-size: 20px;
     color: #c1b6ff;
 }
+/*All 5 footer buttons.*/
+.footerButtons {
+    float: right;
+    margin-top: -1.5rem;
+}
 /*Resume button that accesses resume page.*/
 #resume {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 272px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -499,12 +518,9 @@ button.close:hover {
 }
 /*Contact button that accesses contact page.*/
 #contact {
+    margin-right: 0.3rem;
     width: 85px;
     height: 50px;
-    position: relative;
-    left: 273px;
-    bottom: 10px;
-    text-align: center;
     background-color: black;
     border: 2px solid black;
     font-weight: bold;
@@ -516,11 +532,8 @@ button.close:hover {
 }
 /*GitHub button that contains link, expands when hovered.*/
 #github {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -532,11 +545,8 @@ button.close:hover {
 }
 /*LinkedIn button that contains link, expands when hovered.*/
 #linkedin {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
-    margin-right: 5px;
+    margin-right: 0.3rem;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -548,10 +558,7 @@ button.close:hover {
 }
 /*Discord button that contains link, expands when hovered.*/
 #discord {
-    position: relative;
-    bottom: 10px;
     display: inline;
-    float: right;
     height: 50px;
     width: 50px;
     transition: 0.3s;
@@ -561,28 +568,280 @@ button.close:hover {
     cursor: pointer;
     transform: scale(1.07);
 }
-/*Footer line separating content from copyright claim.*/
-#line {
-    height: 5px;
-    width: 1110px;
-    border: 3px solid #c1b6ff;
-    position: absolute;
-    top: 90px;
-}
 /*Copyright claim in footer.*/
 #copyright {
+    width: 100%;
+    border-top: 5px solid #c1b6ff;
+    padding-top: 15px;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     color: rgb(152, 152, 152);
     font-size: 10px;
-    position: relative;
-    top: 15px;
 }
 /*Spinner that appears in the middle of screen when a button that contains a link is clicked, hidden otherwise.*/
 #spinner {
     display: none;
     position: fixed;
-    bottom: 35%;
-    left: 42%;
+    inset: 0;
+    margin: auto;
     height: 250px;
     width: 250px;
     border-width: 15px;
+}
+
+/*Exclusive modifications to elements for screen width 992-1200.5 px.*/
+@media (min-width: 992px) and (max-width: 1200.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #profileCard {
+        margin-left: 2rem;
+    }
+    #bio {
+        margin-left: 2rem;
+    }
+    #skills {
+        margin-top: 4rem;
+    }
+    #portfolio {
+        margin: auto;
+        margin-top: 4rem;
+    }
+    #contactExperienceLifeRow {
+        margin-top: 4rem;
+    }
+    #contactBox {
+        width: 80%;
+        height: 65%;
+        margin-top: 0rem;
+        margin-left: -0.5rem;
+        
+    }
+    #contactHeader {
+        margin-top: 1rem;
+    }
+    #oinwicon2 {
+        position: relative;
+        bottom: 145px;
+        left: 90px;
+        height: 36px;
+        width: 36px;
+    }
+    #experience {
+        width: 90%;
+        margin-left: -3rem;
+    }
+    #myLife {
+        margin-left: -3rem;
+    }
+    #myLifeHeader {
+        display: block;
+        text-align: left;
+    }
+    #myLifeButton {
+        float: right;
+        margin-top: -55px;
+    }
+    .carouselItems2 {
+        margin-top: 15px;
+    }
+    #carouselImage7 {
+        width: 30%;
+    }
+    #carouselImage8 {
+        width: 50%;
+    }
+    #carouselImage9 {
+        width: 30%;
+    }
+    .bottom {
+        margin-top: 3rem;
+        max-width: 992px;
+    }
+}
+/*Exclusive modifications to elements for screen width 768-991.5 px.*/
+@media (min-width: 768px) and (max-width: 991.5px) {
+    .navTitles {
+        padding: 1.5rem;
+    }
+    #titleHeader1 {
+        font-size: 80px;
+    }
+    #subTitles {
+        font-size: 20px;
+    }
+    #skills {
+        margin-top: 3rem;
+    }
+    #portfolio {
+        margin: auto;
+        margin-left: -1rem;
+        margin-top: 4rem;
+    }
+    #contactBox {
+        margin-top: 7rem;
+    }
+    #experience {
+        margin-top: 4rem;
+    }
+    #myLife {
+        margin: auto;
+        margin-top: 4rem;
+    }
+    #footerHeader {
+        font-size: 25px;
+    }
+    #footerDesc {
+        font-size: 16px;
+    }
+    #resume {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #contact {
+        height: 40px;
+        width: 70px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        height: 40px;
+        width: 40px;
+    }
+    .footerButtons {
+        margin-top: -1rem;
+    }
+}
+/*Exclusive nav title modifications for screens 830 px or less.*/
+@media (max-width: 830px) {
+    .navTitles {
+        padding: 0rem;
+    }
+}
+/*Exclusive modifications to elements for screen width 767.5 px or less.*/
+@media (max-width: 767.5px) {
+    #titleHeader1 {
+        font-size: 70px;
+        margin-top: 3rem;
+    }
+    #subTitles {
+        font-size: 18px;
+    }
+    #skills {
+        margin-top: 3rem;
+    }
+    #portfolio {
+        margin: auto;
+        margin-top: 3rem;
+    }
+    #contactBox {
+        margin-top: 3rem;
+    }
+    #experience {
+        margin-top: 3rem;
+    }
+    #myLife {
+        margin: auto;
+        margin-top: 3rem;
+    }
+    #footerDesc {
+        display: block;
+        font-size: 20px;
+        color: #c1b6ff;
+    }
+    .footerButtons {
+        display: inline;
+        float: none;
+        margin: auto;
+    }
+    #resume {
+        margin-right: 0rem;
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #contact {
+        width: 70px;
+        height: 40px;
+        padding-left: 4px;
+    }
+    #github {
+        height: 40px;
+        width: 40px;
+    }
+    #linkedin {
+        height: 40px;
+        width: 40px;
+    }
+    #discord {
+        margin-right: 0.3rem;
+        height: 40px;
+        width: 40px;
+    }
+    #copyright {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 3rem;
+    }
+}
+/*Exclusive nav title modifications for screens 685 px or less.*/
+@media (max-width: 685px) {
+    .navTitles {
+        padding: 6.5rem;
+    }
+}
+/*Exclusive nav title modifications for screens 480 px or less.*/
+@media (max-width: 480px) {
+    .navTitles {
+        padding: 2.2rem;
+    }
+}
+/*Exclusive nav title modifications for screens 380 px or less.*/
+@media (max-width: 380px) {
+    #myLifeHeader {
+        float: left;
+    }
+    #myLifeButton {
+        width: 90px;
+        float: right;
+        margin-top: 5px;
+    }
+    .carouselItems2 {
+        margin-top: 20px;
+    }
+    #carouselImage4 {
+        width: 60%;
+        margin-left: 0px;
+    }
+    #carouselImage6 {
+        width: 60%;
+        margin-left: 0px;
+    }
+}
+/*Exclusive nav title modifications for screens 360 px or less.*/
+@media (max-width: 360px) {
+    .navTitles {
+        padding: 0rem;
+    }
+    #profileCard {
+        width: 100%;
+    }
+}
+/*Exclusive nav title modifications for screens 340 px or less.*/
+@media (max-width: 340px) {
+    #oinwicon {
+        left: 20px;
+    }
+    #oinwicon2 {
+        left: 20px;
+    }
 }

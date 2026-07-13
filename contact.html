@@ -60,30 +60,40 @@
                     </nav>
                 </div>
             <!--Contact title header.-->
-            <div class="container">
+            <div class="container mt-4">
                 <h5 class="top normal" id="titleHeader6">Contact Info</h5>
             </div>
             <!--Container containing ID card with image, header, and subheaders.-->
             <div class="container">
-                <div class="container rounded standard normal" id="idCard">
-                    <img src="images/id.jpg" class="rounded" id="cardImage" alt="Card Image">
-                    <h5 class="" id="cardHeader">Jacob Sanchez</h5>
-                    <h5 class="cardSubheaders">Irvine, CA</h5>
-                    <h5 class="cardSubheaders">Student, Web Development Intern</h5>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container rounded standard normal" id="idCard">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="images/id.jpg" class="rounded" id="cardImage" alt="Card Image">
+                                </div>
+                                <div class="col-8">
+                                    <h5 class="" id="cardHeader">Jacob Sanchez</h5>
+                                    <h5 class="cardSubheaders">Irvine, CA</h5>
+                                    <h5 class="cardSubheaders">Student, Web Development Intern</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--Container containing both external link buttons below ID card.-->
             <div class="container">
                 <div class="row">
                     <!--Send an Email button with external link.-->
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-12">
                         <div class="container rounded standard clickable contactBoxes" id="contactBox1">
                             <h5 class="clickable contactHeaders" id="contact1Header">Send an Email</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded contactoinwicons" id="contactIcon1" alt="Open in New Window Icon">
                         </div>
                     </div>
                     <!--Connect on LinkedIn with external link.-->
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-12">
                         <div class="container rounded standard clickable contactBoxes" id="contactBox2">
                             <h5 class="clickable contactHeaders" id="contact2Header">Connect on LinkedIn</h5>
                             <img src="images/openinnewwindowicon.png" class="rounded contactoinwicons" id="contactIcon2" alt="Open in New Window Icon">
@@ -93,22 +103,24 @@
             </div>
             <!--Bottom container that serves as the footer; contains header, description and email, social links, and copyright.-->
             <div class="container bottom">
-                <!--Footer header.-->
-                <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
-                <!--Container that sets everything in it inline.-->
-                <div class="descLine">
-                    <!--Subtitle and email.-->
-                    <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
-                    <!--Images/buttons that direct users to my socials when clicked.-->
-                    <button class="btn btn-dark" id="resume" type="button">Resume</button>
-                    <img class="rounded" id="discord" src="images/discord.png" alt="Discord">
-                    <img class="rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
-                    <img class="rounded" id="github" src="images/github2.png" alt="GitHub">
+                <div class="row">
+                    <div class="col-12 text-center text-md-left">    
+                        <!--Footer header.-->
+                        <h5 class="normal" id="footerHeader">Jacob Sanchez</h5>
+                        <!--Container that sets everything in it inline.-->
+                        <div class="descLine float-none">
+                            <!--Subtitle and email.-->
+                            <h5 class="normal" id="footerDesc">Software Developer&ensp;|&ensp;developed.by.jacob@gmail.com</h5>
+                            <!--Images/buttons that direct users to my socials when clicked.-->
+                            <img class="footerButtons rounded" id="discord" src="images/discord.png" alt="Discord">
+                            <img class="footerButtons rounded" id="linkedin" src="images/linkedin2.png" alt="LinkedIn">
+                            <img class="footerButtons rounded" id="github" src="images/github2.png" alt="GitHub">
+                            <button class="footerButtons btn btn-dark" id="resume" type="button">Resume</button>
+                        </div>
+                        <!--Copyright claim with line above.-->
+                        <h5 class="normal" id="copyright">© Copyright 2026 All Rights Reserved</h5>
+                    </div>
                 </div>
-                <!--Footer line.-->
-                <span class="line" id="line2"></span>
-                <!--Copyright claim.-->
-                <h5 class="normal" id="copyright">© Copyright 2026 All Rights Reserved</h5>
             </div>
         </div>
         <!--Spinner located outside of all container so that it doesn't get blurred when a user clicks a button navigating to a new page.-->

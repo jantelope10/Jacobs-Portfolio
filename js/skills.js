@@ -7,6 +7,23 @@ $(document).ready(function() {
             this.window.location.reload();
         }
     });
+
+    /*Navbar functionality that hides dark blue banner portion when open, shows when closed.*/
+    let clickCount = 0;
+    $("#navicon").click(function(){
+        clickCount++;
+        if (clickCount % 2 !== 0) {
+            $(".navbar").css("background", "linear-gradient(to right, #0e0b1f, #1f1b48)");
+            $(".navbar").css("position", "sticky");
+
+        } else {
+            $(".navbar").css("background", "#ffffff");
+            $(".navbar").css("background-color", "rgb(12, 0, 44)");
+            setTimeout(function() {
+                $(".navbar").css("position", "fixed");
+            }, 150);
+        }
+    });
     /*For first skill box (languages) in skills section, opens languages box modal on click.*/
     $("#skills1").click(function(){
         $('#languagesModal').modal("show");

@@ -15,6 +15,23 @@ $(document).ready(function() {
     $("#myModalButton").click(function(){
         $('#myModal').modal("hide");
     });
+
+    /*Navbar functionality that hides dark blue banner portion when open, shows when closed.*/
+    let clickCount = 0;
+    $("#navicon").click(function(){
+        clickCount++;
+        if (clickCount % 2 !== 0) {
+            $(".navbar").css("background", "linear-gradient(to right, #0e0b1f, #1f1b48)");
+            $(".navbar").css("position", "sticky");
+
+        } else {
+            $(".navbar").css("background", "#ffffff");
+            $(".navbar").css("background-color", "rgb(12, 0, 44)");
+            setTimeout(function() {
+                $(".navbar").css("position", "fixed");
+            }, 150);
+        }
+    });
     /*Navigates user to top of the home page when the logo is clicked.*/
     $("#logo").click(function(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
