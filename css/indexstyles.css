@@ -9,6 +9,12 @@
     50% { color: #281f4a; }
     100% { color: #3931d2; }
 }
+@font-face {
+  font-family: 'Brush Script MT';
+  src: url('fonts/BrushScriptMT.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 /*Fixes overflowing elements that I couldn't figure out how to fix.*/
 html, body {
     max-width: 100%;
@@ -54,7 +60,7 @@ body {
     position: fixed;
     color: white;
     font-size: 50px;
-    font-family: 'Brush Script MT', 'brush-script-mt', sans-serif; 
+    font-family: 'Brush Script MT', sans-serif; 
     background-color: transparent;
     cursor: pointer;
 }
