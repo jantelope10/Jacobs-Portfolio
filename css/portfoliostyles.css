@@ -2088,6 +2088,12 @@
         width: 230px;
         height: 480px;
     }
+    #project2 {
+        height: 500px;
+    }
+    #project5 {
+        height: 500px;
+    }
     #projectHeader1 {
         line-height: 40px !important;
         margin-right: 0px;
@@ -2124,7 +2130,7 @@
     }
     #projectHeader2 {
         text-align: center;
-        font-size: 23px;
+        font-size: 22px;
         margin-left: 0px;
         margin-top: 10px;
     }
@@ -2144,11 +2150,11 @@
         width: 100%;
         font-size: 14px;
         margin-right: 20px;
-        margin-top: 25px;
+        margin-top: 45px;
     }
     #project2Image {
         width: 50%;
-        margin-top: -625px;
+        margin-top: -620px;
         margin-left: 80px;
     }
     #projectHeader3 {

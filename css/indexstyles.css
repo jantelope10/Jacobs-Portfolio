@@ -814,16 +814,23 @@ button.close:hover {
 }
 /*Exclusive nav title modifications for screens 380 px or less.*/
 @media (max-width: 380px) {
+    #myLife {
+        height: 230px;
+    }
     #myLifeHeader {
         float: left;
+        margin-left: 10px;
+        margin-top: 5px;
     }
     #myLifeButton {
         width: 90px;
         float: right;
+        margin-right: 10px;
         margin-top: 5px;
+        margin-bottom: 50px;
     }
-    .carouselItems2 {
-        margin-top: 20px;
+    #carousel2 {
+        margin-top: 50px;
     }
     #carouselImage4 {
         width: 60%;
@@ -845,6 +852,12 @@ button.close:hover {
 }
 /*Exclusive nav title modifications for screens 340 px or less.*/
 @media (max-width: 340px) {
+    #myLifeHeader {
+        margin-left: 0px;
+    }
+    #myLifeButton {
+        margin-right: 0px;
+    }
     #oinwicon {
         left: 20px;
     }

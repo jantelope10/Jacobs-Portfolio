@@ -125,7 +125,6 @@
 /*Subheaders of my name, location, student, and current position.*/
 .cardSubheaders {
     text-align: center;
-    
     margin-top: -60px;
     font-size: 30px;
     color: #c1b6ff;
@@ -166,17 +165,18 @@
 }
 /*Open in new window icons in the contact boxes.*/
 .contactoinwicons {
-    position: relative;
     height: 30px;
     width: 30px;
 }
 /*Open in new window icon in send an email contact box.*/
 #contactIcon1 {
+    position: relative;
     left: 54px;
     bottom: 21px;
 }
 /*Open in new window icon in connect on LinkedIn contact box.*/
 #contactIcon2 {
+    position: relative;
     left: 20px;
     bottom: 21px;
 }
@@ -479,12 +479,6 @@
         padding: 3.5rem;
     }
 }
-/*Exclusive nav title modifications for screens 480 px or less.*/
-@media (max-width: 480px) {
-    .navTitles {
-        padding: 2.7rem;
-    }
-}
 /*Exclusive modifications to elements for screen width 470 px or less.*/
 @media (max-width: 470px) {
     #titleHeader6 {
@@ -507,6 +501,11 @@
         margin-left: -6.5rem;
     }
 }
+@media (max-width: 390px) {
+    .navTitles {
+        padding: 2.0rem;
+    }
+}
 /*Exclusive title and card modifications for screens 370 px or less.*/
 @media (max-width: 370px) {
     #titleHeader6 {
@@ -519,18 +518,19 @@
         width: 260px;
     }
     #contact2Header {
-        font-size: 21px;
-        margin-left: -7px;
+        font-size: 20px;
+        line-height: 50px;
+        margin-left: -5px;
+        margin-bottom: -50px;
     }
     #contactIcon1 {
         left: 25px;
         bottom: 21px;
     }
     #contactIcon2 {
-        left: 107px;
-        bottom: 77px;
+        left: 16px;
+        bottom: -3px;
     }
-
 }
 /*Exclusive nav title modifications for screens 360 px or less.*/
 @media (max-width: 360px) {
