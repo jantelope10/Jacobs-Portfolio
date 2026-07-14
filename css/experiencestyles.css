@@ -951,6 +951,9 @@
 }
 /*Exclusive modifications to elements for screen width 450 px or less.*/
 @media (max-width: 450px) {
+    .navTitles {
+        padding: 3.2rem;
+    }
     #titleHeader5 {
         font-size: 55px;
     }
@@ -1053,10 +1056,16 @@
         margin-top: 2rem;
     }
 }
+/*Exclusive nav title modifications for screens 420 px or less.*/
+@media (max-width: 420px) {
+    .navTitles {
+        padding: 2.5rem;
+    }
+}
 /*Exclusive nav title modifications for screens 390 px or less.*/
 @media (max-width: 390px) {
     .navTitles {
-        padding: 2rem;
+        padding: 1.8rem;
     }
 }
 /*Exclusive nav title modifications for screens 360 px or less.*/
