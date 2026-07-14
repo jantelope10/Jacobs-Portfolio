@@ -1056,16 +1056,10 @@
         margin-top: 2rem;
     }
 }
-/*Exclusive nav title modifications for screens 420 px or less.*/
-@media (max-width: 420px) {
-    .navTitles {
-        padding: 2.5rem;
-    }
-}
 /*Exclusive nav title modifications for screens 390 px or less.*/
 @media (max-width: 390px) {
     .navTitles {
-        padding: 1.8rem;
+        padding: 2.5rem;
     }
 }
 /*Exclusive nav title modifications for screens 360 px or less.*/
