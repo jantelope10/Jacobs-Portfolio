@@ -122,6 +122,20 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when clicked, loads experience page after a timeout.*/
+    $("#experienceLink").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "experience.html";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
     /*Shows spinner and blurs background when more box 1 (about me) is clicked, loads about me page after a timeout.*/
     $("#moreBox1").click(function(){
         $(".all").css("filter", "blur(10px)");

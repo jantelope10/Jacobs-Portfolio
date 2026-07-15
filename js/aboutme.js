@@ -152,6 +152,36 @@ $(document).ready(function() {
             all.style.filter = "none";
         }, 700);
     });
+    /*Shows spinner and blurs background when clicked, loads portfolio page after a timeout.*/
+    $("#portfolioModalLink").click(function(){
+        $('#schoolModal').modal("hide");
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "portfolio.html";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
+    /*Shows spinner and blurs background when clicked, loads experience page after a timeout.*/
+    $("#experienceModalLink").click(function(){
+        $('#schoolModal').modal("hide");
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "experience.html";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
     /*Shows spinner and blurs background when more box 1 (portfolio) is clicked, loads portfolio page after a timeout.*/
     $("#moreBox1").click(function(){
         $(".all").css("filter", "blur(10px)");

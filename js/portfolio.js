@@ -32,6 +32,62 @@ $(document).ready(function() {
     $("#moreModalButton").click(function(){
         $('#project1Modal').modal("hide");
     });
+    /*Shows spinner and blurs background when clicked, loads experience page after a timeout.*/
+    $("#internLink").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "experience.html";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
+    /*For github button inside third project box (Chef Claude), links to github repo on click.*/
+    $("#project3More").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://github.com/jantelope10/Chef-Claude";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
+    /*For github button inside fourth project box (Emergency Room Simulator), links to github repo on click.*/
+    $("#project4More").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://github.com/jantelope10/EmergencyRoom---Priority-Queue";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
+    /*For github button inside fifth project box (Tic Tac Toe), links to github repo on click.*/
+    $("#project5More").click(function(){
+        $(".all").css("filter", "blur(10px)");
+        const elem = document.getElementById("spinner");
+        const all = document.querySelector(".all");
+        elem.style.display = "inline";
+        setTimeout(() => {
+            window.location.href = "https://github.com/jantelope10/TicTacToe-SingleandMultiplayer";
+        }, 500);
+        setTimeout(() => {
+            elem.style.display = "none";
+            all.style.filter = "none";
+        }, 700);
+    });
     /*Shows spinner and blurs background when logo is clicked, loads home page after a timeout.*/
     $("#logo").click(function(){
         $(".all").css("filter", "blur(10px)");
