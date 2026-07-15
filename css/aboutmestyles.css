@@ -691,6 +691,15 @@
         padding: 0rem;
     }
 }
+/*Exclusive nav title modifications for screens 690 px or less.*/
+@media (max-width: 690px) {
+    .navTitles {
+        padding: 0rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        display: block;
+    }
+}
 /*Exclusive modifications to elements for screen width 576-767.5 px.*/
 @media (min-width: 576px) and (max-width: 767.5px) {
     #titleHeader2 {
@@ -801,12 +810,6 @@
         margin-bottom: 3rem;
     }
 }
-/*Exclusive nav title modifications for screens 685 px or less.*/
-@media (max-width: 685px) {
-    .navTitles {
-        padding: 6.5rem;
-    }
-}
 /*Exclusive modifications to elements for screen width 575.5 px or less.*/
 @media (max-width: 575.5px) {
     #titleHeader2 {
@@ -894,9 +897,6 @@
 }
 /*Exclusive modifications to elements for screen width 480 px or less.*/
 @media (max-width: 480px) {
-    .navTitles {
-        padding: 2.2rem;
-    }
     #titleDesc {
         width: 290px;
     }
@@ -945,11 +945,5 @@
         font-size: 30px;
         margin-top: 3rem;
         margin-left: 3rem;
-    }
-}
-/*Exclusive nav title modifications for screens 360 px or less.*/
-@media (max-width: 360px) {
-    .navTitles {
-        padding: 0rem;
     }
 }

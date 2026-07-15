@@ -640,6 +640,15 @@
         padding: 0rem;
     }
 }
+/*Exclusive nav title modifications for screens 690 px or less.*/
+@media (max-width: 690px) {
+    .navTitles {
+        padding: 0rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        display: block;
+    }
+}
 /*Exclusive modifications to elements for screen width 576-767.5 px.*/
 @media (min-width: 576px) and (max-width: 768.5px) {
     #titleHeader5 {
@@ -789,12 +798,6 @@
         margin-bottom: 3rem;
     }
 }
-/*Exclusive nav title modifications for screens 685 px or less.*/
-@media (max-width: 685px) {
-    .navTitles {
-        padding: 7.9rem;
-    }
-}
 /*Exclusive modifications to elements for screen width 575.5 px or less.*/
 @media (max-width: 575.5px) {
     #titleHeader5 {
@@ -937,23 +940,8 @@
         margin-bottom: 3rem;
     }
 }
-/*Exclusive nav title modifications for screens 525 px or less.*/
-@media (max-width: 525px) {
-    .navTitles {
-        padding: 4.6rem;
-    }
-}
-/*Exclusive nav title modifications for screens 480 px or less.*/
-@media (max-width: 480px) {
-    .navTitles {
-        padding: 3.7rem;
-    }
-}
 /*Exclusive modifications to elements for screen width 450 px or less.*/
 @media (max-width: 450px) {
-    .navTitles {
-        padding: 3.2rem;
-    }
     #titleHeader5 {
         font-size: 55px;
     }
@@ -1054,17 +1042,5 @@
     .moreButtons {
         margin: auto;
         margin-top: 2rem;
-    }
-}
-/*Exclusive nav title modifications for screens 390 px or less.*/
-@media (max-width: 390px) {
-    .navTitles {
-        padding: 2.5rem;
-    }
-}
-/*Exclusive nav title modifications for screens 360 px or less.*/
-@media (max-width: 360px) {
-    .navTitles {
-        padding: 1.2rem;
     }
 }
