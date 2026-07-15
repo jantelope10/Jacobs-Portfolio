@@ -800,16 +800,13 @@ button.close:hover {
         margin-bottom: 3rem;
     }
 }
-/*Exclusive nav title modifications for screens 685 px or less.*/
-@media (max-width: 685px) {
+/*Exclusive nav title modifications for screens 690 px or less.*/
+@media (max-width: 690px) {
     .navTitles {
-        padding: 6.5rem;
-    }
-}
-/*Exclusive nav title modifications for screens 480 px or less.*/
-@media (max-width: 480px) {
-    .navTitles {
-        padding: 2.2rem;
+        padding: 0rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        display: block;
     }
 }
 /*Exclusive nav title modifications for screens 380 px or less.*/
@@ -843,9 +840,6 @@ button.close:hover {
 }
 /*Exclusive nav title modifications for screens 360 px or less.*/
 @media (max-width: 360px) {
-    .navTitles {
-        padding: 0rem;
-    }
     #profileCard {
         width: 100%;
     }
