@@ -194,15 +194,14 @@ button.close:hover {
 }
 /*Bio header in bio.*/
 #bioHeader {
-    margin-top: 17px;
+    margin-top: 10px;
     line-height: normal;
     font-size: 14px;
     color:rgb(255, 224, 181);
 }
-/*SCC image in bio.*/
-#scc {
-    width: 55%;
-    height: 55%;
+/*UCI image in bio.*/
+#uci {
+    width: 35%;
     margin-top: 10px;
 }
 /*Home title header at top.*/
